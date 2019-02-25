@@ -10,15 +10,20 @@
         {% endblock %}
     </head>
     <body>
+    {% block header %}
+        <header>
+            {% include 'includes/header.html.twig' %}
+        </header>
+    {% endblock %}
+
         {% block body %}
-            <header>
-                {% include 'inludes/header.html.twig' %}
-            </header>
-
-            <footer>
-
-            </footer>
         {% endblock %}
+
+    {% block footer %}
+        <footer>
+            {% include 'includes/footer.html.twig' %}
+        </footer>
+    {% endblock %}
 
         {% block javascripts %}
             <script src="{{ asset('assets/js/jquery.js') }}"></script>
