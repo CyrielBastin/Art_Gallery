@@ -33,6 +33,11 @@ class PaintingStyle
      */
     private $paintings;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
+
     public function __construct()
     {
         $this->paintings = new ArrayCollection();
@@ -94,6 +99,18 @@ class PaintingStyle
                 $painting->setStyle(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

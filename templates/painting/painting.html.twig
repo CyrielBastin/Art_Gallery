@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Paintings{% endblock %}
+
+{% block body %}
+    <div class="section">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Style</th>
+                        <th>Artist</th>
+                        <th>Year</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for painting in paintings %}
+                        <tr>
+                            <td><figure style="text-align: center">
+                                    <img src="{{ asset('assets/images/paintings/') ~ painting['image'] }}" alt="{{ painting['image'] }}" style="width: 200px; height: 150px">
+                                    <figcaption style="font-size: 0.8em">{{ painting['media'] ~ '( ' ~ painting['dimensions'] ~ ' )' }}</figcaption>
+                                </figure></td>
+                            <td>{{ painting['title'] }}</td>
+                            <td>{{ painting['style'] }}</td>
+                            <td>{{ painting['artist'] }}</td>
+                            <td>{{ painting['year']|date('d/m/Y') }}</td>
+                            <td>{{ painting['price'] ~ ' €'}}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

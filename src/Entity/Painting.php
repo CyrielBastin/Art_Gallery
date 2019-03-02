@@ -32,7 +32,7 @@ class Painting
     private $dimensions;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="string", length=5, nullable=true)
      */
     private $year;
 
@@ -107,12 +107,12 @@ class Painting
         return $this;
     }
 
-    public function getYear(): ?\DateTimeInterface
+    public function getYear(): ?string
     {
         return $this->year;
     }
 
-    public function setYear(?\DateTimeInterface $year): self
+    public function setYear(?string $year): self
     {
         $this->year = $year;
 
