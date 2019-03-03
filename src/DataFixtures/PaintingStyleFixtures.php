@@ -21,7 +21,7 @@ class PaintingStyleFixtures extends Fixture
             $painting_style = new PaintingStyle();
 
             $painting_style->setName($style)
-                ->setDescription($faker->text(300));
+                ->setDescription($faker->text(700));
 
             $manager->persist($painting_style);
         }

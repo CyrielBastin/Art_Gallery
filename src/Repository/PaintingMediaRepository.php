@@ -3,13 +3,14 @@
 namespace App\Repository;
 
 use App\Entity\PaintingMedia;
+use Doctrine\DBAL\DBALException;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Faker;
 
 /**
  * @method PaintingMedia|null find($id, $lockMode = null, $lockVersion = null)
  * @method PaintingMedia|null findOneBy(array $criteria, array $orderBy = null)
- * @method PaintingMedia[]    findAll()
  * @method PaintingMedia[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class PaintingMediaRepository extends ServiceEntityRepository
@@ -19,32 +20,41 @@ class PaintingMediaRepository extends ServiceEntityRepository
         parent::__construct($registry, PaintingMedia::class);
     }
 
-    // /**
-    //  * @return PaintingMedia[] Returns an array of PaintingMedia objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findAll()
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $conn = $this->getEntityManager()->getConnection();
 
-    /*
-    public function findOneBySomeField($value): ?PaintingMedia
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $sql='
+            SELECT *
+            FROM painting_media
+        ';
+
+        try {
+            $request = $conn->prepare($sql);
+        } catch (DBALException $e) {}
+
+        $request->execute();
+
+        return $request->fetchAll();
     }
-    */
+
+    public function findById($id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT *
+            FROM painting_media
+            WHERE id = :id
+        ';
+
+        try {
+            $request = $conn->prepare($sql);
+        } catch (DBALException $e) {}
+
+        $request->execute(['id' => $id]);
+
+        return $request->fetchAll();
+    }
+
 }

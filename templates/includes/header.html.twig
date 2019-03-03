@@ -14,25 +14,25 @@
             <div class="menu-custom-border-grey">
                 <div class="navbar-custom">
                     {# Element Home #}
-                    <a href="#">Home</a>
+                    <a href="{{ path('homepage') }}">Home</a>
                     {# Element Painting#}
                     <div class="dropdown-custom">
-                        <button class="dropbtn-custom"><a href="#">Paintings</a></button>
+                        <button class="dropbtn-custom"><a href="{{ path('painting_all') }}">Paintings</a></button>
                         <div class="dropdown-content-custom">
                             <a href="{{ path('painting_all') }}">All</a>
-                            <a href="#">latest added</a>
+                            <a href="{{ path('painting_latest_added') }}">latest added</a>
                             <a href="#">Discount</a>
                             <span>===========</span>
-                            <a href="#">Medias</a>
+                            <a href="{{ path('painting_media_all') }}">Medias</a>
                             <span>===========</span>
-                            <a href="#">Styles</a>
+                            <a href="{{ path('painting_style_all') }}">Styles</a>
                         </div>
                     </div>
                     {# Element Artists #}
                     <div class="dropdown-custom">
-                        <button class="dropbtn-custom"><a href="#">Artists</a></button>
+                        <button class="dropbtn-custom"><a href="{{ path('artist_all') }}">Artists</a></button>
                         <div class="dropdown-content-custom">
-                            <a href="#">All</a>
+                            <a href="{{ path('artist_all') }}">All</a>
                         </div>
                     </div>
                     {# Element Subscribe #}

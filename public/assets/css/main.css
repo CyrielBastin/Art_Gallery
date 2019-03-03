@@ -155,10 +155,12 @@ footer{
     color: gray;
     text-decoration: underline;
 }
-
 /********************************************************************************************************
  ** Style for the HomePage
  *******************************************************************************************************/
+body{
+    background-color: lightgrey;
+}
 .welcome-text{
     float: right;
     margin-top: -250px;
@@ -184,6 +186,35 @@ footer{
     background-color: black;
     color: #fff;
 }
+
+.painting-link{
+    color: grey;
+    text-decoration: underline;
+}
+.painting-link:hover{
+    color: #1b6d85;
+    text-decoration: none;
+}
+/********************************************************************************************************
+ ** Style for the Styles section (in menu)
+ *******************************************************************************************************/
+.max-image-size {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.align-text-middle{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1.4em;
+}
+/********************************************************************************************************
+ ** Style for the Artist section (in menu)
+ *******************************************************************************************************/
+.margin-top-bottom{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 /********************************************************************************************************
  ** Media Queries
  *******************************************************************************************************/
@@ -203,10 +234,16 @@ footer{
     .big-screen-adjustment{
         margin-left: 100px;
     }
+    .big-screen-adjustment-painting{
+        margin-left: 90px;
+    }
 }  /*--> Ecran bureau */
 
 @media screen and (min-width: 1500px){
     .big-screen-adjustment{
         margin-left: 430px;
+    }
+    .big-screen-adjustment-painting{
+        margin-left: 350px;
     }
 }  /*--> Très grand ecran */

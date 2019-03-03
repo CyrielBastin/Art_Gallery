@@ -23,7 +23,7 @@ class ArtistFixtures extends Fixture
                 ->setFirstname($faker->firstName('male'|'female'))
                 ->setCountry($faker->country)
                 ->setDateOfBirth($faker->dateTimeBetween('-1000 years', 'now'))
-                ->setCommentary($faker->text(400));
+                ->setCommentary($faker->text(1200));
 
             $manager->persist($artist);
         }

@@ -21,7 +21,7 @@ class PaintingMediaFixtures extends Fixture
             $painting_media = new PaintingMedia();
 
             $painting_media->setName($media)
-                ->setDescription($faker->text(300));
+                ->setDescription($faker->text(700));
 
             $manager->persist($painting_media);
         }

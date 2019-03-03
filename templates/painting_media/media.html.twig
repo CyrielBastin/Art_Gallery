@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Medias{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% for media in medias %}
+                <div class="col-md-3 margin-top-bottom">
+                    <a href="{{ path('painting_media_view_one', {id:media['id']}) }}">
+                        <div class="card bg-dark text-white max-image-size">
+                            <img src="{{ asset('assets/images/medias/' ~ media['image']) }}" class="card-img" alt="{{ media['image'] }}">
+                            <div class="card-img-overlay">
+                                <p class="card-text align-text-middle">{{ media['name'] }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

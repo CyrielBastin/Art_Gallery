@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artists{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% for artist in artists %}
+                <div class="col-md-3 margin-top-bottom">
+                    <a href="{{ path('artist_view_one', {id:artist['id']}) }}">
+                        <div class="card" style="background-color: lightgrey;">
+                            <img src="{{ asset('assets/images/artists/' ~ artist['image']) }}" class="card-img-top" alt="{{ artist['image'] }}">
+                            <div class="card-body">
+                                <p class="card-text painting-link" style="text-align: center; font-size: 1.3em;">{{ artist['full_name'] }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

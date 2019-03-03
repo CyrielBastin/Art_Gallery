@@ -1,9 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Paintings{% endblock %}
+{% block title %}{{ artist[0]['full_name'] }} : Biography{% endblock %}
 
 {% block body %}
+    <div class="big-screen-adjustment-painting" style="margin-top: 100px; margin-bottom: 100px">
+        <div class="card mb-3" style="margin-left: 15px; margin-right: 15px; max-width: 1100px;">
+            <div class="row no-gutters" style="display: flex; align-items: center;">
+                <div class="col-md-4">
+                    <figure>
+                        <img src="{{ asset('assets/images/artists/' ~ artist[0]['image']) }}" class="card-img" alt="{{ artist[0]['image'] }}" style="max-width: 300px; max-height: 300px; margin-left: 15px">
+                        <figcaption class="text-center text-muted">{{ artist[0]['date_of_birth']|date('d/m/Y') ~ ' - ' ~ artist[0]['date_of_death']|date('d/m/Y') }}</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ artist[0]['full_name'] ~ '   (' ~ artist[0]['country'] ~ ')' }} : </h5>
+                        <p class="card-text">{{ artist[0]['commentary'] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="section">
+        <h1 class="text-center" style="margin-bottom: 20px;">His/Her Paintings :</h1>
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <table class="table table-hover" style="background-color: white">
@@ -12,7 +32,6 @@
                         <th>Image</th>
                         <th>Title</th>
                         <th>Style</th>
-                        <th>Artist</th>
                         <th>Year</th>
                         <th>Price</th>
                     </tr>
@@ -26,7 +45,6 @@
                                 </figure></td>
                             <td class="align-middle"><a class="painting-link" href="{{ path('painting_view_one', {id:painting['id']}) }}">{{ painting['title'] }}</a></td>
                             <td class="align-middle">{{ painting['style'] }}</td>
-                            <td class="align-middle"><a href="{{ path('artist_view_one', {id:painting['artist_id']}) }}" class="painting-link">{{ painting['artist'] }}</a></td>
                             <td class="align-middle">{{ painting['year'] }}</td>
                             <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>
                         </tr>
@@ -34,9 +52,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            {{ knp_pagination_render(paintings) }}
         </div>
     </div>
 {% endblock %}

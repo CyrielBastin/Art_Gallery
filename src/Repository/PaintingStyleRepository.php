@@ -4,12 +4,13 @@ namespace App\Repository;
 
 use App\Entity\PaintingStyle;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\DBAL\DBALException;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Faker;
 
 /**
  * @method PaintingStyle|null find($id, $lockMode = null, $lockVersion = null)
  * @method PaintingStyle|null findOneBy(array $criteria, array $orderBy = null)
- * @method PaintingStyle[]    findAll()
  * @method PaintingStyle[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class PaintingStyleRepository extends ServiceEntityRepository
@@ -19,32 +20,41 @@ class PaintingStyleRepository extends ServiceEntityRepository
         parent::__construct($registry, PaintingStyle::class);
     }
 
-    // /**
-    //  * @return PaintingStyle[] Returns an array of PaintingStyle objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findAll()
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $conn = $this->getEntityManager()->getConnection();
 
-    /*
-    public function findOneBySomeField($value): ?PaintingStyle
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $sql='
+            SELECT *
+            FROM painting_style
+        ';
+
+        try {
+            $request = $conn->prepare($sql);
+        } catch (DBALException $e) {}
+
+        $request->execute();
+
+        return $request->fetchAll();
     }
-    */
+
+    public function findById($id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT *
+            FROM painting_style
+            WHERE id = :id
+        ';
+
+        try {
+            $request = $conn->prepare($sql);
+        } catch (DBALException $e) {}
+
+        $request->execute(['id' => $id]);
+
+        return $request->fetchAll();
+    }
+
 }
