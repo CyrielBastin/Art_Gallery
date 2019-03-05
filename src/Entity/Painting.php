@@ -3,9 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PaintingRepository")
+ * @Vich\Uploadable
  */
 class Painting
 {
@@ -18,11 +22,27 @@ class Painting
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $image;
 
     /**
+     * @Assert\Image(
+     *     mimeTypes={"image/jpg", "image/jpeg", "image/png"}
+     * )
+     * @Vich\UploadableField(mapping="painting_image", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *     min = 4,
+     *     max = 50,
+     *     minMessage = "The title must be of at least {{ limit }} characters",
+     *     maxMessage = "The title must be of {{ limit }} characters at max"
+     * )
      */
     private $title;
 
@@ -39,7 +59,7 @@ class Painting
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $descripition;
+    private $description;
 
     /**
      * @ORM\Column(type="integer")
@@ -66,22 +86,16 @@ class Painting
      */
     private $style;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updated_at;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(string $image): self
-    {
-        $this->image = $image;
-
-        return $this;
-    }
 
     public function getTitle(): ?string
     {
@@ -119,14 +133,14 @@ class Painting
         return $this;
     }
 
-    public function getDescripition(): ?string
+    public function getDescription(): ?string
     {
-        return $this->descripition;
+        return $this->description;
     }
 
-    public function setDescripition(?string $descripition): self
+    public function setDescription(?string $description): self
     {
-        $this->descripition = $descripition;
+        $this->description = $description;
 
         return $this;
     }
@@ -195,4 +209,31 @@ class Painting
 
         return $this;
     }
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        if ($image) {
+            try {
+                $this->updated_at = new \DateTime('now');
+            } catch (\Exception $e) {}
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
 }

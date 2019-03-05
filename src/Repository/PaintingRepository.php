@@ -69,7 +69,7 @@ class PaintingRepository extends ServiceEntityRepository
 
         $sql='
             SELECT p.id, p.image, p.title, pm.name AS media, dimensions, ps.name AS style,
-            CONCAT(a.lastname, \' \', a.firstname) AS artist, year, price
+            CONCAT(a.lastname, \' \', a.firstname) AS artist, year, price, p.artist_id
             FROM painting p
               LEFT JOIN painting_media pm ON p.media_id = pm.id
               LEFT JOIN painting_style ps ON p.style_id = ps.id

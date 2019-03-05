@@ -41,6 +41,15 @@
                     <a href="#">Contact</a>
                     {# Element Forum #}
                     <a href="#">Forum</a>
+                    {# Elemnt Admin #}
+                    <div class="dropdown-custom">
+                        <button class="dropbtn-custom"><a href="#">Admin</a></button>
+                        <div class="dropdown-content-custom">
+                            <a href="{{ path('painting_add') }}">Add painting</a>
+                            <a href="{{ path('painting_media_add') }}">Add media</a>
+                            <a href="{{ path('painting_style_add') }}">Add style</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

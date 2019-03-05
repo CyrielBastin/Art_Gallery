@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Painting;
+use App\Form\PaintingType;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -43,5 +44,60 @@ class PaintingController extends AbstractController
         $paintings = $this->getDoctrine()->getRepository(Painting::class)->findLatest();
 
         return $this->render('painting/painting_latest_added.html.twig', ['paintings' => $paintings]);
+    }
+
+    /******************************************************************************************************************
+     * Access denied unless granted below
+     *****************************************************************************************************************/
+
+    /**
+     * @Route("/add", name="add")
+     */
+    public function addOnePainting(Request $request)
+    {
+        $painting = new Painting();
+        $form = $this->createForm(PaintingType::class, $painting);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($painting);
+            $em->flush();
+
+            return $this->redirectToRoute('homepage');
+        }
+
+        return $this->render('painting/painting_add.html.twig', ['painting' => $painting, 'form' => $form->createView()]);
+    }
+
+    /**
+     * @Route("/edit/{id}", name="edit_one")
+     */
+    public function editOnePainting(Request $request, Painting $painting)
+    {
+        $form = $this->createForm(PaintingType::class, $painting);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($painting);
+            $em->flush();
+
+            return $this->redirectToRoute('homepage');
+        }
+        return $this->render('painting/painting_edit.html.twig', ['painting' => $painting, 'form' => $form->createView()]);
+    }
+
+    /**
+     * @Route("/delete/{id}", name="delete_one")
+     */
+    public function deleteOnePainting($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository(Painting::class);
+        $painting = $repository->find($id);
+        $em->remove($painting);
+        $em->flush();
+
+        return $this->redirectToRoute('homepage');
     }
 }

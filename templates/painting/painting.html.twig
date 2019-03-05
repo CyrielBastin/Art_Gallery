@@ -15,6 +15,8 @@
                         <th>Artist</th>
                         <th>Year</th>
                         <th>Price</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -22,13 +24,15 @@
                         <tr class="text-center">
                             <td><figure style="text-align: center">
                                     <a href="{{ path('painting_view_one', {id:painting['id']}) }}"><img src="{{ asset('assets/images/paintings/') ~ painting['image'] }}" alt="{{ painting['image'] }}" style="width: 200px; height: 150px"></a>
-                                    <figcaption style="font-size: 0.8em">{{ painting['media'] ~ ' ( d: ' ~ painting['dimensions'] ~ ' )' }}</figcaption>
+                                    <figcaption style="font-size: 0.8em">{{ painting['media'] ~ ' ( ' ~ painting['dimensions'] ~ ' cm )' }}</figcaption>
                                 </figure></td>
                             <td class="align-middle"><a class="painting-link" href="{{ path('painting_view_one', {id:painting['id']}) }}">{{ painting['title'] }}</a></td>
                             <td class="align-middle">{{ painting['style'] }}</td>
                             <td class="align-middle"><a href="{{ path('artist_view_one', {id:painting['artist_id']}) }}" class="painting-link">{{ painting['artist'] }}</a></td>
                             <td class="align-middle">{{ painting['year'] }}</td>
                             <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>
+                            <td class="align-middle"><a href="{{ path('painting_edit_one', {id:painting['id']}) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
+                            <td class="align-middle"><a href="{{ path('painting_delete_one', {id:painting['id']}) }}"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></td>
                         </tr>
                     {% endfor %}
                     </tbody>

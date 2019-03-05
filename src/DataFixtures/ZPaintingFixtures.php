@@ -13,7 +13,7 @@ class ZPaintingFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
-        $dimensions = ['300 x 400', '500 x 500', '800 x 600', '1200 x 900', '700 x 500', '400 x 700', '1500 x 1800', '900 x 1400'];
+        $dimensions = ['30 x 40', '50 x 50', '80 x 60', '120 x 90', '70 x 50', '40 x 70', '150 x 180', '90 x 140'];
 
         $faker = Faker\Factory::create();
 

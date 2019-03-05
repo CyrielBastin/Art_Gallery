@@ -55,4 +55,16 @@ class PaintingDiscount
 
         return $this;
     }
+
+    public function getPainting(): ?Painting
+    {
+        return $this->painting;
+    }
+
+    public function setPainting(Painting $painting): self
+    {
+        $this->painting = $painting;
+
+        return $this;
+    }
 }

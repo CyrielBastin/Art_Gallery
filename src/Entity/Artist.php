@@ -182,4 +182,9 @@ class Artist
 
         return $this;
     }
+
+    public function getArtist()
+    {
+        return $this->getLastname().' '.$this->getFirstname();
+    }
 }
