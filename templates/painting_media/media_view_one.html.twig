@@ -1,24 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ media[0]['name'] }} : Description{% endblock %}
+{% block title %}{{ media['name'] }} : Description{% endblock %}
 
 {% block body %}
     <div class="big-screen-adjustment-painting" style="margin-top: 100px; margin-bottom: 100px">
         <div class="card mb-3" style="margin-left: 15px; margin-right: 15px; max-width: 1100px">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/images/medias/' ~ media[0]['image']) }}" class="card-img" alt="{{ media[0]['image'] }}" style="max-width: 300px; max-height: 300px">
+                    <img src="{{ asset('assets/images/medias/' ~ media['image']) }}" class="card-img" alt="{{ media['image'] }}" style="width: 300px; height: 300px">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{ media[0]['name'] }} : </h5>
-                        <p class="card-text">{{ media[0]['description'] }}</p>
+                        <h5 class="card-title">{{ media['name'] }} : </h5>
+                        <p class="card-text">{{ media['description'] }}</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
-            <a href="{{ path('painting_media_edit_one', {id:media[0]['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Edit</span></a>
+        <div class="d-flex justify-content-around">
+            <a href="{{ path('painting_media_edit_one', {id:media['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Edit</span></a>
+            <a href="{{ path('painting_media_delete_one', {id:media['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Delete</span></a>
         </div>
     </div>
 {% endblock %}

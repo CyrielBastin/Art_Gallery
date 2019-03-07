@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190304232605 extends AbstractMigration
+final class Version20190305181433 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,8 +22,7 @@ final class Version20190304232605 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE painting_media ADD updated_at DATETIME DEFAULT NULL');
-        $this->addSql('ALTER TABLE painting_style ADD updated_at DATETIME DEFAULT NULL');
+        $this->addSql('ALTER TABLE artist ADD updated_at DATETIME DEFAULT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -31,7 +30,6 @@ final class Version20190304232605 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE painting_media DROP updated_at');
-        $this->addSql('ALTER TABLE painting_style DROP updated_at');
+        $this->addSql('ALTER TABLE artist DROP updated_at');
     }
 }

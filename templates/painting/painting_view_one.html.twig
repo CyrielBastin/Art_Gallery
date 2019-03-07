@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ painting[0]['title'] }}{% endblock %}
+{% block title %}{{ painting['title'] }}{% endblock %}
 
 {% block body %}
     <div class="big-screen-adjustment-painting" style="margin-top: 100px; margin-bottom: 100px">
         <div class="card mb-3" style="margin-left: 15px; margin-right: 15px; max-width: 1100px">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/images/paintings/' ~ painting[0]['image']) }}" class="card-img" alt="{{ painting[0]['image'] }}" style="max-width: 300px; max-height: 300px">
+                    <img src="{{ asset('assets/images/paintings/' ~ painting['image']) }}" class="card-img" alt="{{ painting['image'] }}" style="width: 300px; height: 300px">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{ painting[0]['title'] ~ ' by ' }} <a class="painting-link" href="{{ path('artist_view_one', {id:painting[0]['artist_id'] }) }}">{{ painting[0]['artist'] }}</a></h5>
-                        <p class="card-text">{{ painting[0]['description'] }} <br/><br/>
-                        {{ painting[0]['style'] }}
-                            <small class="text-muted" style="margin-left: 30px">{{ painting[0]['media'] ~ ' ( d: ' ~ painting[0]['dimensions'] ~ ' )' }}</small>
+                        <h5 class="card-title">{{ painting['title'] ~ ' by ' }} <a class="painting-link" href="{{ path('artist_view_one', {id:painting['artist_id'] }) }}">{{ painting['artist'] }}</a></h5>
+                        <p class="card-text">{{ painting['description'] }} <br/><br/>
+                        {{ painting['style'] }}
+                            <small class="text-muted" style="margin-left: 30px">{{ painting['media'] ~ ' ( ' ~ painting['dimensions'] ~ ' cm )' }}</small>
                         </p>
-                        <p class="card-text" style="margin-top: 20px; color: green">{{ painting[0]['price'] ~ ' €'}}</p>
+                        <p class="card-text" style="margin-top: 20px; color: green">{{ painting['price'] ~ ' €'}}</p>
                     </div>
                 </div>
             </div>

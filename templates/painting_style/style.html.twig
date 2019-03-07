@@ -9,7 +9,7 @@
                     <div class="col-md-3 margin-top-bottom">
                         <a href="{{ path('painting_style_view_one', {id:style['id']}) }}">
                             <div class="card bg-dark text-white max-image-size">
-                                <img src="{{ asset('assets/images/styles/' ~ style['image']) }}" class="card-img" alt="{{ style['image'] }}">
+                                <img src="{{ asset('assets/images/styles/' ~ style['image']) }}" class="card-img" alt="{{ style['image'] }}" style="width: 198px; height: 198px;">
                                 <div class="card-img-overlay">
                                     <p class="card-text align-text-middle">{{ style['name'] }}</p>
                                 </div>

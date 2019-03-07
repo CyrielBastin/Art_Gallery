@@ -61,7 +61,7 @@ class PaintingRepository extends ServiceEntityRepository
 
         $request->execute(['id' => $id]);
 
-        return $request->fetchAll();
+        return $request->fetch();
     }
 
     public function findLatest(){

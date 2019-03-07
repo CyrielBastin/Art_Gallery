@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190302154240 extends AbstractMigration
+final class Version20190307153450 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,8 +22,8 @@ final class Version20190302154240 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE painting_media ADD image VARCHAR(255) DEFAULT NULL');
-        $this->addSql('ALTER TABLE painting_style ADD image VARCHAR(255) DEFAULT NULL');
+        $this->addSql('ALTER TABLE painting_media CHANGE name name VARCHAR(25) NOT NULL');
+        $this->addSql('ALTER TABLE painting_style CHANGE name name VARCHAR(25) NOT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -31,7 +31,7 @@ final class Version20190302154240 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE painting_media DROP image');
-        $this->addSql('ALTER TABLE painting_style DROP image');
+        $this->addSql('ALTER TABLE painting_media CHANGE name name VARCHAR(50) NOT NULL COLLATE utf8mb4_unicode_ci');
+        $this->addSql('ALTER TABLE painting_style CHANGE name name VARCHAR(100) NOT NULL COLLATE utf8mb4_unicode_ci');
     }
 }

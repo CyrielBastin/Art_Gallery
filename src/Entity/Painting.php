@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PaintingRepository")
+ * @ORM\EntityListeners({"App\EventListener\PaintingListener"})
  * @Vich\Uploadable
  */
 class Painting
@@ -47,22 +48,38 @@ class Painting
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=20, nullable=true)
+     * @Assert\Regex("#[0-9]{2,3}\sX\s[0-9]{2,3}#i")
      */
     private $dimensions;
 
     /**
      * @ORM\Column(type="string", length=5, nullable=true)
+     * @Assert\Range(
+     *     min = -1000,
+     *     max = 2019,
+     *     maxMessage = "The artwork can't be painted in the future"
+     * )
      */
     private $year;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Length(
+     *     min = 10,
+     *     max = 2000,
+     *     minMessage = "It would be nice to write a little comment about the artwork ({{ limit }} minimum letters please)",
+     *     maxMessage = "This place is for a little description, no need to write a novel !"
+     * )
      */
     private $description;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\GreaterThanOrEqual(
+     *     value = 0,
+     *     message = "You can't put a price of less than {{ compared_value }} euros"
+     * )
      */
     private $price;
 

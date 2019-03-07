@@ -24,7 +24,7 @@ class PaintingType extends AbstractType
         $builder
             ->add('title', TextType::class, ['label' => 'Title'])
             ->add('imageFile', FileType::class, ['label' => 'image', 'required' => false])
-            ->add('dimensions', TextType::class, ['label' => 'Dimensions ( cm )'])
+            ->add('dimensions', TextType::class, ['label' => 'Dimensions ( cm )', 'help' => 'example: 50 x 50'])
             ->add('year', TextType::class, ['label' => 'Year'])
             ->add('description', TextareaType::class, ['label' => 'Description', 'attr' => ['style' => 'height: 180px;']])
             ->add('price', IntegerType::class, ['label' => 'Price'])

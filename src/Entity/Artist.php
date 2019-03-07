@@ -4,10 +4,14 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArtistRepository")
+ * @Vich\Uploadable()
  */
 class Artist
 {
@@ -19,17 +23,38 @@ class Artist
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $image;
 
     /**
+     * @Assert\Image(
+     *     mimeTypes={"image/jpg", "image/jpeg", "image/png"}
+     * )
+     * @Vich\UploadableField(mapping="artist_image", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\Length(
+     *     min = 4,
+     *     max = 100,
+     *     minMessage = "The author's lastname must contain at least {{ limit }} letters",
+     *     maxMessage = "No more than {{ limit }} letters for the lastname"
+     * )
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
+     * @Assert\Length(
+     *     min = 4,
+     *     max = 100,
+     *     minMessage = "The author's lastname must contain at least {{ limit }} letters",
+     *     maxMessage = "No more than {{ limit }} letters for the lastname"
+     * )
      */
     private $firstname;
 
@@ -40,6 +65,12 @@ class Artist
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Length(
+     *     min = 10,
+     *     max = 2000,
+     *     minMessage = "It would be nice to write a little comment about the author ({{ limit }} minimum letters please)",
+     *     maxMessage = "This place is for a description, no need to write a novel ! ( {{ limit }} letters max )"
+     * )
      */
     private $commentary;
 
@@ -50,6 +81,9 @@ class Artist
 
     /**
      * @ORM\Column(type="date", nullable=true)
+     * @Assert\Range(
+     *     max = "now"
+     * )
      */
     private $date_of_death;
 
@@ -57,6 +91,11 @@ class Artist
      * @ORM\OneToMany(targetEntity="App\Entity\Painting", mappedBy="artist")
      */
     private $paintings;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updated_at;
 
     public function __construct()
     {
@@ -66,18 +105,6 @@ class Artist
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(?string $image): self
-    {
-        $this->image = $image;
-
-        return $this;
     }
 
     public function getLastname(): ?string
@@ -186,5 +213,31 @@ class Artist
     public function getArtist()
     {
         return $this->getLastname().' '.$this->getFirstname();
+    }
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        if ($image) {
+            try {
+                $this->updated_at = new \DateTime('now');
+            } catch (\Exception $e) {}
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
 }

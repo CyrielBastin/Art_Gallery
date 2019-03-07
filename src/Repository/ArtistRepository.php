@@ -55,6 +55,6 @@ class ArtistRepository extends ServiceEntityRepository
 
         $request->execute(['id' => $id]);
 
-        return $request->fetchAll();
+        return $request->fetch();
     }
 }

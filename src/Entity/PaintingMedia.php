@@ -23,12 +23,24 @@ class PaintingMedia
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=25)
+     * @Assert\Length(
+     *     min = 4,
+     *     max = 25,
+     *     minMessage = "The name of the media must contain at leat {{ limit }} caracters",
+     *     maxMessage = "{{ limit }} caracters maximum"
+     * )
      */
     private $name;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(
+     *   min = 10,
+     *   max = 2000,
+     *   minMessage = "It would be nice to write a little description about the media ({{ limit }} letters please)",
+     *   maxMessage = "This place is for a description, no need to write a novel !"
+     * )
      */
     private $description;
 
@@ -38,7 +50,7 @@ class PaintingMedia
     private $paintings;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $image;
 

@@ -24,14 +24,14 @@ class HomePageController extends AbstractController
     }
 
     /**
-     * @Route("/privacy-policy", name="privacy_policy")
+     * @Route("/privacy-policy.html", name="privacy_policy")
      */
     public function privacyPolicy(){
         return $this->render('home_page/privacy_policy.html.twig');
     }
 
     /**
-     * @Route("/cookie-policy", name="cookie_policy")
+     * @Route("/cookie-policy.html", name="cookie_policy")
      */
     public function cookiePolicy(){
         return $this->render('home_page/cookie_policy.html.twig');
