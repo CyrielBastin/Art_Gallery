@@ -27,7 +27,8 @@ class PaintingType extends AbstractType
             ->add('dimensions', TextType::class, ['label' => 'Dimensions ( cm )', 'help' => 'example: 50 x 50'])
             ->add('year', TextType::class, ['label' => 'Year'])
             ->add('description', TextareaType::class, ['label' => 'Description', 'attr' => ['style' => 'height: 180px;']])
-            ->add('price', IntegerType::class, ['label' => 'Price'])
+            ->add('price', IntegerType::class, ['label' => 'Price ( € )'])
+            ->add('discount', IntegerType::class, ['label' => 'Discount ( % )', 'help' => 'set 0 if you don\'t want to discount the artwork'])
             ->add('artist', EntityType::class, ['class' => Artist::class,
                                                             'query_builder' => function (EntityRepository $er){return $er->createQueryBuilder('a')->orderBy('a.lastname', 'ASC');},
                                                             'choice_label' => 'Artist', 'placeholder' => '-- Choose an artist'])

@@ -22,4 +22,45 @@
             <a href="{{ path('painting_media_delete_one', {id:media['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Delete</span></a>
         </div>
     </div>
+
+    <div class="section">
+        <h1 class="text-center" style="margin-bottom: 20px;">Artworks using {{ media['name'] }} as media :</h1>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <table class="table table-hover" style="background-color: white">
+                    <thead>
+                    <tr class="text-center">
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Style</th>
+                        <th>Artist</th>
+                        <th>Year</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for painting in paintings %}
+                        <tr class="text-center">
+                            <td><figure style="text-align: center">
+                                    <a href="{{ path('painting_view_one', {id:painting['id']}) }}"><img src="{{ asset('assets/images/paintings/') ~ painting['image'] }}" alt="{{ painting['image'] }}" style="width: 200px; height: 150px"></a>
+                                    <figcaption style="font-size: 0.8em">{{ painting['media'] ~ ' ( ' ~ painting['dimensions'] ~ ' cm )' }}</figcaption>
+                                </figure></td>
+                            <td class="align-middle"><a class="painting-link" href="{{ path('painting_view_one', {id:painting['id']}) }}">{{ painting['title'] }}</a></td>
+                            <td class="align-middle">{{ painting['style'] }}</td>
+                            <td class="align-middle"><a class="painting-link" href="{{ path('artist_view_one', {id:painting['artist_id']}) }}">{{ painting['artist'] }}</a></td>
+                            <td class="align-middle">{{ painting['year'] }}</td>
+                            {% if painting['discount']==0 %}
+                                <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>
+                            {% else %}
+                                <td class="align-middle" style="min-width: 100px;"><span style="text-decoration: line-through">{{ painting['price'] ~ ' €'}}</span><br/>
+                                    <span style="color: red;">{{ painting['price_reduced']|number_format(1, ',', ' ') ~ ' €'}}</span>
+                                </td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -46,6 +46,16 @@ class PaintingController extends AbstractController
         return $this->render('painting/painting_latest_added.html.twig', ['paintings' => $paintings]);
     }
 
+    /**
+     * @Route("/discount", name="discount")
+     */
+    public function viewDiscount()
+    {
+        $discounts = $this->getDoctrine()->getRepository(Painting::class)->findDiscount();
+
+        return $this->render('painting/painting_discount.html.twig', ['discounts' => $discounts]);
+    }
+
     /******************************************************************************************************************
      * Access denied unless granted below
      *****************************************************************************************************************/
@@ -64,6 +74,7 @@ class PaintingController extends AbstractController
             $em->persist($painting);
             $em->flush();
 
+            $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been correctly added');
             return $this->redirectToRoute('homepage');
         }
 
@@ -82,6 +93,7 @@ class PaintingController extends AbstractController
             $em->persist($painting);
             $em->flush();
 
+            $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been correctly modified');
             return $this->redirectToRoute('homepage');
         }
         return $this->render('painting/painting_edit.html.twig', ['painting' => $painting, 'form' => $form->createView()]);
@@ -98,6 +110,7 @@ class PaintingController extends AbstractController
         $em->remove($painting);
         $em->flush();
 
+        $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been properly deleted');
         return $this->redirectToRoute('homepage');
     }
 }

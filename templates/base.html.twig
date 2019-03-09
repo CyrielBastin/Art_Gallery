@@ -16,8 +16,25 @@
         </header>
     {% endblock %}
 
-        {% block body %}
-        {% endblock %}
+    {# Flash Messages #}
+    {% block message %}
+        <div style="margin: 10px 15px">
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }} alert-dismissible" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endblock %}
+    {# End Flash Messages #}
+
+    {% block body %}
+    {% endblock %}
 
     {% block footer %}
         <footer>

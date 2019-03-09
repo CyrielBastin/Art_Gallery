@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Painting;
 use App\Entity\PaintingStyle;
 use App\Form\PaintingStyleType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,8 +30,9 @@ class PaintingStyleController extends AbstractController
     public function viewOneStyle($id)
     {
         $style = $this->getDoctrine()->getRepository(PaintingStyle::class)->findById($id);
+        $paintings = $this->getDoctrine()->getRepository(Painting::class)->findByStyle($id);
 
-        return $this->render('painting_style/style_view_one.html.twig', ['style' => $style]);
+        return $this->render('painting_style/style_view_one.html.twig', ['style' => $style, 'paintings' => $paintings]);
     }
 
     /******************************************************************************************************************
@@ -51,6 +53,7 @@ class PaintingStyleController extends AbstractController
             $em->persist($style);
             $em->flush();
 
+            $this->addFlash('success', 'Style ' . $style->getName() . ' successfully added');
             return $this->redirectToRoute('homepage');
         }
 
@@ -69,6 +72,7 @@ class PaintingStyleController extends AbstractController
             $em->persist($style);
             $em->flush();
 
+            $this->addFlash('success', 'Style ' . $style->getName() . ' successfully modified');
             return $this->redirectToRoute('homepage');
         }
         return $this->render('painting_style/style_edit.html.twig', ['style' => $style, 'form' => $form->createView()]);
@@ -85,6 +89,7 @@ class PaintingStyleController extends AbstractController
         $em->remove($style);
         $em->flush();
 
+        $this->addFlash('success', 'Style ' . $style->getName() . ' successfully removed');
         return $this->redirectToRoute('homepage');
     }
 }

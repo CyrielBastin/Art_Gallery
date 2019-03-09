@@ -84,7 +84,13 @@ class Painting
     private $price;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\PaintingDiscount", mappedBy="painting", cascade={"persist", "remove"})
+     * @ORM\Column(type="smallint")
+     * @Assert\Range(
+     *     min = 0,
+     *     max = 100,
+     *     minMessage = "{{ limit }} % minimum for the discount",
+     *     maxMessage = "You can't discount more than {{ limit }} %"
+     * )
      */
     private $discount;
 
@@ -174,23 +180,6 @@ class Painting
         return $this;
     }
 
-    public function getDiscount(): ?PaintingDiscount
-    {
-        return $this->discount;
-    }
-
-    public function setDiscount(PaintingDiscount $discount): self
-    {
-        $this->discount = $discount;
-
-        // set the owning side of the relation if necessary
-        if ($this !== $discount->getPaintingId()) {
-            $discount->setPaintingId($this);
-        }
-
-        return $this;
-    }
-
     public function getArtist(): ?Artist
     {
         return $this->artist;
@@ -251,6 +240,18 @@ class Painting
     public function getImage()
     {
         return $this->image;
+    }
+
+    public function getDiscount(): ?int
+    {
+        return $this->discount;
+    }
+
+    public function setDiscount(?int $discount): self
+    {
+        $this->discount = $discount;
+
+        return $this;
     }
 
 }

@@ -17,8 +17,7 @@ class PaintingListener
 
         $painting_delete = new PaintingDelete();
 
-        $painting_delete->setId($painting->getId())
-                        ->setArtistId($painting->getArtist()->getId())
+        $painting_delete->setArtistId($painting->getArtist()->getId())
                         ->setMediaId($painting->getMedia()->getId())
                         ->setStyleId($painting->getStyle()->getId())
                         ->setTitle($painting->getTitle())
@@ -37,5 +36,4 @@ class PaintingListener
         } catch (OptimisticLockException $e) {}
           catch (ORMException $e) {}
     }
-
 }

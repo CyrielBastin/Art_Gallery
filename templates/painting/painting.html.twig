@@ -30,7 +30,13 @@
                             <td class="align-middle">{{ painting['style'] }}</td>
                             <td class="align-middle"><a href="{{ path('artist_view_one', {id:painting['artist_id']}) }}" class="painting-link">{{ painting['artist'] }}</a></td>
                             <td class="align-middle">{{ painting['year'] }}</td>
-                            <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>
+                            {% if painting['discount']==0 %}
+                                <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>
+                                {% else %}
+                                    <td class="align-middle" style="min-width: 100px;"><span style="text-decoration: line-through">{{ painting['price'] ~ ' €'}}</span><br/>
+                                        <span style="color: red;">{{ painting['price_reduced']|number_format(1, ',', ' ') ~ ' €'}}</span>
+                                    </td>
+                            {% endif %}
                             <td class="align-middle"><a href="{{ path('painting_edit_one', {id:painting['id']}) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
                             <td class="align-middle"><a href="{{ path('painting_delete_one', {id:painting['id']}) }}"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></td>
                         </tr>

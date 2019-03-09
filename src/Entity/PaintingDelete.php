@@ -11,6 +11,7 @@ class PaintingDelete
 {
     /**
      * @ORM\Id()
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -58,16 +59,6 @@ class PaintingDelete
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     * @return PaintingDelete
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-        return $this;
     }
 
     public function getArtistId(): ?int

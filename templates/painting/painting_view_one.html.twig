@@ -16,10 +16,22 @@
                         {{ painting['style'] }}
                             <small class="text-muted" style="margin-left: 30px">{{ painting['media'] ~ ' ( ' ~ painting['dimensions'] ~ ' cm )' }}</small>
                         </p>
-                        <p class="card-text" style="margin-top: 20px; color: green">{{ painting['price'] ~ ' €'}}</p>
+                        {% if painting['discount']==0 %}
+                            <p class="card-text" style="margin-top: 20px; color: green">{{ painting['price'] ~ ' €'}}</p>
+                        {% else %}
+                            <div class="d-flex justify-content-start">
+                                <p class="card-text" style="margin-top: 20px; color: green; text-decoration: line-through;">{{ painting['price'] ~ ' €'}}</p>
+                                <p class="card-text" style="margin: 20px 15px;"> --> </p>
+                                <p class="card-text" style="margin-top: 20px; color: red;">{{ painting['price_reduced']|number_format(1, ',', ' ') ~ ' €'}}</p>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="d-flex justify-content-around">
+            <a href="{{ path('painting_edit_one', {id:painting['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Edit</span></a>
+            <a href="{{ path('painting_delete_one', {id:painting['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Delete</span></a>
         </div>
     </div>
 {% endblock %}

@@ -53,6 +53,7 @@ class ArtistController extends AbstractController
             $em->persist($artist);
             $em->flush();
 
+            $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully added');
             return $this->redirectToRoute('homepage');
         }
 
@@ -71,6 +72,7 @@ class ArtistController extends AbstractController
             $em->persist($artist);
             $em->flush();
 
+            $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully modified');
             return $this->redirectToRoute('homepage');
         }
         return $this->render('artist/artist_edit.html.twig', ['artist' => $artist, 'form' => $form->createView()]);
@@ -87,6 +89,7 @@ class ArtistController extends AbstractController
         $em->remove($artist);
         $em->flush();
 
+        $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully removed');
         return $this->redirectToRoute('homepage');
     }
 }
