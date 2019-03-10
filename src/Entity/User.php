@@ -5,9 +5,11 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity("email", message="A user with this email is already registered")
  */
 class User implements UserInterface
 {
@@ -20,20 +22,27 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
-     * @Assert\Email()
+     * @Assert\Email(
+     *     message= "The address {{ value }} is not a valid email address !"
+     * )
      */
     private $email;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\ManyToOne(targetEntity="App\Entity\UserRoles", inversedBy="users")
      */
-    private $roles = [];
+    private $roles;
 
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\UserProfile", mappedBy="user_id", cascade={"persist", "remove"})
+     */
+    private $userProfile;
 
     public function getId(): ?int
     {
@@ -63,21 +72,25 @@ class User implements UserInterface
     }
 
     /**
-     * @see UserInterface
+     * @return mixed
      */
-    public function getRoles(): array
+    public function getRoles()
     {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
+        return ($this->roles == 1)? ['ROLE_ROOT']:
+               ($this->roles == 2)? ['ROLE_SUPER_ADMIN']:
+               ($this->roles == 3)? ['ROLE_SONATA_ADMIN']:
+               ($this->roles == 4)? ['ROLE_ADMIN']:
+               ($this->roles == 5)? ['ROLE_MODERATOR']: ['ROLE_USER']
+            ;
     }
 
-    public function setRoles(array $roles): self
+    /**
+     * @param mixed $roles
+     * @return User
+     */
+    public function setRoles($roles)
     {
         $this->roles = $roles;
-
         return $this;
     }
 
@@ -111,5 +124,22 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getUserProfile(): ?UserProfile
+    {
+        return $this->userProfile;
+    }
+
+    public function setUserProfile(UserProfile $userProfile): self
+    {
+        $this->userProfile = $userProfile;
+
+        // set the owning side of the relation if necessary
+        if ($this !== $userProfile->getUserId()) {
+            $userProfile->setUserId($this);
+        }
+
+        return $this;
     }
 }

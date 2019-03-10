@@ -78,7 +78,7 @@ class PaintingRepository extends ServiceEntityRepository
               LEFT JOIN painting_style ps ON p.style_id = ps.id
               LEFT JOIN artist a ON p.artist_id = a.id
               ORDER BY p.id DESC
-              LIMIT 5
+              LIMIT 7
         ';
 
         try {

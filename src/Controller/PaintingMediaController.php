@@ -53,10 +53,10 @@ class PaintingMediaController extends AbstractController
             $em->persist($media);
             $em->flush();
 
+            $this->addFlash('success', 'Media ' . $media->getName() . ' successfully added');
             return $this->redirectToRoute('homepage');
         }
 
-        $this->addFlash('success', 'Media ' . $media->getName() . ' successfully added');
         return $this->render('painting_media/media_add.html.twig', ['media' => $media, 'form' => $form->createView()]);
     }
 
@@ -75,6 +75,7 @@ class PaintingMediaController extends AbstractController
             $this->addFlash('success', 'Media ' . $media->getName() . ' successfully modified');
             return $this->redirectToRoute('homepage');
         }
+
         return $this->render('painting_media/media_edit.html.twig', ['media' => $media, 'form' => $form->createView()]);
     }
 

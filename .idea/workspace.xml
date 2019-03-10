@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00c0767f-31f5-4ca9-824c-68765abf7f60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e5255179-e45a-4ce2-8b2c-6c373291478a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e5255179-e45a-4ce2-8b2c-6c373291478a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PaintingMediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PaintingMediaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Artist.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Artist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Painting.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Painting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/PaintingMedia.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PaintingMedia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/PaintingStyle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PaintingStyle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PaintingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PaintingRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,41 +33,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="art_gallery@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="art_gallery@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="art_gallery@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="art_gallery: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="art_gallery@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="art_gallery: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="painting: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="220">
+              <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
               <folding>
                 <element signature="e#30#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/PaintingMediaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="763">
+              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+              <folding>
+                <element signature="e#34#58#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,9 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/packages/vich_uploader.yaml" />
-        <option value="$PROJECT_DIR$/src/Repository/PaintingMediaRepository.php" />
-        <option value="$PROJECT_DIR$/src/Repository/PaintingStyleRepository.php" />
         <option value="$PROJECT_DIR$/templates/painting_media/media.html.twig" />
         <option value="$PROJECT_DIR$/templates/painting_style/style.html.twig" />
         <option value="$PROJECT_DIR$/public/assets/css/bootstrap.css" />
@@ -119,7 +112,6 @@
         <option value="$PROJECT_DIR$/templates/painting/painting_edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/painting/painting_latest_added.html.twig" />
         <option value="$PROJECT_DIR$/templates/artist/artist_view_one.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/PaintingMediaController.php" />
         <option value="$PROJECT_DIR$/src/Controller/PaintingStyleController.php" />
         <option value="$PROJECT_DIR$/templates/painting_media/media_view_one.html.twig" />
         <option value="$PROJECT_DIR$/templates/painting_style/style_view_one.html.twig" />
@@ -128,11 +120,15 @@
         <option value="$PROJECT_DIR$/src/Controller/PaintingController.php" />
         <option value="$PROJECT_DIR$/templates/includes/header.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/liip_imagine.yaml" />
-        <option value="$PROJECT_DIR$/src/Repository/PaintingRepository.php" />
         <option value="$PROJECT_DIR$/templates/painting/painting_discount.html.twig" />
         <option value="$PROJECT_DIR$/templates/painting/painting_view_one.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/framework.yaml" />
+        <option value="$PROJECT_DIR$/src/Entity/UserRoles.php" />
+        <option value="$PROJECT_DIR$/config/packages/vich_uploader.yaml" />
         <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Repository/PaintingRepository.php" />
+        <option value="$PROJECT_DIR$/src/Entity/UserProfile.php" />
+        <option value="$PROJECT_DIR$/src/Controller/PaintingMediaController.php" />
       </list>
     </option>
   </component>
@@ -266,10 +262,11 @@
       <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="984" />
-    <option name="width" value="943" />
-    <option name="height" value="1087" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="337" />
+    <option name="y" value="83" />
+    <option name="width" value="1297" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -277,6 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,13 +291,12 @@
               <item name="Art_Gallery" type="b2602c69:ProjectViewProjectNode" />
               <item name="Art_Gallery" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,18 +377,20 @@
       <workItem from="1551990343591" duration="145000" />
       <workItem from="1551990930029" duration="1508000" />
       <workItem from="1552122412128" duration="9832000" />
-      <workItem from="1552219591748" duration="479000" />
+      <workItem from="1552219591748" duration="1331000" />
+      <workItem from="1552223716016" duration="4414000" />
+      <workItem from="1552232179319" duration="2183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141580000" />
+    <option name="totallyTimeSpent" value="149029000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="984" y="0" width="943" height="1087" extended-state="0" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.45413363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2232635" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -404,7 +403,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32967034" />
-      <window_info anchor="bottom" x="63" y="31" width="927" height="1048" id="Terminal" order="10" weight="0.3296371" />
+      <window_info anchor="bottom" x="63" y="31" width="927" height="1048" id="Terminal" order="10" weight="0.32867134" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -439,66 +438,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes/liip_imagine.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/ArtistRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="7839" column="4" selection-start-line="7839" selection-start-column="4" selection-end-line="7839" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/HomePageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190307123534.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ArtistType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="105" selection-start-line="25" selection-start-column="105" selection-end-line="25" selection-end-column="105" />
-          <folding>
-            <element signature="e#28#50#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/artist/artist_add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/artist/artist_edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -545,26 +484,6 @@
           <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/PaintingMedia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Artist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -627,16 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Painting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://e5255179-e45a-4ce2-8b2c-6c373291478a/schema/art_gallery/table/painting">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -679,16 +588,6 @@
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#34#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PaintingMediaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="34" column="117" selection-start-line="34" selection-start-column="117" selection-end-line="34" selection-end-column="117" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,16 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/PaintingRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="185" selection-start-line="185" selection-end-line="185" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/sonata_admin.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -864,12 +753,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="640">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/PaintingMedia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="91" column="7" lean-forward="true" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190310142156.php" />
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190310142443.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/UserRoles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1760">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/UserDeleted.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/vich_uploader.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Painting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="228" selection-start-line="228" selection-end-line="228" />
           <folding>
             <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/PaintingRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/UserProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1840">
+          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+          <folding>
+            <element signature="e#30#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PaintingMediaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
