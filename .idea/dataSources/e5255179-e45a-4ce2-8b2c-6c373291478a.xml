@@ -1443,46 +1443,52 @@
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="334" parent="247" name="UNIQ_D95AB405A76ED395">
+    <column id="334" parent="247" name="updated_at">
+      <Position>12</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="335" parent="247" name="UNIQ_D95AB405A76ED395">
       <ColNames>user_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="335" parent="247" name="PRIMARY">
+    <key id="336" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="336" parent="247" name="UNIQ_D95AB405A76ED395">
+    <key id="337" parent="247" name="UNIQ_D95AB405A76ED395">
       <ColNames>user_id</ColNames>
       <UnderlyingIndexName>UNIQ_D95AB405A76ED395</UnderlyingIndexName>
     </key>
-    <foreign-key id="337" parent="247" name="FK_D95AB405A76ED395">
+    <foreign-key id="338" parent="247" name="FK_D95AB405A76ED395">
       <ColNames>user_id</ColNames>
       <RefSchemaName>art_gallery</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="338" parent="248" name="id">
+    <column id="339" parent="248" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="339" parent="248" name="name">
+    <column id="340" parent="248" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="248" name="description">
+    <column id="341" parent="248" name="description">
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="341" parent="248" name="PRIMARY">
+    <key id="342" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

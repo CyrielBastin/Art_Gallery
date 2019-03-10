@@ -30,4 +30,14 @@ services:
     painting_listener_remove:
         class: App\EventListener\PaintingListener
         tags:
-            - { name: doctrine.orm.entity_listener, event: preRemove, entity: App\Entity\Painting, entity_manager: custom}
+            - { name: doctrine.orm.entity_listener, event: preRemove, entity: App\Entity\Painting, entity_manager: custom }
+
+    user_listener_persist:
+        class: App\EventListener\UserListener
+        tags:
+            - { name: doctrine.orm.entity_listener, event: postPersist, entity: App\Entity\User, entity_manager: custom }
+
+    user_listener_remove:
+        class: App\EventListener\UserListener
+        tags:
+            - { name: doctrine.orm.entity_listener, event: postRemove, entity: App\Entity\User, entity_manager: custom }

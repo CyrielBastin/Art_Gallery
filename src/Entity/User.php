@@ -10,6 +10,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity("email", message="A user with this email is already registered")
+ * @ORM\EntityListeners({"App\EventListener\UserListener"})
  */
 class User implements UserInterface
 {
@@ -40,7 +41,7 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\UserProfile", mappedBy="user_id", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="App\Entity\UserProfile", mappedBy="user", cascade={"persist", "remove"})
      */
     private $userProfile;
 
@@ -76,11 +77,11 @@ class User implements UserInterface
      */
     public function getRoles()
     {
-        return ($this->roles == 1)? ['ROLE_ROOT']:
-               ($this->roles == 2)? ['ROLE_SUPER_ADMIN']:
-               ($this->roles == 3)? ['ROLE_SONATA_ADMIN']:
-               ($this->roles == 4)? ['ROLE_ADMIN']:
-               ($this->roles == 5)? ['ROLE_MODERATOR']: ['ROLE_USER']
+        return ($this->roles == '1')? ['ROLE_ROOT']:
+               ($this->roles == '2')? ['ROLE_SUPER_ADMIN']:
+               ($this->roles == '3')? ['ROLE_SONATA_ADMIN']:
+               ($this->roles == '4')? ['ROLE_ADMIN']:
+               ($this->roles == '5')? ['ROLE_MODERATOR']: ['ROLE_USER']
             ;
     }
 
@@ -136,8 +137,8 @@ class User implements UserInterface
         $this->userProfile = $userProfile;
 
         // set the owning side of the relation if necessary
-        if ($this !== $userProfile->getUserId()) {
-            $userProfile->setUserId($this);
+        if ($this !== $userProfile->getUser()) {
+            $userProfile->setUser($this);
         }
 
         return $this;
