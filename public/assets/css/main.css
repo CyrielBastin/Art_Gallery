@@ -13,7 +13,9 @@ header{
     background-color: black;
     margin: 0px 15px 15px 15px;
 }
-
+/*------------------------------------
+ * if NOT user
+ -----------------------------------*/
 .login-zone{
     text-decoration: underline;
     display: flex;
@@ -48,6 +50,26 @@ margin-right:auto;
 .menu-custom-border-grey{
     border-top: solid #474747 5px;
     border-bottom: solid #474747 5px;
+}
+/*------------------------------------
+ * if user
+ -----------------------------------*/
+.profil-zone{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.user-menu-content{
+    display: none;
+}
+
+.card:hover .user-menu-content{
+    display: block;
+}
+
+.user-menu-content a{
+    color: white;
 }
 /*------------------------------------
  * Custom Navbar
@@ -210,6 +232,20 @@ body{
     margin-bottom: 30px;
     min-width: 180px;
     min-height:70px;
+}
+
+.container-form-custom{
+    width: 370px;
+    border: 1px solid darkgrey;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group .vich-file .custom-file .custom-file-input:focus{
+    outline: none !important;
+    border: 2px solid grey;
+    box-shadow: 0 0 10px grey;
 }
 /********************************************************************************************************
  ** Style for the Styles section (in menu)

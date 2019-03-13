@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Artist;
 use App\Entity\Painting;
+use App\Form\ArtistEditType;
 use App\Form\ArtistType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -65,7 +66,7 @@ class ArtistController extends AbstractController
      */
     public function editOneArtist(Request $request, Artist $artist)
     {
-        $form = $this->createForm(ArtistType::class, $artist);
+        $form = $this->createForm(ArtistEditType::class, $artist);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $em = $this->getDoctrine()->getManager();

@@ -24,6 +24,12 @@ security:
             logout:
                 path: app_logout
 
+    role_hierarchy:
+        ROLE_MODERATOR: ROLE_USER
+        ROLE_ADMIN: [ROLE_MODERATOR, ROLE_SONATA_ADMIN]
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+        ROLE_ROOT: ROLE_SUPER_ADMIN
+
             # activate different ways to authenticate
 
             # http_basic: true

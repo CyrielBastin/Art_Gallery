@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Painting;
+use App\Form\PaintingEditType;
 use App\Form\PaintingType;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -86,7 +87,7 @@ class PaintingController extends AbstractController
      */
     public function editOnePainting(Request $request, Painting $painting)
     {
-        $form = $this->createForm(PaintingType::class, $painting);
+        $form = $this->createForm(PaintingEditType::class, $painting);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $em = $this->getDoctrine()->getManager();

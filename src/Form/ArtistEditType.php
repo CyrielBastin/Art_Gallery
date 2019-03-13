@@ -12,12 +12,12 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 
-class ArtistType extends AbstractType
+class ArtistEditType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('imageFile', VichFileType::class, ['label' => 'Image', 'required' => true, 'allow_delete' => false, 'download_uri' => false])
+            ->add('imageFile', VichFileType::class, ['label' => 'Image', 'required' => false, 'allow_delete' => false, 'download_uri' => false])
             ->add('lastname', TextType::class, ['label' => 'Lastname'])
             ->add('firstname', TextType::class, ['label' => 'Firstname'])
             ->add('country', TextType::class, ['label' => 'Country'])

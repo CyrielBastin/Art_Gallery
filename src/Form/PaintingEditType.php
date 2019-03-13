@@ -17,27 +17,27 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 
-class PaintingType extends AbstractType
+class PaintingEditType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('title', TextType::class, ['label' => 'Title'])
-            ->add('imageFile', VichFileType::class, ['label' => 'image', 'required' => true, 'allow_delete' => false, 'download_uri' => false])
+            ->add('imageFile', VichFileType::class, ['label' => 'image', 'required' => false, 'allow_delete' => false, 'download_uri' => false])
             ->add('dimensions', TextType::class, ['label' => 'Dimensions ( cm )', 'help' => 'example: 50 x 50'])
             ->add('year', TextType::class, ['label' => 'Year'])
             ->add('description', TextareaType::class, ['label' => 'Description', 'attr' => ['style' => 'height: 180px;']])
             ->add('price', IntegerType::class, ['label' => 'Price ( € )'])
             ->add('discount', IntegerType::class, ['label' => 'Discount ( % )', 'help' => 'set 0 if you don\'t want to discount the artwork'])
             ->add('artist', EntityType::class, ['class' => Artist::class,
-                                                            'query_builder' => function (EntityRepository $er){return $er->createQueryBuilder('a')->orderBy('a.lastname', 'ASC');},
-                                                            'choice_label' => 'Artist', 'placeholder' => '-- Choose an artist'])
+                'query_builder' => function (EntityRepository $er){return $er->createQueryBuilder('a')->orderBy('a.lastname', 'ASC');},
+                'choice_label' => 'Artist', 'placeholder' => '-- Choose an artist'])
             ->add('media', EntityType::class, ['class' => PaintingMedia::class,
-                                                            'query_builder' => function (EntityRepository $er){return $er->createQueryBuilder('m')->orderBy('m.name', 'ASC');},
-                                                            'choice_label' => 'Media', 'placeholder' => '-- Choose a media'])
+                'query_builder' => function (EntityRepository $er){return $er->createQueryBuilder('m')->orderBy('m.name', 'ASC');},
+                'choice_label' => 'Media', 'placeholder' => '-- Choose a media'])
             ->add('style', EntityType::class, ['class' => PaintingStyle::class,
-                                                            'query_builder' => function (EntityRepository $er){return $er->createQueryBuilder('s')->orderBy('s.name', 'ASC');},
-                                                            'choice_label' => 'Style', 'placeholder' => '-- Choose a style'])
+                'query_builder' => function (EntityRepository $er){return $er->createQueryBuilder('s')->orderBy('s.name', 'ASC');},
+                'choice_label' => 'Style', 'placeholder' => '-- Choose a style'])
             ->add('submit', SubmitType::class, ['attr' => ['class' => 'btn btn-info btn-lg btn-submit-custom', 'style' => 'font-size: 1.8em;']])
         ;
     }

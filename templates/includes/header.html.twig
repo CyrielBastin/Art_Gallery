@@ -1,7 +1,35 @@
 <div class="container">
+    {% if not app.user %}
         <div class="login-zone">
-            <a href="#">Login</a>
+            <a href="{{ path('app_login') }}">Login</a>
         </div>
+    {% else %}
+        <div class="profil-zone">
+            <div class="card text-white bg-dark mb-3" style="width: 150px;">
+                <div class="d-flex justify-content-center">
+                    <a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">
+                        <img class="rounded-circle" src="{{ asset('assets/images/users/') ~ app.user.userprofile.avatar }}" alt="{{ app.user.userprofile.avatar }}" style="width: 70px; height: 70px;"/>
+                    </a>
+                </div>
+                <div class="user-menu-content">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <p class="card-text" style="margin-top: -10px; margin-bottom: 20px; font-size: 1.2em;">{{ app.user.userprofile.pseudo }}</p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">profil</a></p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p style="font-size: 1.2em;"><a href="#">messages</a></p>
+                        </div>
+                        <div class="d-flex justify-content-center" style="background-color: white;">
+                            <p style="margin-bottom: 0px; font-size: 1.7em;"><a href="{{ path('app_logout') }}"><span style="color: #343a40;">Log out</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 
     <div class="row">
         <div class="col-md-12">
@@ -36,7 +64,7 @@
                         </div>
                     </div>
                     {# Element Subscribe #}
-                    <a href="#">Sign-In</a>
+                    <a href="{{ path('signup') }}">Sign-Up</a>
                     {# Element Contact #}
                     <a href="#">Contact</a>
                     {# Element Forum #}
@@ -45,6 +73,7 @@
                     <div class="dropdown-custom">
                         <button class="dropbtn-custom"><a href="#">Admin</a></button>
                         <div class="dropdown-content-custom">
+                            <a href="{{ path('sonata_admin_dashboard') }}">Dashboard</a>
                             <a href="{{ path('painting_add') }}">Add painting</a>
                             <a href="{{ path('painting_media_add') }}">Add media</a>
                             <a href="{{ path('painting_style_add') }}">Add style</a>

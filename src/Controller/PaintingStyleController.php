@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Painting;
 use App\Entity\PaintingStyle;
+use App\Form\PaintingStyleEditType;
 use App\Form\PaintingStyleType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -65,7 +66,7 @@ class PaintingStyleController extends AbstractController
      */
     public function editOneStyle(Request $request, PaintingStyle $style)
     {
-        $form = $this->createForm(PaintingStyleType::class, $style);
+        $form = $this->createForm(PaintingStyleEditType::class, $style);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $em = $this->getDoctrine()->getManager();

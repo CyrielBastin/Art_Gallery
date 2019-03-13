@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Painting;
 use App\Entity\PaintingMedia;
+use App\Form\PaintingMediaEditType;
 use App\Form\PaintingMediaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -65,7 +66,7 @@ class PaintingMediaController extends AbstractController
      */
     public function editOneMedia(Request $request, PaintingMedia $media)
     {
-        $form = $this->createForm(PaintingMediaType::class, $media);
+        $form = $this->createForm(PaintingMediaEditType::class, $media);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $em = $this->getDoctrine()->getManager();
