@@ -1,7 +1,7 @@
 <div class="container">
     {% if not app.user %}
         <div class="login-zone">
-            <a href="{{ path('app_login') }}">Login</a>
+            <a href="{{ path('app_login') }}#loginform">Login</a>
         </div>
     {% else %}
         <div class="profil-zone">
@@ -66,7 +66,7 @@
                     {# Element Subscribe #}
                     <a href="{{ path('signup') }}">Sign-Up</a>
                     {# Element Contact #}
-                    <a href="#">Contact</a>
+                    <a href="{{ path('contact_us') }}#form-contact">Contact</a>
                     {# Element Forum #}
                     <a href="#">Forum</a>
                     {# Elemnt Admin #}

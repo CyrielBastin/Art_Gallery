@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1 id="form-contact" class="text-center title-form-custom">Contact Us</h1>
+        {{ form_start(form) }}
+        <div class="form-row">
+            <div class="col-md-5 offset-md-1">
+                {{ form_row(form.lastname) }}
+            </div>
+            <div class="col-md-4 offset-md-1">
+                {{ form_row(form.firstname) }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-5 offset-md-1">
+                {{ form_row(form.email) }}
+            </div>
+            <div class="col-md-4 offset-md-1">
+                {{ form_row(form.subject) }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-10 offset-md-1">
+                {{ form_row(form.message, { 'attr': { 'style': 'min-height: 150px;' } }) }}
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            {{ form_row(form.submit, { 'attr': { 'class': 'btn btn-info btn-lg btn-submit-custom', 'style': 'font-size: 1.8em;' } }) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

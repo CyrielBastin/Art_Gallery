@@ -2,12 +2,18 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
+use App\Entity\Newsletter;
+use App\Form\ContactType;
+use App\Service\ContactService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 class HomePageController extends AbstractController
 {
+
     /**
      * @Route("/", name="homepage")
      */
@@ -15,6 +21,27 @@ class HomePageController extends AbstractController
     {
         return $this->render('home_page/index.html.twig');
     }
+
+    /**
+     * @Route("/contact-us", name="contact_us")
+     */
+    public function contactUs(Request $request, ContactService $contactService)
+    {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $contactService->contactNotify($contact);
+            return $this->redirectToRoute('homepage');
+        }
+
+        return $this->render('home_page/contact.html.twig', ['form' => $form->createView()]);
+    }
+
+    // ===========================================================================================
+    // Routes pour le FOOTER
+    // ===========================================================================================
 
     /**
      * @Route("/general-terms-and-conditions.html", name="terms_and_conditions")
@@ -35,5 +62,28 @@ class HomePageController extends AbstractController
      */
     public function cookiePolicy(){
         return $this->render('home_page/cookie_policy.html.twig');
+    }
+
+    /**
+     * @Route("/newsletter", name="newsletter")
+     */
+    public function subscribeToNewsletter(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $newsletter = new Newsletter();
+        $form = $request->request->all();
+        $email = $form['email'];
+
+        if($email != null)
+        {
+            $newsletter->setEmail($email);
+            $em->persist($newsletter);
+            $em->flush();
+
+            $this->addFlash('success', 'You are now subscribed to our Newsletter. Congratulations !');
+            $this->redirectToRoute('homepage');
+        }
+
+        return $this->render('home_page/index.html.twig');
     }
 }

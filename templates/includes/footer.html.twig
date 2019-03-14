@@ -23,13 +23,14 @@
         </div>
         {# Column Newsletter #}
         <div class="col-md-4">
-            <form>
+                <form method="post" action="{{ path('newsletter') }}">
                 <div class="form-group">
                     <label class="font-white" style="font-size: 1.2em;">NEWSLETTER</label>
-                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="email address">
+                    <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="email address">
                 </div>
                 <button type="submit" class="btn btn-secondary" style="background-color: #343a40; border: none; width: 100%; margin-top: -17px;">Subscribe</button>
-            </form>
+                </form>
+            {# {{ render(controller('App\\Controller\\HomePageController::subscribeToNewsletter')) }} #}
         </div>
     </div>
 </div>
