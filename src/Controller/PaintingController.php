@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Painting;
 use App\Form\PaintingEditType;
 use App\Form\PaintingType;
+use App\Repository\PaintingRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,11 +18,26 @@ use Symfony\Component\Routing\Annotation\Route;
 class PaintingController extends AbstractController
 {
     /**
+     * @var EntityManagerInterface
+     */
+    private $em;
+    /**
+     * @var PaintingRepository
+     */
+    private $paintingRepo;
+
+    public function __construct(EntityManagerInterface $em, PaintingRepository $paintingRepo)
+    {
+        $this->em = $em;
+        $this->paintingRepo = $paintingRepo;
+    }
+
+    /**
      * @Route("/", name="all")
      */
     public function viewAll(Request $request, PaginatorInterface $paginator)
     {
-        $paintings = $this->getDoctrine()->getRepository(Painting::class)->findAll();
+        $paintings = $this->paintingRepo->findAll();
 
         $pagination = $paginator->paginate($paintings, $request->query->getInt('page', 1), 10);
 
@@ -32,7 +49,7 @@ class PaintingController extends AbstractController
      */
     public function viewOne($id)
     {
-        $painting = $this->getDoctrine()->getRepository(Painting::class)->findById($id);
+        $painting = $this->paintingRepo->findById($id);
 
         return $this->render('painting/painting_view_one.html.twig', ['painting' => $painting]);
     }
@@ -42,7 +59,7 @@ class PaintingController extends AbstractController
      */
     public function viewLatest()
     {
-        $paintings = $this->getDoctrine()->getRepository(Painting::class)->findLatest();
+        $paintings = $this->paintingRepo->findLatest();
 
         return $this->render('painting/painting_latest_added.html.twig', ['paintings' => $paintings]);
     }
@@ -52,7 +69,7 @@ class PaintingController extends AbstractController
      */
     public function viewDiscount()
     {
-        $discounts = $this->getDoctrine()->getRepository(Painting::class)->findDiscount();
+        $discounts = $this->paintingRepo->findDiscount();
 
         return $this->render('painting/painting_discount.html.twig', ['discounts' => $discounts]);
     }
@@ -71,9 +88,8 @@ class PaintingController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($painting);
-            $em->flush();
+            $this->em->persist($painting);
+            $this->em->flush();
 
             $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been correctly added');
             return $this->redirectToRoute('homepage');
@@ -90,9 +106,8 @@ class PaintingController extends AbstractController
         $form = $this->createForm(PaintingEditType::class, $painting);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($painting);
-            $em->flush();
+            $this->em->persist($painting);
+            $this->em->flush();
 
             $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been correctly modified');
             return $this->redirectToRoute('homepage');
@@ -105,11 +120,9 @@ class PaintingController extends AbstractController
      */
     public function deleteOnePainting($id)
     {
-        $em = $this->getDoctrine()->getManager();
-        $repository = $this->getDoctrine()->getRepository(Painting::class);
-        $painting = $repository->find($id);
-        $em->remove($painting);
-        $em->flush();
+        $painting = $this->paintingRepo->find($id);
+        $this->em->remove($painting);
+        $this->em->flush();
 
         $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been properly deleted');
         return $this->redirectToRoute('homepage');

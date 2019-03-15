@@ -1,6 +1,15 @@
-<p>
-    {{ contact.message }}
-</p>
-<p>
-    de: {{ contact.firstname }} {{ contact.lastname }}
-</p>
+<style>
+    h1{
+        color: dodgerblue;
+        margin-bottom: 30px;
+    }
+    h3, p{
+        margin-bottom: 20px;
+    }
+</style>
+
+<h1>Message from Contact Form</h1>
+<h3>{{ contact.subject }}</h3>
+<p>{{ contact.message }}</p>
+<p>name: {{ contact.firstname }} {{ contact.lastname }}</p>
+<p>Send reply to {{ contact.email }}</p>

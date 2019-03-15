@@ -1,87 +1,89 @@
 <div class="container">
-    {% if not app.user %}
-        <div class="login-zone">
-            <a href="{{ path('app_login') }}#loginform">Login</a>
+    <div class="row">
+        <div class="col-md-6 offset-md-3" style="margin-top: 50px; margin-bottom: 53px;">
+            <img id="logo_site" src="{{ asset('assets/images/base_images/logo_site.png') }}" alt="site logo"/>
         </div>
-    {% else %}
-        <div class="profil-zone">
-            <div class="card text-white bg-dark mb-3" style="width: 150px;">
-                <div class="d-flex justify-content-center">
-                    <a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">
-                        <img class="rounded-circle" src="{{ asset('assets/images/users/') ~ app.user.userprofile.avatar }}" alt="{{ app.user.userprofile.avatar }}" style="width: 70px; height: 70px;"/>
-                    </a>
+        <div class="col-md-3">
+            {% if not app.user %}
+                <div class="login-zone">
+                    <a href="{{ path('app_login') }}#loginform">Login</a>
                 </div>
-                <div class="user-menu-content">
-                    <div class="card-body">
+            {% else %}
+                <div class="profil-zone">
+                    <div class="card text-white bg-dark mb-3" style="width: 150px;">
                         <div class="d-flex justify-content-center">
-                            <p class="card-text" style="margin-top: -10px; margin-bottom: 20px; font-size: 1.2em;">{{ app.user.userprofile.pseudo }}</p>
+                            <a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">
+                                <img class="rounded-circle" src="{{ asset('assets/images/users/') ~ app.user.userprofile.avatar }}" alt="{{ app.user.userprofile.avatar }}" style="width: 60px; height: 60px;"/>
+                            </a>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">profil</a></p>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <p style="font-size: 1.2em;"><a href="#">messages</a></p>
-                        </div>
-                        <div class="d-flex justify-content-center" style="background-color: white;">
-                            <p style="margin-bottom: 0px; font-size: 1.7em;"><a href="{{ path('app_logout') }}"><span style="color: #343a40;">Log out</span></a></p>
+                        <div class="user-menu-content">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-center">
+                                    <p class="card-text" style="margin-top: -10px; margin-bottom: 20px; font-size: 1.2em;">{{ app.user.userprofile.pseudo }}</p>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">profil</a></p>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <p style="font-size: 1.2em;"><a href="#">messages</a></p>
+                                </div>
+                                <div class="d-flex justify-content-center" style="background-color: white;">
+                                    <p style="margin-bottom: 0px; font-size: 1.4em;"><a href="{{ path('app_logout') }}"><span style="color: #343a40;">Log out</span></a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    {% endif %}
-
-    <div class="row">
-        <div class="col-md-12">
-            <img id="logo_site" src="{{ asset('assets/images/base_images/logo_site.png') }}" alt="site logo"/>
+            {% endif %}
         </div>
     </div>
 
     {# Navbar #}
-        <div class="menu-custom">
-            <div class="menu-custom-border-grey">
-                <div class="navbar-custom">
-                    {# Element Home #}
-                    <a href="{{ path('homepage') }}">Home</a>
-                    {# Element Painting#}
-                    <div class="dropdown-custom">
-                        <button class="dropbtn-custom"><a href="{{ path('painting_all') }}">Paintings</a></button>
-                        <div class="dropdown-content-custom">
-                            <a href="{{ path('painting_all') }}">All</a>
-                            <a href="{{ path('painting_latest_added') }}">latest added</a>
-                            <a href="{{ path('painting_discount') }}">Discount</a>
-                            <span>===========</span>
-                            <a href="{{ path('painting_media_all') }}">Medias</a>
-                            <span>===========</span>
-                            <a href="{{ path('painting_style_all') }}">Styles</a>
-                        </div>
+    <div class="menu-custom">
+        <div class="menu-custom-border-grey">
+            <div class="navbar-custom">
+                {# Element Home #}
+                <a href="{{ path('homepage') }}">Home</a>
+                {# Element Painting#}
+                <div class="dropdown-custom">
+                    <button class="dropbtn-custom"><a href="{{ path('painting_all') }}">Paintings</a></button>
+                    <div class="dropdown-content-custom">
+                        <a href="{{ path('painting_all') }}">All</a>
+                        <a href="{{ path('painting_latest_added') }}">latest added</a>
+                        <a href="{{ path('painting_discount') }}">Discount</a>
+                        <span>===========</span>
+                        <a href="{{ path('painting_media_all') }}">Medias</a>
+                        <span>===========</span>
+                        <a href="{{ path('painting_style_all') }}">Styles</a>
                     </div>
-                    {# Element Artists #}
-                    <div class="dropdown-custom">
-                        <button class="dropbtn-custom"><a href="{{ path('artist_all') }}">Artists</a></button>
-                        <div class="dropdown-content-custom">
-                            <a href="{{ path('artist_all') }}">All</a>
-                        </div>
+                </div>
+                {# Element Artists #}
+                <div class="dropdown-custom">
+                    <button class="dropbtn-custom"><a href="{{ path('artist_all') }}">Artists</a></button>
+                    <div class="dropdown-content-custom">
+                        <a href="{{ path('artist_all') }}">All</a>
                     </div>
-                    {# Element Subscribe #}
-                    <a href="{{ path('signup') }}">Sign-Up</a>
-                    {# Element Contact #}
-                    <a href="{{ path('contact_us') }}#form-contact">Contact</a>
-                    {# Element Forum #}
-                    <a href="#">Forum</a>
-                    {# Elemnt Admin #}
-                    <div class="dropdown-custom">
-                        <button class="dropbtn-custom"><a href="#">Admin</a></button>
-                        <div class="dropdown-content-custom">
-                            <a href="{{ path('sonata_admin_dashboard') }}">Dashboard</a>
-                            <a href="{{ path('painting_add') }}">Add painting</a>
-                            <a href="{{ path('painting_media_add') }}">Add media</a>
-                            <a href="{{ path('painting_style_add') }}">Add style</a>
-                            <a href="{{ path('artist_add') }}">Add artist</a>
-                        </div>
+                </div>
+                {# Element Subscribe #}
+                <a href="{{ path('signup') }}">Sign-Up</a>
+                {# Element Contact #}
+                <a href="{{ path('contact_us') }}#form-contact">Contact</a>
+                {# Element Forum #}
+                <a href="#">Forum</a>
+                {# Elemnt Admin #}
+                <div class="dropdown-custom">
+                    <button class="dropbtn-custom"><a href="#">Admin</a></button>
+                    <div class="dropdown-content-custom">
+                        <a href="{{ path('sonata_admin_dashboard') }}">Dashboard</a>
+                        <a href="{{ path('painting_add') }}">Add painting</a>
+                        <a href="{{ path('painting_media_add') }}">Add media</a>
+                        <a href="{{ path('painting_style_add') }}">Add style</a>
+                        <a href="{{ path('artist_add') }}">Add artist</a>
+                        <a href="{{ path('newsletter_create_one') }}">Add newsletter</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     {# END Navbar #}
 </div>

@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as  Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\NewsletterRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\NewsletterSubscribedPeopleRepository")
+ * @UniqueEntity(fields={"email"}, message="You are already subscribed to our newsletter")
  */
-class Newsletter
+class NewsletterSubscribedPeople
 {
     /**
      * @ORM\Id()

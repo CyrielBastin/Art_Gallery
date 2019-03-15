@@ -6,6 +6,8 @@ use App\Entity\Artist;
 use App\Entity\Painting;
 use App\Form\ArtistEditType;
 use App\Form\ArtistType;
+use App\Repository\ArtistRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,11 +18,27 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArtistController extends AbstractController
 {
     /**
+     * @var EntityManagerInterface
+     */
+    private $em;
+    /**
+     * @var ArtistRepository
+     */
+    private $artistRepo;
+
+    public function __construct(EntityManagerInterface $em, ArtistRepository $artistRepo)
+    {
+        $this->em = $em;
+        $this->artistRepo = $artistRepo;
+    }
+
+
+    /**
      * @Route("/", name="all")
      */
     public function viewArtists()
     {
-        $artists = $this->getDoctrine()->getRepository(Artist::class)->findAll();
+        $artists = $this->artistRepo->findAll();
 
         return $this->render('artist/artist.html.twig', ['artists' => $artists]);
     }
@@ -30,7 +48,7 @@ class ArtistController extends AbstractController
      */
     public function viewOneArtist($id)
     {
-        $artist = $this->getDoctrine()->getRepository(Artist::class)->findById($id);
+        $artist = $this->artistRepo->findById($id);
         $paintings = $this->getDoctrine()->getRepository(Painting::class)->findByArtist($id);
 
         return $this->render('artist/artist_view_one.html.twig', ['artist' => $artist, 'paintings' => $paintings]);
@@ -50,9 +68,8 @@ class ArtistController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($artist);
-            $em->flush();
+            $this->em->persist($artist);
+            $this->em->flush();
 
             $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully added');
             return $this->redirectToRoute('homepage');
@@ -69,9 +86,8 @@ class ArtistController extends AbstractController
         $form = $this->createForm(ArtistEditType::class, $artist);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($artist);
-            $em->flush();
+            $this->em->persist($artist);
+            $this->em->flush();
 
             $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully modified');
             return $this->redirectToRoute('homepage');
@@ -84,11 +100,10 @@ class ArtistController extends AbstractController
      */
     public function deleteOneArtist($id)
     {
-        $em = $this->getDoctrine()->getManager();
         $repository = $this->getDoctrine()->getRepository(Artist::class);
         $artist = $repository->find($id);
-        $em->remove($artist);
-        $em->flush();
+        $this->em->remove($artist);
+        $this->em->flush();
 
         $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully removed');
         return $this->redirectToRoute('homepage');

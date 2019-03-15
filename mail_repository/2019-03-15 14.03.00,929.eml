@@ -1,0 +1,37 @@
+Message-ID: <8aa514b05653e7a765beb1b926feee12@localhost>
+Date: Fri, 15 Mar 2019 13:02:59 +0000
+Subject: weekly news
+From: info@art_gallery.com
+To: toto@toto.toto, tata@tata.tata, tutu@tutu.tutu, titi@titi.titi
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<style>
+    a{
+        text-decoration: underline;
+        color: #42=
+474f;
+    }
+    h1{
+        color: dodgerblue;
+        margin-botto=
+m: 30px;
+    }
+    h3{
+        margin-bottom: 30px;
+    }
+</style=
+>
+
+<div class=3D"container">
+    <h1>Newsletter Update :</h1>
+    <=
+h3>weekly news</h3>
+    <p style=3D"margin-bottom: 30px;">ioufhzu=C3=
+=A7_if fciuzea faz dauiz rfiaz fuiza fze foze foze fzeo fze</p>
+    <p>Vi=
+sit our <a href=3D"http://localhost/symfony/Art_Gallery/public/">Website</a=
+> for more information</p>
+</div>
+

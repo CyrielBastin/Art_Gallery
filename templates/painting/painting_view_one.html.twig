@@ -16,7 +16,7 @@
                         {{ painting['style'] }}
                             <small class="text-muted" style="margin-left: 30px">{{ painting['media'] ~ ' ( ' ~ painting['dimensions'] ~ ' cm )' }}</small>
                         </p>
-                        {% if painting['discount']==0 %}
+                        {% if painting['discount'] == 0 %}
                             <p class="card-text" style="margin-top: 20px; color: green">{{ painting['price'] ~ ' €'}}</p>
                         {% else %}
                             <div class="d-flex justify-content-start">

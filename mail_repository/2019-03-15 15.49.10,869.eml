@@ -1,0 +1,31 @@
+Message-ID: <78acb92299d0f20d50ab2ae884cffc91@localhost>
+Date: Fri, 15 Mar 2019 14:49:09 +0000
+Subject: Account registration
+From: info@art_gallery.com
+To: patou@patou.patou
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<style>
+    h2{
+        color: green;
+    }
+    a{
+        color:=
+ red;
+    }
+</style>
+
+<h2>Your account has been successfully regist=
+ered</h2>
+<p>You have received this email following your registration on =
+Art Gallery</p>
+
+<p>You can access your profile here <a href=3D"http://=
+localhost/symfony/Art_Gallery/public/user/profile/patou9">here</a></p>
+<p=
+>If this action wasn't your doing, you can contact us<br/>
+    @ info@art=
+_gallery.com</p>
+

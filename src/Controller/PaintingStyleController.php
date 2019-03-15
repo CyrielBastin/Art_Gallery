@@ -6,6 +6,8 @@ use App\Entity\Painting;
 use App\Entity\PaintingStyle;
 use App\Form\PaintingStyleEditType;
 use App\Form\PaintingStyleType;
+use App\Repository\PaintingStyleRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,11 +18,26 @@ use Symfony\Component\Routing\Annotation\Route;
 class PaintingStyleController extends AbstractController
 {
     /**
+     * @var EntityManagerInterface
+     */
+    private $em;
+    /**
+     * @var PaintingStyleRepository
+     */
+    private $styleRepo;
+
+    public function __construct(EntityManagerInterface $em, PaintingStyleRepository $styleRepo)
+    {
+        $this->em = $em;
+        $this->styleRepo = $styleRepo;
+    }
+
+    /**
      * @Route("/", name="all")
      */
     public function viewStyles()
     {
-        $styles = $this->getDoctrine()->getRepository(PaintingStyle::class)->findAll();
+        $styles = $this->styleRepo->findAll();
 
         return $this->render('painting_style/style.html.twig', ['styles' => $styles]);
     }
@@ -30,7 +47,7 @@ class PaintingStyleController extends AbstractController
      */
     public function viewOneStyle($id)
     {
-        $style = $this->getDoctrine()->getRepository(PaintingStyle::class)->findById($id);
+        $style = $this->styleRepo->findById($id);
         $paintings = $this->getDoctrine()->getRepository(Painting::class)->findByStyle($id);
 
         return $this->render('painting_style/style_view_one.html.twig', ['style' => $style, 'paintings' => $paintings]);
@@ -50,9 +67,8 @@ class PaintingStyleController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($style);
-            $em->flush();
+            $this->em->persist($style);
+            $this->em->flush();
 
             $this->addFlash('success', 'Style ' . $style->getName() . ' successfully added');
             return $this->redirectToRoute('homepage');
@@ -69,9 +85,8 @@ class PaintingStyleController extends AbstractController
         $form = $this->createForm(PaintingStyleEditType::class, $style);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($style);
-            $em->flush();
+            $this->em->persist($style);
+            $this->em->flush();
 
             $this->addFlash('success', 'Style ' . $style->getName() . ' successfully modified');
             return $this->redirectToRoute('homepage');
@@ -84,11 +99,9 @@ class PaintingStyleController extends AbstractController
      */
     public function deleteOneStyle($id)
     {
-        $em = $this->getDoctrine()->getManager();
-        $repository = $this->getDoctrine()->getRepository(PaintingStyle::class);
-        $style = $repository->find($id);
-        $em->remove($style);
-        $em->flush();
+        $style = $this->styleRepo->find($id);
+        $this->em->remove($style);
+        $this->em->flush();
 
         $this->addFlash('success', 'Style ' . $style->getName() . ' successfully removed');
         return $this->redirectToRoute('homepage');

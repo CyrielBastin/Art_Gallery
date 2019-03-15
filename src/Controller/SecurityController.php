@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Service\SignupService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -34,7 +35,7 @@ class SecurityController extends AbstractController
     /**
      * @Route("/sign-up", name="signup")
      */
-    public function subscribe(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    public function subscribe(Request $request, UserPasswordEncoderInterface $passwordEncoder, SignupService $service)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -45,6 +46,9 @@ class SecurityController extends AbstractController
             $user->setPassword($hash);
             $em->persist($user);
             $em->flush();
+
+            $service->registrationEmail($user);
+            $this->addFlash('success', 'You are now registered to Art Gallery. You can now login and share with other users');
         }
 
         return $this->render('security/signup.html.twig', ['form' => $form->createView()]);

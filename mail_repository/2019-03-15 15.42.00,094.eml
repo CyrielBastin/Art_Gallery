@@ -1,0 +1,31 @@
+Message-ID: <7ffe8d59dba47c380dabe1fd201bd975@localhost>
+Date: Fri, 15 Mar 2019 14:41:58 +0000
+Subject: Account registration
+From: info@art_gallery.com
+To: pol@pol.pol
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<style>
+    h2{
+        color: green;
+    }
+    a{
+        color:=
+ red;
+    }
+</style>
+
+<h2>Your account has been successfully regist=
+ered</h2>
+<p>You have received this email following your registration on =
+Art Gallery</p>
+
+<p>You can access your profile here <a href=3D"http://=
+localhost/symfony/Art_Gallery/public/user/profile/pol">here</a></p>
+<p>If=
+ this action wasn't your doing, you can contact us<br/>
+    @ info@art_ga=
+llery.com</p>
+

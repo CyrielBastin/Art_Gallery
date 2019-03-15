@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
-use App\Entity\Newsletter;
 use App\Form\ContactType;
 use App\Service\ContactService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -64,26 +63,4 @@ class HomePageController extends AbstractController
         return $this->render('home_page/cookie_policy.html.twig');
     }
 
-    /**
-     * @Route("/newsletter", name="newsletter")
-     */
-    public function subscribeToNewsletter(Request $request)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $newsletter = new Newsletter();
-        $form = $request->request->all();
-        $email = $form['email'];
-
-        if($email != null)
-        {
-            $newsletter->setEmail($email);
-            $em->persist($newsletter);
-            $em->flush();
-
-            $this->addFlash('success', 'You are now subscribed to our Newsletter. Congratulations !');
-            $this->redirectToRoute('homepage');
-        }
-
-        return $this->render('home_page/index.html.twig');
-    }
 }

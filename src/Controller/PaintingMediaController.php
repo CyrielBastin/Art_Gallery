@@ -6,6 +6,8 @@ use App\Entity\Painting;
 use App\Entity\PaintingMedia;
 use App\Form\PaintingMediaEditType;
 use App\Form\PaintingMediaType;
+use App\Repository\PaintingMediaRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,11 +18,26 @@ use Symfony\Component\Routing\Annotation\Route;
 class PaintingMediaController extends AbstractController
 {
     /**
+     * @var EntityManagerInterface
+     */
+    private $em;
+    /**
+     * @var PaintingMediaRepository
+     */
+    private $mediaRepo;
+
+    public function __construct(EntityManagerInterface $em, PaintingMediaRepository $mediaRepo)
+    {
+        $this->em = $em;
+        $this->mediaRepo = $mediaRepo;
+    }
+
+    /**
      * @Route("/", name="all")
      */
     public function viewMedias()
     {
-        $medias = $this->getDoctrine()->getRepository(PaintingMedia::class)->findAll();
+        $medias = $this->mediaRepo->findAll();
 
         return $this->render('painting_media/media.html.twig', ['medias' => $medias]);
     }
@@ -30,7 +47,7 @@ class PaintingMediaController extends AbstractController
      */
     public function viewOneMedia($id)
     {
-        $media = $this->getDoctrine()->getRepository(PaintingMedia::class)->findById($id);
+        $media = $this->mediaRepo->findById($id);
         $paintings = $this->getDoctrine()->getRepository(Painting::class)->findByMedia($id);
 
         return $this->render('painting_media/media_view_one.html.twig', ['media' => $media, 'paintings' => $paintings]);
@@ -50,9 +67,8 @@ class PaintingMediaController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($media);
-            $em->flush();
+            $this->em->persist($media);
+            $this->em->flush();
 
             $this->addFlash('success', 'Media ' . $media->getName() . ' successfully added');
             return $this->redirectToRoute('homepage');
@@ -69,9 +85,8 @@ class PaintingMediaController extends AbstractController
         $form = $this->createForm(PaintingMediaEditType::class, $media);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($media);
-            $em->flush();
+            $this->em->persist($media);
+            $this->em->flush();
 
             $this->addFlash('success', 'Media ' . $media->getName() . ' successfully modified');
             return $this->redirectToRoute('homepage');
@@ -85,11 +100,9 @@ class PaintingMediaController extends AbstractController
      */
     public function deleteOneMedia($id)
     {
-        $em = $this->getDoctrine()->getManager();
-        $repository = $this->getDoctrine()->getRepository(PaintingMedia::class);
-        $media = $repository->find($id);
-        $em->remove($media);
-        $em->flush();
+        $media = $this->mediaRepo->find($id);
+        $this->em->remove($media);
+        $this->em->flush();
 
         $this->addFlash('success', 'Media ' . $media->getName() . ' successfully removed');
         return $this->redirectToRoute('homepage');
