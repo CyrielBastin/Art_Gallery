@@ -272,6 +272,21 @@ body{
     max-width: 63px;
 }
 /********************************************************************************************************
+ ** Style for Painting(in general)
+ *******************************************************************************************************/
+.box-login-to-comment{
+    width: 570px;
+    font-size: 2.5em;
+    border: solid red 3px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.box-login-to-comment a{
+    color: #343a40;
+    text-decoration: underline;
+}
+/********************************************************************************************************
  ** Media Queries
  *******************************************************************************************************/
 @media screen and (max-width: 575px){}   /*--> Smartphone */

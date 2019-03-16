@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Painting;
+use App\Entity\PaintingComment;
+use App\Form\PaintingCommentType;
 use App\Form\PaintingEditType;
 use App\Form\PaintingType;
 use App\Repository\PaintingRepository;
@@ -11,12 +13,14 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
 /**
  * @Route("/painting", name="painting_")
  */
 class PaintingController extends AbstractController
 {
+    use TargetPathTrait;
     /**
      * @var EntityManagerInterface
      */
@@ -47,11 +51,28 @@ class PaintingController extends AbstractController
     /**
      * @Route("/view/{id}", name="view_one")
      */
-    public function viewOne($id)
+    public function viewOne($id, Request $request, PaginatorInterface $paginator)
     {
         $painting = $this->paintingRepo->findById($id);
+        $painting_commentary = $this->getDoctrine()->getRepository(PaintingComment::class)->findByPaintingId($id);
+        $pagination = $paginator->paginate($painting_commentary, $request->query->getInt('page', 1), 7);
 
-        return $this->render('painting/painting_view_one.html.twig', ['painting' => $painting]);
+        $paintingComment = new PaintingComment();
+        $form = $this->createForm(PaintingCommentType::class, $paintingComment);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $paintingComment->setUser($this->getUser());
+            $paintingComment->setPainting($this->paintingRepo->findOneBy(['id' => $id]));
+            $paintingComment->setPostedAt(new \DateTime('now'));
+            //
+            $this->em->persist($paintingComment);
+            $this->em->flush();
+
+            return $this->redirectToRoute('redirect_from_painting_view_one', ['painting_id' => $id]);
+        }
+        $this->saveTargetPath($request->getSession(), 'main', 'http://localhost/symfony/Art_Gallery/public/painting/view/'.$id.'#post-a-commentary');
+
+        return $this->render('painting/painting_view_one.html.twig', ['painting' => $painting, 'commentaries' => $pagination, 'form' => $form->createView()]);
     }
 
     /**
@@ -127,4 +148,5 @@ class PaintingController extends AbstractController
         $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been properly deleted');
         return $this->redirectToRoute('homepage');
     }
+
 }

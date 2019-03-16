@@ -9,7 +9,6 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
 /**
  * @method NewsletterMessages|null find($id, $lockMode = null, $lockVersion = null)
  * @method NewsletterMessages|null findOneBy(array $criteria, array $orderBy = null)
- * @method NewsletterMessages[]    findAll()
  * @method NewsletterMessages[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class NewsletterMessagesRepository extends ServiceEntityRepository
@@ -19,5 +18,19 @@ class NewsletterMessagesRepository extends ServiceEntityRepository
         parent::__construct($registry, NewsletterMessages::class);
     }
 
+    public function findAll()
+    {
+        $conn = $this->getEntityManager()->getConnection();
 
+        $sql='
+            SELECT *
+            FROM newsletter_messages
+            ORDER BY created_at DESC
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
 }

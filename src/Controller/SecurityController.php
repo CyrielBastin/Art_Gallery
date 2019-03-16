@@ -27,6 +27,16 @@ class SecurityController extends AbstractController
         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
+    public function loginFormPaintingViewOne(AuthenticationUtils $authenticationUtils): Response
+    {
+        // get the login error if there is one
+        $error = $authenticationUtils->getLastAuthenticationError();
+        // last username entered by the user
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        return $this->render('security/login_form_painting_view_one.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+    }
+
     /**
      * @Route("/logout", name="app_logout")
      */
@@ -49,6 +59,7 @@ class SecurityController extends AbstractController
 
             $service->registrationEmail($user);
             $this->addFlash('success', 'You are now registered to Art Gallery. You can now login and share with other users');
+            $this->redirectToRoute('homepage');
         }
 
         return $this->render('security/signup.html.twig', ['form' => $form->createView()]);

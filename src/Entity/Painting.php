@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -113,6 +115,16 @@ class Painting
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updated_at;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\PaintingComment", mappedBy="painting", orphanRemoval=true)
+     */
+    private $paintingComments;
+
+    public function __construct()
+    {
+        $this->paintingComments = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -262,6 +274,37 @@ class Painting
     public function setUpdatedAt(?\DateTimeInterface $updated_at): self
     {
         $this->updated_at = $updated_at;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|PaintingComment[]
+     */
+    public function getPaintingComments(): Collection
+    {
+        return $this->paintingComments;
+    }
+
+    public function addPaintingComment(PaintingComment $paintingComment): self
+    {
+        if (!$this->paintingComments->contains($paintingComment)) {
+            $this->paintingComments[] = $paintingComment;
+            $paintingComment->setPainting($this);
+        }
+
+        return $this;
+    }
+
+    public function removePaintingComment(PaintingComment $paintingComment): self
+    {
+        if ($this->paintingComments->contains($paintingComment)) {
+            $this->paintingComments->removeElement($paintingComment);
+            // set the owning side to null (unless already changed)
+            if ($paintingComment->getPainting() === $this) {
+                $paintingComment->setPainting(null);
+            }
+        }
 
         return $this;
     }

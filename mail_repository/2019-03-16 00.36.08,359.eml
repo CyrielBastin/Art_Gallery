@@ -1,0 +1,30 @@
+Message-ID: <5b8f6d234fd019e56d900d5fc2c679d3@localhost>
+Date: Fri, 15 Mar 2019 23:36:07 +0000
+Subject: Account registration
+From: info@art_gallery.com
+To: machin@machine.be
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<style>
+    h2{
+        color: green;
+    }
+    a{
+        color:=
+ red;
+    }
+</style>
+
+<h2>Your account has been successfully regist=
+ered</h2>
+<p>You have received this email following your registration on =
+Art Gallery</p>
+
+<p>You can access Art Gallery here <a href=3D"http://l=
+ocalhost/symfony/Art_Gallery/public/">here</a></p>
+<p>If this action wasn=
+'t your doing, you can contact us<br/>
+    @ info@art_gallery.com</p>
+

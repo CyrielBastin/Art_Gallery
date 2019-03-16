@@ -7,6 +7,7 @@ use App\Entity\NewsletterSubscribedPeople;
 use App\Form\NewsletterMessageType;
 use App\Service\NewsletterService;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -62,6 +63,22 @@ class NewsletterController extends AbstractController
         return $this->render('home_page/index.html.twig');
     }
 
+    /******************************************************************************************************************
+     * Access denied unless granted below
+     *****************************************************************************************************************/
+
+    /**
+     * @Route("/view-all", name="view_all")
+     */
+    public function viewAllNewsletter(PaginatorInterface $paginator, Request $request)
+    {
+        $newsletter_messages = $this->getDoctrine()->getRepository(NewsletterMessages::class)->findAll();
+
+        $pagination = $paginator->paginate($newsletter_messages, $request->query->getInt('page', 1), 6);
+
+        return $this->render('newsletter/newsletter_view_all.html.twig', ['newsletters' => $pagination]);
+    }
+
     /**
      * @Route("/create-one", name="create_one")
      */
@@ -78,7 +95,7 @@ class NewsletterController extends AbstractController
             $em->flush();
 
             $service->sendNewsletter($newsletter);
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('redirect_from_newsletter_create_one');
         }
 
         return $this->render('newsletter/newsletter_create_one.html.twig', ['form' => $form->createView()]);

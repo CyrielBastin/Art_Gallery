@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -52,6 +54,16 @@ class User implements UserInterface
      * @ORM\OneToOne(targetEntity="App\Entity\UserProfile", mappedBy="user", cascade={"persist", "remove"})
      */
     private $userProfile;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\PaintingComment", mappedBy="user")
+     */
+    private $paintingComments;
+
+    public function __construct()
+    {
+        $this->paintingComments = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -154,6 +166,37 @@ class User implements UserInterface
         // set the owning side of the relation if necessary
         if ($this !== $userProfile->getUser()) {
             $userProfile->setUser($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|PaintingComment[]
+     */
+    public function getPaintingComments(): Collection
+    {
+        return $this->paintingComments;
+    }
+
+    public function addPaintingComment(PaintingComment $paintingComment): self
+    {
+        if (!$this->paintingComments->contains($paintingComment)) {
+            $this->paintingComments[] = $paintingComment;
+            $paintingComment->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePaintingComment(PaintingComment $paintingComment): self
+    {
+        if ($this->paintingComments->contains($paintingComment)) {
+            $this->paintingComments->removeElement($paintingComment);
+            // set the owning side to null (unless already changed)
+            if ($paintingComment->getUser() === $this) {
+                $paintingComment->setUser(null);
+            }
         }
 
         return $this;
