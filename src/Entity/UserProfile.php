@@ -58,7 +58,7 @@ class UserProfile
     private $pseudo;
 
     /**
-     * @ORM\Column(type="string", length=50, nullable=true)
+     * @ORM\Column(type="string", length=60, nullable=true)
      * @Assert\LessThanOrEqual(
      *     value = 50,
      *     message = "Your signature must be {{ compared_value }} letters max !"
@@ -116,12 +116,12 @@ class UserProfile
         return $this;
     }
 
-    public function getAvatar(): ?string
+    public function getAvatar(): string
     {
         return $this->avatar;
     }
 
-    public function setAvatar(string $avatar): self
+    public function setAvatar(?string $avatar): self
     {
         $this->avatar = $avatar;
 
@@ -239,7 +239,7 @@ class UserProfile
     /**
      * @return File
      */
-    public function getImageFile(): ?File
+    public function getImageFile()
     {
         return $this->imageFile;
     }

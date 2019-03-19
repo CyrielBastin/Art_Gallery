@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
-use App\Entity\PaintingComment;
 use App\Form\ContactType;
 use App\Service\ContactService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,21 +21,6 @@ class HomePageController extends AbstractController
         return $this->render('home_page/index.html.twig');
     }
 
-    /**
-     * @Route("/redirect-to-painting-view-one-{painting_id}", name="redirect_from_painting_view_one")
-     */
-    public function redirectFromPaintingViewOne($painting_id)
-    {
-        return $this->redirectToRoute('painting_view_one', ['id' => $painting_id]);
-    }
-
-    /**
-     * @Route("/redirect-to-newsletter-view-all", name="redirect_from_newsletter_create_one")
-     */
-    public function redirectFromNewsletterCreateOne()
-    {
-        return $this->redirectToRoute('newsletter_view_all');
-    }
 
     /**
      * @Route("/contact-us", name="contact_us")

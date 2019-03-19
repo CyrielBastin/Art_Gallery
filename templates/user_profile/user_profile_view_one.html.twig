@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil: {{ profile['pseudo'] }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {# Section Profil Informations #}
+            <div class="col-md-8">
+                <table class="table-profile">
+                    <tr>
+                        <td class="width-label">
+                            Email :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['email'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Role :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['role'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Pseudo :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['pseudo'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Signature :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['signature'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Lastname :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['lastname'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Firstname :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['firstname'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Date of birth :
+                        </td>
+                        <td class="input-profile">
+                            {% if profile['date_of_birth'] != null %}
+                            {{ profile['date_of_birth']|date('d/m/Y') }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Country :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['country'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Like :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['likes'] }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="width-label">
+                            Dislikes :
+                        </td>
+                        <td class="input-profile">
+                            {{ profile['dislikes'] }}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <img src="{% if profile['avatar'] == 'avatar_default.png' %}
+                            {{ asset('assets/images/avatar_default.png') }}
+                          {% else %}
+                            {{ vich_uploader_asset(profile, 'imageFile', 'App\\Entity\\UserProfile')|imagine_filter('avatar_in_profile') }}
+                          {% endif %}
+                          " alt="{{ profile['avatar'] }}"/>
+            </div>
+        </div>
+        {# END Section #}
+
+        {% if app.user %}
+            {% if app.user.userprofile.pseudo == profile['pseudo'] %}
+                <div class="d-flex justify-content-center">
+                    <a href="{{ path('user_profile_edit_one', { 'pseudo': profile['pseudo'] }) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Modify informations</span></a>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

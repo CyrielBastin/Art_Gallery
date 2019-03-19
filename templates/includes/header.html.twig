@@ -13,7 +13,12 @@
                     <div class="card text-white bg-dark mb-3" style="width: 150px;">
                         <div class="d-flex justify-content-center">
                             <a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">
-                                <img class="rounded-circle" src="{{ asset('assets/images/users/') ~ app.user.userprofile.avatar }}" alt="{{ app.user.userprofile.avatar }}" style="width: 60px; height: 60px;"/>
+                                <img class="rounded-circle" src="{% if app.user.userprofile.avatar == 'avatar_default.png' %}
+                                                                    {{ asset('assets/images/avatar_default.png') }}
+                                                                 {% else %}
+                                                                    {{ vich_uploader_asset(app.user.userprofile, 'imageFile')|imagine_filter('avatar_comment') }}
+                                                                 {% endif %}
+                                                            " alt="{{ app.user.userprofile.avatar }}" style="width: 60px; height: 60px;"/>
                             </a>
                         </div>
                         <div class="user-menu-content">

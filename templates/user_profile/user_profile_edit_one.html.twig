@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile - edit : {{ profile.pseudo }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center title-form-custom" style="margin-top: 30px; margin-bottom: 50px;">Here, you can modify your informations</h1>
+        {{ form_start(form) }}
+        <p style="color: #8596af; margin-bottom: 0px;">Personnal informations</p>
+        <div style="border: dotted #8596af 2px; margin-bottom: 30px;">
+            <div class="form-row align-items-end">
+                <div class="col-md-4">
+                    {{ form_row(form.firstname) }}
+                </div>
+                <div class="col-md-4">
+                    {{ form_row(form.lastname) }}
+                </div>
+                <div class="col-md-4">
+                    {{ form_row(form.country) }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4">
+                    <div class="d-flex justify-content-center align-items-baseline">
+                        {{ form_row(form.date_of_birth, { 'attr': { 'class': 'date-custom', 'style': 'margin-top: -6px;' } }) }}
+                    </div>
+                </div>
+                <div class="col">
+                    {{ form_row(form.signature) }}
+                </div>
+            </div>
+            <div class="form-row align-items-end">
+                <div class="col">
+                    {{ form_row(form.likes) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.dislikes) }}
+                </div>
+            </div>
+        </div>
+        <p style="color: #8596af; margin-bottom: 0px;">Account informations</p>
+        <div style="border: dotted #8596af 2px; margin-bottom: 30px;">
+            <div class="form-row align-items-end">
+                <div class="col-md-5">
+                    {{ form_row(form.email, { 'value': profile.user.email }) }}
+                </div>
+                <div class="col-md-4">
+                    {{ form_row(form.pseudo) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.imageFile, { 'attr': { 'style': 'margin-top: -15px;' } }) }}
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            {{ form_row(form.submit, { 'attr': { 'class': 'btn btn-info btn-lg btn-submit-custom', 'style': 'font-size: 1.8em;' } }) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -23,6 +23,12 @@ liip_imagine:
           size: [64, 64]
           mode: outbound
 
+    avatar_in_profile:
+      quality: 90
+      filters:
+        thumbnail:
+          size: [200, 200]
+          mode: outbound
 
 #liip_imagine:
 #    # valid drivers options include "gd" or "gmagick" or "imagick"

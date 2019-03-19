@@ -19,32 +19,22 @@ class UserProfileRepository extends ServiceEntityRepository
         parent::__construct($registry, UserProfile::class);
     }
 
-    // /**
-    //  * @return UserProfile[] Returns an array of UserProfile objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findOneByPseudo($pseudo)
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('u.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $conn = $this->getEntityManager()->getConnection();
 
-    /*
-    public function findOneBySomeField($value): ?UserProfile
-    {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $sql='
+            SELECT u.id, u.email, ur.name as role, up.avatar, up.pseudo, up.firstname, up.lastname,
+                   up.country, up.date_of_birth, up.likes, up.dislikes, up.signature
+            FROM user_profile up
+            LEFT JOIN user u on up.user_id = u.id
+            LEFT JOIN user_roles ur on u.roles_id = ur.id
+            WHERE up.pseudo = :pseudo
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute(['pseudo' => $pseudo]);
+
+        return $request->fetch();
     }
-    */
 }

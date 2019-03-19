@@ -89,10 +89,9 @@ class NewsletterController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
             $newsletter->setCreatedAt(new \DateTime('now'));
-            $em->persist($newsletter);
-            $em->flush();
+            $this->em->persist($newsletter);
+            $this->em->flush();
 
             $service->sendNewsletter($newsletter);
             return $this->redirectToRoute('redirect_from_newsletter_create_one');

@@ -74,23 +74,35 @@
             <div class="row" style="margin-bottom: 30px;">
                 <div class="col-md-10 offset-md-1">
                     <div class="media" style="border: solid white 2px; border-radius: 15px;">
-                        <img src="
+                        <a href="{{ path('user_profile_view_one', { 'pseudo': commentary['pseudo'] }) }}">
+                            <img src="
                     {% if commentary['avatar'] == 'avatar_default.png' %}
                         {{ asset('assets/images/avatar_default.png') }}
                     {% else %}
-                        {{ vich_uploader_asset(commentary, 'imageFile', 'App\\Entity\\PaintingCommentary') | imagine_filter('avatar_comment') }}
+                        {{ vich_uploader_asset(commentary, 'imageFile', 'App\\Entity\\UserProfile') | imagine_filter('avatar_comment') }}
                     {% endif %}" class="mr-3" alt="{{ commentary['avatar'] }}" style="width: 64px; height: 64px; border-radius: 15px;">
-                        <div class="media-body" style="padding-top: 5px;">
-                            <h5 class="mt-0">{{ commentary['pseudo'] ~ ' wrote :' }}</h5>
+                        </a>
+                            <div class="media-body" style="padding-top: 5px;">
+
+                            <div class="d-flex">
+                                <div class="col-md-8">
+                                    <h5 class="mt-0"><a href="{{ path('user_profile_view_one', { 'pseudo': commentary['pseudo'] }) }}" style="color: black;">{{ commentary['pseudo'] }}</a> wrote :</h5>
+                                </div>
+                                <div class="text-muted">
+                                    {{ 'posted : ' ~ commentary['posted_at']|date('d/m/Y, H:i:s') }}
+                                </div>
+                            </div>
                             {{ commentary['commentary'] }}
                             <hr class="my-4">
                             <div class="d-flex">
-                                <div class="text-muted" style="margin-top: -20px; margin-bottom: 10px;">
-                                    {{ 'posted : ' ~ commentary['posted_at']|date('d/m/Y, H:i:s') }}
+                                <div class="col-md-8">
+                                    <div class="text-muted" style="margin-top: -20px; margin-bottom: 10px;">
+                                        {{ commentary['signature'] }}
+                                    </div>
                                 </div>
                                 {% if app.user %}
                                     {% if app.user.userprofile.pseudo == commentary['pseudo'] %}
-                                        <div class="d-flex" style="margin-left: 250px; margin-top: -17px;">
+                                        <div class="d-flex" style="margin-top: -17px;">
                                             <a href="{{ path('painting_comment_edit_user_comment', { 'id': commentary['id'], 'painting_id': painting['id'] }) }}" style="margin-right: 40px;"><i class="fa fa-pencil-square-o" aria-hidden="true" style="color: green; font-size: 1.5em;"><span style="font-size: 0.7em; color: black; margin-left: 5px;">Edit</span></i></a>
                                             <a href="{{ path('painting_comment_delete_user_comment', { 'commentary_id': commentary['id'], 'painting_id': painting['id'] }) }}"><i class="fa fa-trash" aria-hidden="true" style="color: red; font-size: 1.5em;"><span style="font-size: 0.7em; color: black; margin-left: 5px;">Delete</span></i></a>
                                         </div>
