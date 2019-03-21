@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>You are already registered to our Newsletter</source>
-        <target></target>
+        <target>You are already registered to our Newsletter</target>
       </segment>
     </unit>
     <unit id="RuO7MGT" name="You are now subscribed to our Newsletter. Congratulations !">
@@ -16,7 +16,7 @@
       </notes>
       <segment>
         <source>You are now subscribed to our Newsletter. Congratulations !</source>
-        <target></target>
+        <target>You are now subscribed to our Newsletter. Congratulations !</target>
       </segment>
     </unit>
     <unit id="di8_C7W" name="Your comment has been successfully modified">
@@ -25,7 +25,7 @@
       </notes>
       <segment>
         <source>Your comment has been successfully modified</source>
-        <target></target>
+        <target>Your comment has been successfully modified</target>
       </segment>
     </unit>
     <unit id="BNWsQ7Z" name="You comment has been successfully deleted">
@@ -34,7 +34,7 @@
       </notes>
       <segment>
         <source>You comment has been successfully deleted</source>
-        <target></target>
+        <target>You comment has been successfully deleted</target>
       </segment>
     </unit>
     <unit id="YNJseLS" name="207386a">
@@ -43,7 +43,7 @@
       </notes>
       <segment>
         <source>You are now registered to Art Gallery. You can now login and share with other users</source>
-        <target></target>
+        <target>You are now registered to Art Gallery. You can now login and share with other users</target>
       </segment>
     </unit>
     <unit id="I8ZxRBq" name="Your profile has been updated">
@@ -52,7 +52,7 @@
       </notes>
       <segment>
         <source>Your profile has been updated</source>
-        <target></target>
+        <target>Your profile has been updated</target>
       </segment>
     </unit>
     <unit id="GqTLC8y" name="Image">
@@ -64,7 +64,7 @@
       </notes>
       <segment>
         <source>Image</source>
-        <target></target>
+        <target>Image</target>
       </segment>
     </unit>
     <unit id="htiPHRy" name="Lastname">
@@ -76,7 +76,7 @@
       </notes>
       <segment>
         <source>Lastname</source>
-        <target></target>
+        <target>Lastname</target>
       </segment>
     </unit>
     <unit id="ZHz6kbI" name="Firstname">
@@ -87,7 +87,7 @@
       </notes>
       <segment>
         <source>Firstname</source>
-        <target></target>
+        <target>Firstname</target>
       </segment>
     </unit>
     <unit id="cB0CHQj" name="Country">
@@ -98,7 +98,7 @@
       </notes>
       <segment>
         <source>Country</source>
-        <target></target>
+        <target>Country</target>
       </segment>
     </unit>
     <unit id="IqwPFgm" name="Commentary on the artist">
@@ -108,7 +108,7 @@
       </notes>
       <segment>
         <source>Commentary on the artist</source>
-        <target></target>
+        <target>Commentary on the artist</target>
       </segment>
     </unit>
     <unit id="60xOI5E" name="Date of birth">
@@ -119,7 +119,7 @@
       </notes>
       <segment>
         <source>Date of birth</source>
-        <target></target>
+        <target>Date of birth</target>
       </segment>
     </unit>
     <unit id="iqOgZKp" name="Date of death">
@@ -129,7 +129,7 @@
       </notes>
       <segment>
         <source>Date of death</source>
-        <target></target>
+        <target>Date of death</target>
       </segment>
     </unit>
     <unit id="dUkL17k" name="submit">
@@ -147,7 +147,7 @@
       </notes>
       <segment>
         <source>submit</source>
-        <target></target>
+        <target>submit</target>
       </segment>
     </unit>
     <unit id="1w2Ukvj" name="Firtsname">
@@ -156,7 +156,7 @@
       </notes>
       <segment>
         <source>Firtsname</source>
-        <target></target>
+        <target>Firstname</target>
       </segment>
     </unit>
     <unit id="lpzL089" name="Email">
@@ -166,7 +166,7 @@
       </notes>
       <segment>
         <source>Email</source>
-        <target></target>
+        <target>Email</target>
       </segment>
     </unit>
     <unit id="aJcSg4Q" name="Subject">
@@ -176,7 +176,7 @@
       </notes>
       <segment>
         <source>Subject</source>
-        <target></target>
+        <target>Subject</target>
       </segment>
     </unit>
     <unit id="L3dmip3" name="Message">
@@ -186,7 +186,7 @@
       </notes>
       <segment>
         <source>Message</source>
-        <target></target>
+        <target>Message</target>
       </segment>
     </unit>
     <unit id="9vRoj.I" name="Send">
@@ -196,7 +196,7 @@
       </notes>
       <segment>
         <source>Send</source>
-        <target></target>
+        <target>Send</target>
       </segment>
     </unit>
     <unit id="8aDBGnK" name="commentary">
@@ -205,7 +205,7 @@
       </notes>
       <segment>
         <source>commentary</source>
-        <target></target>
+        <target>commentary</target>
       </segment>
     </unit>
     <unit id="fozSBW2" name="Title">
@@ -215,7 +215,7 @@
       </notes>
       <segment>
         <source>Title</source>
-        <target></target>
+        <target>Title</target>
       </segment>
     </unit>
     <unit id="YQXWzHa" name="image">
@@ -227,7 +227,7 @@
       </notes>
       <segment>
         <source>image</source>
-        <target></target>
+        <target>image</target>
       </segment>
     </unit>
     <unit id="VGZ3RzR" name="Dimensions ( cm )">
@@ -237,7 +237,7 @@
       </notes>
       <segment>
         <source>Dimensions ( cm )</source>
-        <target></target>
+        <target>Dimensions ( cm )</target>
       </segment>
     </unit>
     <unit id="ifaDJWD" name="Year">
@@ -247,7 +247,7 @@
       </notes>
       <segment>
         <source>Year</source>
-        <target></target>
+        <target>Year</target>
       </segment>
     </unit>
     <unit id="Um4Ah8w" name="Description">
@@ -261,7 +261,7 @@
       </notes>
       <segment>
         <source>Description</source>
-        <target></target>
+        <target>Description</target>
       </segment>
     </unit>
     <unit id="puKa67D" name="Price ( € )">
@@ -271,7 +271,7 @@
       </notes>
       <segment>
         <source>Price ( € )</source>
-        <target></target>
+        <target>Price ( € )</target>
       </segment>
     </unit>
     <unit id="G15OJYy" name="Discount ( % )">
@@ -281,7 +281,7 @@
       </notes>
       <segment>
         <source>Discount ( % )</source>
-        <target></target>
+        <target>Discount ( % )</target>
       </segment>
     </unit>
     <unit id="y4brLZF" name="style">
@@ -291,7 +291,7 @@
       </notes>
       <segment>
         <source>style</source>
-        <target></target>
+        <target>style</target>
       </segment>
     </unit>
     <unit id="chyVJa3" name="media">
@@ -301,7 +301,7 @@
       </notes>
       <segment>
         <source>media</source>
-        <target></target>
+        <target>media</target>
       </segment>
     </unit>
     <unit id="cLHo4Ge" name="artist">
@@ -311,7 +311,7 @@
       </notes>
       <segment>
         <source>artist</source>
-        <target></target>
+        <target>artist</target>
       </segment>
     </unit>
     <unit id="SEeChDG" name="-- Choose an artist">
@@ -321,7 +321,7 @@
       </notes>
       <segment>
         <source>-- Choose an artist</source>
-        <target></target>
+        <target>-- Choose an artist</target>
       </segment>
     </unit>
     <unit id="PwP8D1k" name="-- Choose a media">
@@ -331,7 +331,7 @@
       </notes>
       <segment>
         <source>-- Choose a media</source>
-        <target></target>
+        <target>-- Choose a media</target>
       </segment>
     </unit>
     <unit id="5B0n8ZV" name="-- Choose a style">
@@ -341,7 +341,7 @@
       </notes>
       <segment>
         <source>-- Choose a style</source>
-        <target></target>
+        <target>-- Choose a style</target>
       </segment>
     </unit>
     <unit id="3NHVIj9" name="Name">
@@ -353,7 +353,7 @@
       </notes>
       <segment>
         <source>Name</source>
-        <target></target>
+        <target>Name</target>
       </segment>
     </unit>
     <unit id="yo6CbZw" name="Avatar">
@@ -362,7 +362,7 @@
       </notes>
       <segment>
         <source>Avatar</source>
-        <target></target>
+        <target>Avatar</target>
       </segment>
     </unit>
     <unit id="BH9Ys5T" name="Pseudo">
@@ -371,7 +371,7 @@
       </notes>
       <segment>
         <source>Pseudo</source>
-        <target></target>
+        <target>Pseudo</target>
       </segment>
     </unit>
     <unit id="8ac_IgS" name="Signature">
@@ -380,7 +380,7 @@
       </notes>
       <segment>
         <source>Signature</source>
-        <target></target>
+        <target>Signature</target>
       </segment>
     </unit>
     <unit id="zKBmL53" name="Likes">
@@ -389,7 +389,7 @@
       </notes>
       <segment>
         <source>Likes</source>
-        <target></target>
+        <target>Likes</target>
       </segment>
     </unit>
     <unit id="ydWjM6Z" name="Dislikes">
@@ -398,7 +398,7 @@
       </notes>
       <segment>
         <source>Dislikes</source>
-        <target></target>
+        <target>Dislikes</target>
       </segment>
     </unit>
     <unit id="FQn1YfJ" name="Save">
@@ -407,7 +407,7 @@
       </notes>
       <segment>
         <source>Save</source>
-        <target></target>
+        <target>Save</target>
       </segment>
     </unit>
     <unit id="tRVRYvi" name="confirmPassword">
@@ -416,7 +416,7 @@
       </notes>
       <segment>
         <source>confirmPassword</source>
-        <target></target>
+        <target>confirmPassword</target>
       </segment>
     </unit>
     <unit id="XohImNo" name="password">
@@ -425,7 +425,7 @@
       </notes>
       <segment>
         <source>password</source>
-        <target></target>
+        <target>password</target>
       </segment>
     </unit>
     <unit id="giREF.l" name="email">
@@ -434,7 +434,7 @@
       </notes>
       <segment>
         <source>email</source>
-        <target></target>
+        <target>email</target>
       </segment>
     </unit>
     <unit id="_jhUlyj" name="Artist %artist% successfully added">
@@ -452,7 +452,7 @@
       </notes>
       <segment>
         <source>Artist %artist% successfully modified</source>
-        <target></target>
+        <target>Artist %artist% successfully modified</target>
       </segment>
     </unit>
     <unit id="tgXkkVi" name="Artist %artist% successfully removed">
@@ -461,7 +461,7 @@
       </notes>
       <segment>
         <source>Artist %artist% successfully removed</source>
-        <target></target>
+        <target>Artist %artist% successfully removed</target>
       </segment>
     </unit>
     <unit id="uPAidcd" name="The artwork %painting% has been correctly added">
@@ -470,7 +470,7 @@
       </notes>
       <segment>
         <source>The artwork %painting% has been correctly added</source>
-        <target></target>
+        <target>The artwork %painting% has been correctly added</target>
       </segment>
     </unit>
     <unit id="9_2njLm" name="The artwork %painting% has been correctly modified">
@@ -479,7 +479,7 @@
       </notes>
       <segment>
         <source>The artwork %painting% has been correctly modified</source>
-        <target></target>
+        <target>The artwork %painting% has been correctly modified</target>
       </segment>
     </unit>
     <unit id="Zv1liYm" name="The artwork %painting% has been properly deleted">
@@ -488,7 +488,7 @@
       </notes>
       <segment>
         <source>The artwork %painting% has been properly deleted</source>
-        <target></target>
+        <target>The artwork %painting% has been properly deleted</target>
       </segment>
     </unit>
     <unit id="MYDU.lu" name="Media %media% successfully added">
@@ -497,7 +497,7 @@
       </notes>
       <segment>
         <source>Media %media% successfully added</source>
-        <target></target>
+        <target>Media %media% successfully added</target>
       </segment>
     </unit>
     <unit id="pesPPQo" name="Media %media% successfully modified">
@@ -506,7 +506,7 @@
       </notes>
       <segment>
         <source>Media %media% successfully modified</source>
-        <target></target>
+        <target>Media %media% successfully modified</target>
       </segment>
     </unit>
     <unit id="iwIxyUU" name="Media %media% successfully removed">
@@ -515,7 +515,7 @@
       </notes>
       <segment>
         <source>Media %media% successfully removed</source>
-        <target></target>
+        <target>Media %media% successfully removed</target>
       </segment>
     </unit>
     <unit id="kpBFYGz" name="Style %style% successfully added">
@@ -524,7 +524,7 @@
       </notes>
       <segment>
         <source>Style %style% successfully added</source>
-        <target></target>
+        <target>Style %style% successfully added</target>
       </segment>
     </unit>
     <unit id="RNSm0Wq" name="Style %style% successfully modified">
@@ -533,7 +533,7 @@
       </notes>
       <segment>
         <source>Style %style% successfully modified</source>
-        <target></target>
+        <target>Style %style% successfully modified</target>
       </segment>
     </unit>
     <unit id="yRyS.3c" name="Style %style% successfully removed">
@@ -542,7 +542,7 @@
       </notes>
       <segment>
         <source>Style %style% successfully removed</source>
-        <target></target>
+        <target>Style %style% successfully removed</target>
       </segment>
     </unit>
   </file>

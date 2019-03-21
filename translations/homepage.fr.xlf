@@ -8,7 +8,7 @@
       </notes>
       <segment>
         <source>Contact Us</source>
-        <target></target>
+        <target>Nous contacter</target>
       </segment>
     </unit>
     <unit id="7ikLPdv" name="Cookie Policy">
@@ -18,7 +18,7 @@
       </notes>
       <segment>
         <source>Cookie Policy</source>
-        <target></target>
+        <target>Utilisation des cookies</target>
       </segment>
     </unit>
     <unit id="TJDtWD1" name="Back to HomePage">
@@ -29,7 +29,7 @@
       </notes>
       <segment>
         <source>Back to HomePage</source>
-        <target></target>
+        <target>Retour page d'accueil</target>
       </segment>
     </unit>
     <unit id="Oj2L7DM" name="General Terms and Conditions">
@@ -40,7 +40,7 @@
       </notes>
       <segment>
         <source>General Terms and Conditions</source>
-        <target></target>
+        <target>Conditions générales de vente</target>
       </segment>
     </unit>
     <unit id="1u1AqOO" name="Hello, hello, hello">
@@ -49,7 +49,7 @@
       </notes>
       <segment>
         <source>Hello, hello, hello</source>
-        <target></target>
+        <target>Bonjour, Bonjour</target>
       </segment>
     </unit>
     <unit id="Mwef.yj" name="Welcome on Art Gallery">
@@ -58,19 +58,26 @@
       </notes>
       <segment>
         <source>Welcome on Art Gallery</source>
-        <target></target>
+        <target>Bienvenue sur Art Gallery</target>
       </segment>
     </unit>
-    <unit id="mUhVsKh" name="b86b42f">
+    <unit id="G_5N_qq" name="8489f28">
       <notes>
-        <note category="file-source" priority="1">templates\home_page\index.html.twig:13</note>
+        <note category="state" priority="1">obsolete</note>
       </notes>
       <segment>
-        <source>Here, you can find hundred of paintings to discover and/or buy.&lt;br/&gt;
-                    You can subscribe to our Newsletter to be inform of our latest news&lt;br/&gt;
-                    or you can sign-in to participate in this site's life and share with&lt;br/&gt;
-                    your fellow art lovers.</source>
-        <target></target>
+        <source>
+            Here, you can find hundred of paintings to discover and/or buy.&lt;br/&gt;
+            You can subscribe to our Newsletter to be inform of our latest news&lt;br/&gt;
+            or you can sign-in to participate in this site's life and share with&lt;br/&gt;
+            your fellow art lovers.
+        </source>
+        <target><![CDATA[
+            Ici, vous pouvez trouver des centaines de peintures à découvrir <br/>
+            et/ou acheter. Vous pouvez vous inscrire à notre newsletter pour <br/>
+            être informé de nos dernières nouvelles ou vous pouvez vous inscrire <br/>
+            pour participer à la vie du site et partagé avec d'autres personnes.
+        ]]></target>
       </segment>
     </unit>
     <unit id="J1aGeeu" name="All paintings here are REPRODUCTION of the original oeuvres">
@@ -79,7 +86,7 @@
       </notes>
       <segment>
         <source>All paintings here are REPRODUCTION of the original oeuvres</source>
-        <target></target>
+        <target>TOUTES les peintures ici sont des REPRODUCTIONS des oeuvres originales</target>
       </segment>
     </unit>
     <unit id="UG.zlGI" name="Privacy Policy">
@@ -89,7 +96,7 @@
       </notes>
       <segment>
         <source>Privacy Policy</source>
-        <target></target>
+        <target>Politique sur la vie privée</target>
       </segment>
     </unit>
     <unit id="ukRc.zi" name="Privacy policy">
@@ -98,7 +105,7 @@
       </notes>
       <segment>
         <source>Privacy policy</source>
-        <target></target>
+        <target>Politique sur la vie privée</target>
       </segment>
     </unit>
     <unit id="7dWy.Z9" name="Cookie policy">
@@ -107,7 +114,7 @@
       </notes>
       <segment>
         <source>Cookie policy</source>
-        <target></target>
+        <target>Utilisation des cookies</target>
       </segment>
     </unit>
     <unit id="eb84RnJ" name="Follow us on :">
@@ -116,7 +123,7 @@
       </notes>
       <segment>
         <source>Follow us on :</source>
-        <target></target>
+        <target>Nous suivre :</target>
       </segment>
     </unit>
     <unit id="NIhB71P" name="Belgium">
@@ -125,7 +132,7 @@
       </notes>
       <segment>
         <source>Belgium</source>
-        <target></target>
+        <target>Belgique</target>
       </segment>
     </unit>
     <unit id="Z3AMJ45" name="NEWSLETTER">
@@ -134,7 +141,7 @@
       </notes>
       <segment>
         <source>NEWSLETTER</source>
-        <target></target>
+        <target>NEWSLETTER</target>
       </segment>
     </unit>
     <unit id="T_6ag8M" name="email address">
@@ -143,7 +150,7 @@
       </notes>
       <segment>
         <source>email address</source>
-        <target></target>
+        <target>adresse mail</target>
       </segment>
     </unit>
     <unit id="zA442px" name="Subscribe">
@@ -152,7 +159,23 @@
       </notes>
       <segment>
         <source>Subscribe</source>
-        <target></target>
+        <target>S'inscrire</target>
+      </segment>
+    </unit>
+    <unit id="mUhVsKh" name="b86b42f">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\index.html.twig:13</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Here, you can find hundred of paintings to discover and/or buy.&lt;br/&gt;
+                    You can subscribe to our Newsletter to be inform of our latest news&lt;br/&gt;
+                    or you can sign-in to participate in this site's life and share with&lt;br/&gt;
+                    your fellow art lovers.</source>
+        <target>Ici, vous pouvez trouver une centaine de peintures à découvrir et/ou acheter.&lt;br/&gt;
+        Vous pouvez vous inscrire à notre Newsletter pour être informé de nos dernières news&lt;br/&gt;
+        ou vous pouvez vous connecter pour participer à la vie du site et partager avec d'autres membres.
+        </target>
       </segment>
     </unit>
   </file>

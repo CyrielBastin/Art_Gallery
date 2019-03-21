@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>Medias</source>
-        <target></target>
+        <target>Supports</target>
       </segment>
     </unit>
     <unit id="0axWApa" name="Add a media">
@@ -17,7 +17,7 @@
       </notes>
       <segment>
         <source>Add a media</source>
-        <target></target>
+        <target>Ajouter un support</target>
       </segment>
     </unit>
     <unit id="1f9t6EO" name="Edit a media">
@@ -27,7 +27,7 @@
       </notes>
       <segment>
         <source>Edit a media</source>
-        <target></target>
+        <target>Editer un support</target>
       </segment>
     </unit>
     <unit id="Um4Ah8w" name="Description">
@@ -36,7 +36,7 @@
       </notes>
       <segment>
         <source>Description</source>
-        <target></target>
+        <target>Description</target>
       </segment>
     </unit>
     <unit id="RkxP.QG" name="Edit">
@@ -45,7 +45,7 @@
       </notes>
       <segment>
         <source>Edit</source>
-        <target></target>
+        <target>Editer</target>
       </segment>
     </unit>
     <unit id="4tClSWj" name="Delete">
@@ -54,7 +54,7 @@
       </notes>
       <segment>
         <source>Delete</source>
-        <target></target>
+        <target>Supprimer</target>
       </segment>
     </unit>
     <unit id="Mab4uhb" name="Artworks using %media% as media :">
@@ -63,7 +63,7 @@
       </notes>
       <segment>
         <source>Artworks using %media% as media :</source>
-        <target></target>
+        <target>Peintures utilisant %media% comme support :</target>
       </segment>
     </unit>
   </file>

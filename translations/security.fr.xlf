@@ -9,7 +9,7 @@
       </notes>
       <segment>
         <source>Log in</source>
-        <target></target>
+        <target>Connexion</target>
       </segment>
     </unit>
     <unit id="oJCZqal" name="Log-in to post a comment">
@@ -18,7 +18,7 @@
       </notes>
       <segment>
         <source>Log-in to post a comment</source>
-        <target></target>
+        <target>Se connecter pour poster un commentaire</target>
       </segment>
     </unit>
     <unit id="lpzL089" name="Email">
@@ -27,7 +27,7 @@
       </notes>
       <segment>
         <source>Email</source>
-        <target></target>
+        <target>Email</target>
       </segment>
     </unit>
     <unit id="PMCOvp1" name="Sign-up">
@@ -36,7 +36,7 @@
       </notes>
       <segment>
         <source>Sign-up</source>
-        <target></target>
+        <target>S'inscrire</target>
       </segment>
     </unit>
     <unit id="fTOdXa3" name="Sign Up here">
@@ -45,7 +45,7 @@
       </notes>
       <segment>
         <source>Sign Up here</source>
-        <target></target>
+        <target>S'inscrire ici</target>
       </segment>
     </unit>
   </file>

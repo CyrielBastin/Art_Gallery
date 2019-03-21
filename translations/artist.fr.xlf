@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>Artists</source>
-        <target></target>
+        <target>Artistes</target>
       </segment>
     </unit>
     <unit id="O8ZP8uY" name="Add an artist">
@@ -16,7 +16,7 @@
       </notes>
       <segment>
         <source>Add an artist</source>
-        <target></target>
+        <target>Ajouter un artiste</target>
       </segment>
     </unit>
     <unit id="4k2yTVv" name="Edit an artist">
@@ -26,7 +26,7 @@
       </notes>
       <segment>
         <source>Edit an artist</source>
-        <target></target>
+        <target>Editer un artiste</target>
       </segment>
     </unit>
     <unit id="lC2_2pF" name="Biography">
@@ -35,7 +35,7 @@
       </notes>
       <segment>
         <source>Biography</source>
-        <target></target>
+        <target>Biographie</target>
       </segment>
     </unit>
     <unit id="RkxP.QG" name="Edit">
@@ -44,7 +44,7 @@
       </notes>
       <segment>
         <source>Edit</source>
-        <target></target>
+        <target>Editer</target>
       </segment>
     </unit>
     <unit id="4tClSWj" name="Delete">
@@ -53,7 +53,7 @@
       </notes>
       <segment>
         <source>Delete</source>
-        <target></target>
+        <target>Supprimer</target>
       </segment>
     </unit>
     <unit id="Gr03dVN" name="His/Her Paintings :">
@@ -62,7 +62,7 @@
       </notes>
       <segment>
         <source>His/Her Paintings :</source>
-        <target></target>
+        <target>Ses oeuvres :</target>
       </segment>
     </unit>
     <unit id="GqTLC8y" name="Image">
@@ -71,7 +71,7 @@
       </notes>
       <segment>
         <source>Image</source>
-        <target></target>
+        <target>Image</target>
       </segment>
     </unit>
     <unit id="fozSBW2" name="Title">
@@ -80,7 +80,7 @@
       </notes>
       <segment>
         <source>Title</source>
-        <target></target>
+        <target>Titre</target>
       </segment>
     </unit>
     <unit id="fnRBQbQ" name="Style">
@@ -89,7 +89,7 @@
       </notes>
       <segment>
         <source>Style</source>
-        <target></target>
+        <target>Style</target>
       </segment>
     </unit>
     <unit id="ifaDJWD" name="Year">
@@ -98,7 +98,7 @@
       </notes>
       <segment>
         <source>Year</source>
-        <target></target>
+        <target>Année</target>
       </segment>
     </unit>
     <unit id="k8kchR5" name="Price">
@@ -107,7 +107,7 @@
       </notes>
       <segment>
         <source>Price</source>
-        <target></target>
+        <target>Prix</target>
       </segment>
     </unit>
   </file>

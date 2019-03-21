@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>Login</source>
-        <target></target>
+        <target>Se connecter</target>
       </segment>
     </unit>
     <unit id="1pajW90" name="Profile">
@@ -16,7 +16,7 @@
       </notes>
       <segment>
         <source>Profile</source>
-        <target></target>
+        <target>Profil</target>
       </segment>
     </unit>
     <unit id="BNe0gzk" name="Messages">
@@ -25,7 +25,7 @@
       </notes>
       <segment>
         <source>Messages</source>
-        <target></target>
+        <target>Messages</target>
       </segment>
     </unit>
     <unit id="SWFhRVF" name="Log out">
@@ -34,7 +34,7 @@
       </notes>
       <segment>
         <source>Log out</source>
-        <target></target>
+        <target>Déconnexion</target>
       </segment>
     </unit>
     <unit id="OnhpU4i" name="Home">
@@ -43,7 +43,7 @@
       </notes>
       <segment>
         <source>Home</source>
-        <target></target>
+        <target>Accueil</target>
       </segment>
     </unit>
     <unit id="1AanUxq" name="Paintings">
@@ -52,7 +52,7 @@
       </notes>
       <segment>
         <source>Paintings</source>
-        <target></target>
+        <target>Peintures</target>
       </segment>
     </unit>
     <unit id="pSrOQg8" name="All">
@@ -62,7 +62,7 @@
       </notes>
       <segment>
         <source>All</source>
-        <target></target>
+        <target>Toutes</target>
       </segment>
     </unit>
     <unit id="98HDQx8" name="Latest added">
@@ -71,7 +71,7 @@
       </notes>
       <segment>
         <source>Latest added</source>
-        <target></target>
+        <target>Dernières additions</target>
       </segment>
     </unit>
     <unit id="y3LsmFt" name="Discount">
@@ -80,7 +80,7 @@
       </notes>
       <segment>
         <source>Discount</source>
-        <target></target>
+        <target>Promotions</target>
       </segment>
     </unit>
     <unit id="caVNJB7" name="Medias">
@@ -89,7 +89,7 @@
       </notes>
       <segment>
         <source>Medias</source>
-        <target></target>
+        <target>Supports</target>
       </segment>
     </unit>
     <unit id="Nibn.eo" name="Styles">
@@ -98,7 +98,7 @@
       </notes>
       <segment>
         <source>Styles</source>
-        <target></target>
+        <target>Styles</target>
       </segment>
     </unit>
     <unit id="lOPopEB" name="Artists">
@@ -107,7 +107,7 @@
       </notes>
       <segment>
         <source>Artists</source>
-        <target></target>
+        <target>Artistes</target>
       </segment>
     </unit>
     <unit id="qCE2S.b" name="Sign-Up">
@@ -116,7 +116,7 @@
       </notes>
       <segment>
         <source>Sign-Up</source>
-        <target></target>
+        <target>S'inscrire</target>
       </segment>
     </unit>
     <unit id="K1w9JnI" name="Contact">
@@ -125,7 +125,7 @@
       </notes>
       <segment>
         <source>Contact</source>
-        <target></target>
+        <target>Nous contacter</target>
       </segment>
     </unit>
     <unit id="Tae9Qqu" name="Forum">
@@ -134,7 +134,7 @@
       </notes>
       <segment>
         <source>Forum</source>
-        <target></target>
+        <target>Forum</target>
       </segment>
     </unit>
     <unit id="wcIksDz" name="Admin">
@@ -143,7 +143,7 @@
       </notes>
       <segment>
         <source>Admin</source>
-        <target></target>
+        <target>Admin</target>
       </segment>
     </unit>
     <unit id="Z7aWRoY" name="Dashboard">
@@ -152,7 +152,7 @@
       </notes>
       <segment>
         <source>Dashboard</source>
-        <target></target>
+        <target>Dashboard</target>
       </segment>
     </unit>
     <unit id="upBk4j2" name="Add painting">
@@ -161,7 +161,7 @@
       </notes>
       <segment>
         <source>Add painting</source>
-        <target></target>
+        <target>Ajouter une oeuvre</target>
       </segment>
     </unit>
     <unit id="1dXSZs6" name="Add media">
@@ -170,7 +170,7 @@
       </notes>
       <segment>
         <source>Add media</source>
-        <target></target>
+        <target>Ajouter un support</target>
       </segment>
     </unit>
     <unit id="nD2BUsF" name="Add style">
@@ -179,7 +179,7 @@
       </notes>
       <segment>
         <source>Add style</source>
-        <target></target>
+        <target>Ajouter un style</target>
       </segment>
     </unit>
     <unit id="o6nmNu0" name="Add artist">
@@ -188,7 +188,7 @@
       </notes>
       <segment>
         <source>Add artist</source>
-        <target></target>
+        <target>Ajouter un artiste</target>
       </segment>
     </unit>
     <unit id="_Eyi53F" name="Newsletter">
@@ -197,7 +197,7 @@
       </notes>
       <segment>
         <source>Newsletter</source>
-        <target></target>
+        <target>Newsletter</target>
       </segment>
     </unit>
   </file>

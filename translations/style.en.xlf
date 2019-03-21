@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>Styles</source>
-        <target></target>
+        <target>Styles</target>
       </segment>
     </unit>
     <unit id="e8GbAMn" name="Add a style">
@@ -17,7 +17,7 @@
       </notes>
       <segment>
         <source>Add a style</source>
-        <target></target>
+        <target>Add a style</target>
       </segment>
     </unit>
     <unit id="ArK0U2K" name="Edit a style">
@@ -27,7 +27,7 @@
       </notes>
       <segment>
         <source>Edit a style</source>
-        <target></target>
+        <target>Edit a style</target>
       </segment>
     </unit>
     <unit id="Um4Ah8w" name="Description">
@@ -36,7 +36,7 @@
       </notes>
       <segment>
         <source>Description</source>
-        <target></target>
+        <target>Description</target>
       </segment>
     </unit>
     <unit id="0MCRLtr" name="Artworks painted in %style% style :">
@@ -45,7 +45,7 @@
       </notes>
       <segment>
         <source>Artworks painted in %style% style :</source>
-        <target></target>
+        <target>Artworks painted in %style% style :</target>
       </segment>
     </unit>
   </file>

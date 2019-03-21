@@ -8,7 +8,7 @@
       </notes>
       <segment>
         <source>No more than {{ limit }} letters for the lastname</source>
-        <target></target>
+        <target>No more than {{ limit }} letters for the lastname</target>
       </segment>
     </unit>
     <unit id="4WkEgKq" name="The author's lastname must contain at least {{ limit }} letters">
@@ -18,7 +18,7 @@
       </notes>
       <segment>
         <source>The author's lastname must contain at least {{ limit }} letters</source>
-        <target></target>
+        <target>The author's lastname must contain at least {{ limit }} letters</target>
       </segment>
     </unit>
     <unit id="ufvF8lD" name="75ab6db">
@@ -27,7 +27,7 @@
       </notes>
       <segment>
         <source>This place is for a description, no need to write a novel ! ( {{ limit }} letters max )</source>
-        <target></target>
+        <target>This place is for a description, no need to write a novel ! ( {{ limit }} letters max )</target>
       </segment>
     </unit>
     <unit id="QfqqImz" name="c945fee">
@@ -36,7 +36,7 @@
       </notes>
       <segment>
         <source>It would be nice to write a little comment about the author ({{ limit }} minimum letters please)</source>
-        <target></target>
+        <target>It would be nice to write a little comment about the author ({{ limit }} minimum letters please)</target>
       </segment>
     </unit>
     <unit id="qB.Xkj." name="Your firstname must be of {{ limit }} letters maximum">
@@ -45,7 +45,7 @@
       </notes>
       <segment>
         <source>Your firstname must be of {{ limit }} letters maximum</source>
-        <target></target>
+        <target>Your firstname must be of {{ limit }} letters maximum</target>
       </segment>
     </unit>
     <unit id="qaO88qr" name="Your firstname must be of {{ limit }} letters minimum">
@@ -54,7 +54,7 @@
       </notes>
       <segment>
         <source>Your firstname must be of {{ limit }} letters minimum</source>
-        <target></target>
+        <target>Your firstname must be of {{ limit }} letters minimum</target>
       </segment>
     </unit>
     <unit id="G5IhROC" name="Your lastname must be of {{ limit }} letters maximum">
@@ -63,7 +63,7 @@
       </notes>
       <segment>
         <source>Your lastname must be of {{ limit }} letters maximum</source>
-        <target></target>
+        <target>Your lastname must be of {{ limit }} letters maximum</target>
       </segment>
     </unit>
     <unit id="fj6EtGc" name="Your lastname must be of {{ limit }} letters minimum">
@@ -72,7 +72,7 @@
       </notes>
       <segment>
         <source>Your lastname must be of {{ limit }} letters minimum</source>
-        <target></target>
+        <target>Your lastname must be of {{ limit }} letters minimum</target>
       </segment>
     </unit>
     <unit id="LzmiX8y" name="The subject must be of {{ limit }} letters maximum">
@@ -81,7 +81,7 @@
       </notes>
       <segment>
         <source>The subject must be of {{ limit }} letters maximum</source>
-        <target></target>
+        <target>The subject must be of {{ limit }} letters maximum</target>
       </segment>
     </unit>
     <unit id="y9S75KI" name="The subject must be of {{ limit }} letters minimum">
@@ -90,7 +90,7 @@
       </notes>
       <segment>
         <source>The subject must be of {{ limit }} letters minimum</source>
-        <target></target>
+        <target>The subject must be of {{ limit }} letters minimum</target>
       </segment>
     </unit>
     <unit id="NZbKwr." name="The message must be of {{ limit }} letters maximum">
@@ -99,7 +99,7 @@
       </notes>
       <segment>
         <source>The message must be of {{ limit }} letters maximum</source>
-        <target></target>
+        <target>The message must be of {{ limit }} letters maximum</target>
       </segment>
     </unit>
     <unit id="iO6vumQ" name="The message must be of {{ limit }} letters minimum">
@@ -108,7 +108,7 @@
       </notes>
       <segment>
         <source>The message must be of {{ limit }} letters minimum</source>
-        <target></target>
+        <target>The message must be of {{ limit }} letters minimum</target>
       </segment>
     </unit>
     <unit id="bJFXmN3" name="You are already subscribed to our newsletter">
@@ -117,7 +117,7 @@
       </notes>
       <segment>
         <source>You are already subscribed to our newsletter</source>
-        <target></target>
+        <target>You are already subscribed to our newsletter</target>
       </segment>
     </unit>
     <unit id="YYCdvwO" name="The title must be of {{ limit }} characters at max">
@@ -126,7 +126,7 @@
       </notes>
       <segment>
         <source>The title must be of {{ limit }} characters at max</source>
-        <target></target>
+        <target>The title must be of {{ limit }} characters at max</target>
       </segment>
     </unit>
     <unit id="YiFr7IS" name="The title must be of at least {{ limit }} characters">
@@ -135,7 +135,7 @@
       </notes>
       <segment>
         <source>The title must be of at least {{ limit }} characters</source>
-        <target></target>
+        <target>The title must be of at least {{ limit }} characters</target>
       </segment>
     </unit>
     <unit id="pJiK9km" name="The artwork can't be painted in the future">
@@ -144,7 +144,7 @@
       </notes>
       <segment>
         <source>The artwork can't be painted in the future</source>
-        <target></target>
+        <target>The artwork can't be painted in the future</target>
       </segment>
     </unit>
     <unit id="IjXYW9W" name="This place is for a little description, no need to write a novel !">
@@ -153,7 +153,7 @@
       </notes>
       <segment>
         <source>This place is for a little description, no need to write a novel !</source>
-        <target></target>
+        <target>This place is for a little description, no need to write a novel !</target>
       </segment>
     </unit>
     <unit id="5yNU_We" name="83f1bb4">
@@ -162,7 +162,7 @@
       </notes>
       <segment>
         <source>It would be nice to write a little comment about the artwork ({{ limit }} minimum letters please)</source>
-        <target></target>
+        <target>It would be nice to write a little comment about the artwork ({{ limit }} minimum letters please)</target>
       </segment>
     </unit>
     <unit id="iy5dcz9" name="You can't put a price of less than {{ compared_value }} euros">
@@ -171,7 +171,7 @@
       </notes>
       <segment>
         <source>You can't put a price of less than {{ compared_value }} euros</source>
-        <target></target>
+        <target>You can't put a price of less than {{ compared_value }} euros</target>
       </segment>
     </unit>
     <unit id="qzIPKJn" name="{{ limit }} % minimum for the discount">
@@ -180,7 +180,7 @@
       </notes>
       <segment>
         <source>{{ limit }} % minimum for the discount</source>
-        <target></target>
+        <target>{{ limit }} % minimum for the discount</target>
       </segment>
     </unit>
     <unit id="S2ZY9Vs" name="You can't discount more than {{ limit }} %">
@@ -189,7 +189,7 @@
       </notes>
       <segment>
         <source>You can't discount more than {{ limit }} %</source>
-        <target></target>
+        <target>You can't discount more than {{ limit }} %</target>
       </segment>
     </unit>
     <unit id="cJi1mHX" name="Your commentary must be less than {{ compared_value }} caracters">
@@ -198,7 +198,7 @@
       </notes>
       <segment>
         <source>Your commentary must be less than {{ compared_value }} caracters</source>
-        <target></target>
+        <target>Your commentary must be less than {{ compared_value }} caracters</target>
       </segment>
     </unit>
     <unit id="rAi7z9p" name="{{ limit }} caracters maximum">
@@ -208,7 +208,7 @@
       </notes>
       <segment>
         <source>{{ limit }} caracters maximum</source>
-        <target></target>
+        <target>{{ limit }} caracters maximum</target>
       </segment>
     </unit>
     <unit id="_9wGsi9" name="The name of the media must contain at leat {{ limit }} caracters">
@@ -218,7 +218,7 @@
       </notes>
       <segment>
         <source>The name of the media must contain at leat {{ limit }} caracters</source>
-        <target></target>
+        <target>The name of the media must contain at leat {{ limit }} caracters</target>
       </segment>
     </unit>
     <unit id="vcWL7rS" name="This place is for a description, no need to write a novel !">
@@ -228,7 +228,7 @@
       </notes>
       <segment>
         <source>This place is for a description, no need to write a novel !</source>
-        <target></target>
+        <target>This place is for a description, no need to write a novel !</target>
       </segment>
     </unit>
     <unit id="bj2k9j8" name="dde6441">
@@ -238,7 +238,7 @@
       </notes>
       <segment>
         <source>It would be nice to write a little description about the media ({{ limit }} letters please)</source>
-        <target></target>
+        <target>It would be nice to write a little description about the media ({{ limit }} letters please)</target>
       </segment>
     </unit>
     <unit id="aLvJg18" name="A user with this email is already registered">
@@ -247,7 +247,7 @@
       </notes>
       <segment>
         <source>A user with this email is already registered</source>
-        <target></target>
+        <target>A user with this email is already registered</target>
       </segment>
     </unit>
     <unit id="pgJJpKc" name="The address {{ value }} is not a valid email address !">
@@ -256,7 +256,7 @@
       </notes>
       <segment>
         <source>The address {{ value }} is not a valid email address !</source>
-        <target></target>
+        <target>The address {{ value }} is not a valid email address !</target>
       </segment>
     </unit>
     <unit id="DHc4qy9" name="The passwords are not identical">
@@ -265,7 +265,7 @@
       </notes>
       <segment>
         <source>The passwords are not identical</source>
-        <target></target>
+        <target>The passwords are not identical</target>
       </segment>
     </unit>
     <unit id="UNpaWYr" name="The pseudo {{ value }} is already taken">
@@ -274,7 +274,7 @@
       </notes>
       <segment>
         <source>The pseudo {{ value }} is already taken</source>
-        <target></target>
+        <target>The pseudo {{ value }} is already taken</target>
       </segment>
     </unit>
     <unit id="JO6YwdG" name="Your signature must be {{ compared_value }} letters max !">
@@ -283,7 +283,7 @@
       </notes>
       <segment>
         <source>Your signature must be {{ compared_value }} letters max !</source>
-        <target></target>
+        <target>Your signature must be {{ compared_value }} letters max !</target>
       </segment>
     </unit>
     <unit id="qqAnApJ" name="This field must be {{ compared_value }} letters max !">
@@ -293,7 +293,7 @@
       </notes>
       <segment>
         <source>This field must be {{ compared_value }} letters max !</source>
-        <target></target>
+        <target>This field must be {{ compared_value }} letters max !</target>
       </segment>
     </unit>
   </file>

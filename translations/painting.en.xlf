@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>Paintings</source>
-        <target></target>
+        <target>Paintings</target>
       </segment>
     </unit>
     <unit id="nI27om5" name="All our Paintings">
@@ -16,7 +16,7 @@
       </notes>
       <segment>
         <source>All our Paintings</source>
-        <target></target>
+        <target>All our Paintings</target>
       </segment>
     </unit>
     <unit id="GqTLC8y" name="Image">
@@ -28,7 +28,7 @@
       </notes>
       <segment>
         <source>Image</source>
-        <target></target>
+        <target>Image</target>
       </segment>
     </unit>
     <unit id="fozSBW2" name="Title">
@@ -40,7 +40,7 @@
       </notes>
       <segment>
         <source>Title</source>
-        <target></target>
+        <target>Title</target>
       </segment>
     </unit>
     <unit id="fnRBQbQ" name="Style">
@@ -51,7 +51,7 @@
       </notes>
       <segment>
         <source>Style</source>
-        <target></target>
+        <target>Style</target>
       </segment>
     </unit>
     <unit id="HTmBuh4" name="Artist">
@@ -63,7 +63,7 @@
       </notes>
       <segment>
         <source>Artist</source>
-        <target></target>
+        <target>Artist</target>
       </segment>
     </unit>
     <unit id="ifaDJWD" name="Year">
@@ -75,7 +75,7 @@
       </notes>
       <segment>
         <source>Year</source>
-        <target></target>
+        <target>Year</target>
       </segment>
     </unit>
     <unit id="k8kchR5" name="Price">
@@ -87,7 +87,7 @@
       </notes>
       <segment>
         <source>Price</source>
-        <target></target>
+        <target>Price</target>
       </segment>
     </unit>
     <unit id="RkxP.QG" name="Edit">
@@ -98,7 +98,7 @@
       </notes>
       <segment>
         <source>Edit</source>
-        <target></target>
+        <target>Edit</target>
       </segment>
     </unit>
     <unit id="4tClSWj" name="Delete">
@@ -108,7 +108,7 @@
       </notes>
       <segment>
         <source>Delete</source>
-        <target></target>
+        <target>Delete</target>
       </segment>
     </unit>
     <unit id="rqxjIJQ" name="Add a painting">
@@ -118,7 +118,7 @@
       </notes>
       <segment>
         <source>Add a painting</source>
-        <target></target>
+        <target>Add a painting</target>
       </segment>
     </unit>
     <unit id="u.Re.k8" name="Discounts">
@@ -127,7 +127,7 @@
       </notes>
       <segment>
         <source>Discounts</source>
-        <target></target>
+        <target>Discounts</target>
       </segment>
     </unit>
     <unit id="a_QYG3b" name="Our best Deals">
@@ -136,7 +136,7 @@
       </notes>
       <segment>
         <source>Our best Deals</source>
-        <target></target>
+        <target>Our best Deals</target>
       </segment>
     </unit>
     <unit id="v.NQGDr" name="Edit a painting">
@@ -146,7 +146,7 @@
       </notes>
       <segment>
         <source>Edit a painting</source>
-        <target></target>
+        <target>Edit a painting</target>
       </segment>
     </unit>
     <unit id="98HDQx8" name="Latest added">
@@ -155,7 +155,7 @@
       </notes>
       <segment>
         <source>Latest added</source>
-        <target></target>
+        <target>Latest added</target>
       </segment>
     </unit>
     <unit id="Rg_CQwN" name="Our latest additions">
@@ -164,7 +164,7 @@
       </notes>
       <segment>
         <source>Our latest additions</source>
-        <target></target>
+        <target>Our latest additions</target>
       </segment>
     </unit>
     <unit id="_y4LvYO" name="Post a commentary :">
@@ -173,7 +173,7 @@
       </notes>
       <segment>
         <source>Post a commentary :</source>
-        <target></target>
+        <target>Post a commentary :</target>
       </segment>
     </unit>
     <unit id="6glZsYl" name="Edit your commentary">
@@ -182,7 +182,7 @@
       </notes>
       <segment>
         <source>Edit your commentary</source>
-        <target></target>
+        <target>Edit your commentary</target>
       </segment>
     </unit>
     <unit id="z8FpNP_" name="Edit your comment">
@@ -191,7 +191,7 @@
       </notes>
       <segment>
         <source>Edit your comment</source>
-        <target></target>
+        <target>Edit your comment</target>
       </segment>
     </unit>
   </file>

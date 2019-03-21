@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>Create a newsletter</source>
-        <target></target>
+        <target>Créer une newsletter</target>
       </segment>
     </unit>
     <unit id="aWz939y" name="Send a Newsletter">
@@ -16,7 +16,7 @@
       </notes>
       <segment>
         <source>Send a Newsletter</source>
-        <target></target>
+        <target>Envoyer une Newsletter</target>
       </segment>
     </unit>
     <unit id=".z1.ESf" name="Newsletter: All">
@@ -25,7 +25,7 @@
       </notes>
       <segment>
         <source>Newsletter: All</source>
-        <target></target>
+        <target>Newsletter: Toutes</target>
       </segment>
     </unit>
     <unit id="KgjqDi1" name="All Newsletters">
@@ -34,7 +34,7 @@
       </notes>
       <segment>
         <source>All Newsletters</source>
-        <target></target>
+        <target>Toutes les Newsletters</target>
       </segment>
     </unit>
     <unit id="IBD0sxG" name="Create One">
@@ -43,7 +43,7 @@
       </notes>
       <segment>
         <source>Create One</source>
-        <target></target>
+        <target>Créer Une</target>
       </segment>
     </unit>
   </file>

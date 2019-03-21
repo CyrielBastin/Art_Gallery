@@ -7,7 +7,7 @@
       </notes>
       <segment>
         <source>Your account has been successfully registered</source>
-        <target></target>
+        <target>Your account has been successfully registered</target>
       </segment>
     </unit>
     <unit id="S5aCEyg" name="You have received this email following your registration on Art Gallery">
@@ -16,7 +16,7 @@
       </notes>
       <segment>
         <source>You have received this email following your registration on Art Gallery</source>
-        <target></target>
+        <target>You have received this email following your registration on Art Gallery</target>
       </segment>
     </unit>
     <unit id="vmirzP0" name="You can access Art Gallery">
@@ -25,7 +25,7 @@
       </notes>
       <segment>
         <source>You can access Art Gallery</source>
-        <target></target>
+        <target>You can access Art Gallery</target>
       </segment>
     </unit>
     <unit id=".OyRUJd" name="here">
@@ -34,7 +34,7 @@
       </notes>
       <segment>
         <source>here</source>
-        <target></target>
+        <target>here</target>
       </segment>
     </unit>
     <unit id="Dbmbjfa" name="If this action wasn't your doing, you can contact us">
@@ -43,7 +43,7 @@
       </notes>
       <segment>
         <source>If this action wasn't your doing, you can contact us</source>
-        <target></target>
+        <target>If this action wasn't your doing, you can contact us</target>
       </segment>
     </unit>
   </file>
