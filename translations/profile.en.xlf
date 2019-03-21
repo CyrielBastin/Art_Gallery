@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="profile.en">
+    <unit id="L1xXa1r" name="Profile - edit : ">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_edit_one.html.twig:5</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Profile - edit : </source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="eGUXGVp" name="Here, you can modify your informations">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_edit_one.html.twig:9</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Here, you can modify your informations</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="R.csSwa" name="Personnal informations">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_edit_one.html.twig:11</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Personnal informations</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="jcvvFTa" name="Account informations">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_edit_one.html.twig:43</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Account informations</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="RomYsZx" name="Profile:">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:5</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Profile:</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="JLff1s." name="Email :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:15</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Email :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="kd.Eaxm" name="Role :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:23</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Role :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="h3654ou" name="Pseudo :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:31</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Pseudo :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="m.GrFDh" name="Signature :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:39</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Signature :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="cFFpUlb" name="Lastname :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:47</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Lastname :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="w_s.5pM" name="Firstname :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:55</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Firstname :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="uxgcQa4" name="Date of birth :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:63</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Date of birth :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="7olTtkJ" name="Country :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:73</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Country :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="uJ9u0Y." name="Likes :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:81</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Likes :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="pJKv5It" name="Dislikes :">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:89</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Dislikes :</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

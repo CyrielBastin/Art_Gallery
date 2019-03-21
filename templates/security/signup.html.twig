@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Sign-up {% endblock %}
+{% trans_default_domain 'security' %}
+
+{% block title %} {% trans %}Sign-up{% endtrans %} {% endblock %}
 
 {% block body %}
     <section class="container" style="margin-top: 50px;">
-        <h1 class="text-center title-form-custom">Sign Up here</h1>
+        <h1 class="text-center title-form-custom">{% trans %}Sign Up here{% endtrans %}</h1>
 
         {{ form_start(form) }}
         <div class="d-flex justify-content-center">

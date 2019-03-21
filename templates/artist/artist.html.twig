@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Artists{% endblock %}
+{% trans_default_domain 'artist' %}
+
+{% block title %}{% trans %}Artists{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="container">

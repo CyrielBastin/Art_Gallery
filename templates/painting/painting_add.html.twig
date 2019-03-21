@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Add a painting{% endblock %}
+{% trans_default_domain 'painting' %}
+
+{% block title %}{% trans %}Add a painting{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="container">
-        <h1 class="text-center title-form-custom">Add a painting</h1>
+        <h1 class="text-center title-form-custom">{% trans %}Add a painting{% endtrans %}</h1>
         {{ form_start(form) }}
         <div class="row align-items-end">
             <div class="col-md-4 offset-md-1">

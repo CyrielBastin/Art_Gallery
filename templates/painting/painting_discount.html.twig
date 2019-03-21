@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Discounts{% endblock %}
+{% trans_default_domain 'painting' %}
+
+{% block title %}{% trans %}Discounts{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="container">
         <div class="d-flex justify-content-center" style="margin-bottom: 40px">
-            <h3 class="title-form-custom" style="margin-top: 20px; margin-bottom: 0px;">Our best Deals</h3>
+            <h3 class="title-form-custom" style="margin-top: 20px; margin-bottom: 0px;">{% trans %}Our best Deals{% endtrans %}</h3>
         </div>
         <div class="row">
             {% for discount in discounts %}
@@ -21,7 +23,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="d-flex justify-content-center">
-                                    <a href="{{ path('painting_edit_one', {id:discount['id']}) }}" class="btn btn-outline-info" role="button">Edit</a>
+                                    <a href="{{ path('painting_edit_one', {id:discount['id']}) }}" class="btn btn-outline-info" role="button">{% trans %}Edit{% endtrans %}</a>
                                 </div>
                             </div>
                         </div>

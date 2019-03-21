@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="painting.en">
+    <unit id="1AanUxq" name="Paintings">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Paintings</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="nI27om5" name="All our Paintings">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>All our Paintings</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="GqTLC8y" name="Image">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:17</note>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:17</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:35</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:35</note>
+      </notes>
+      <segment>
+        <source>Image</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="fozSBW2" name="Title">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:18</note>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:18</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:36</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:36</note>
+      </notes>
+      <segment>
+        <source>Title</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="fnRBQbQ" name="Style">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:19</note>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:19</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:37</note>
+      </notes>
+      <segment>
+        <source>Style</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="HTmBuh4" name="Artist">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:20</note>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:20</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:38</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:37</note>
+      </notes>
+      <segment>
+        <source>Artist</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="ifaDJWD" name="Year">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:21</note>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:21</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:39</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:38</note>
+      </notes>
+      <segment>
+        <source>Year</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="k8kchR5" name="Price">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:22</note>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:22</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:40</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:39</note>
+      </notes>
+      <segment>
+        <source>Price</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="RkxP.QG" name="Edit">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:23</note>
+        <note category="file-source" priority="1">templates\painting\painting_discount.html.twig:26</note>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:37</note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="4tClSWj" name="Delete">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:24</note>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:38</note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="rqxjIJQ" name="Add a painting">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_add.html.twig:5</note>
+        <note category="file-source" priority="1">templates\painting\painting_add.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add a painting</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="u.Re.k8" name="Discounts">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_discount.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Discounts</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="a_QYG3b" name="Our best Deals">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_discount.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>Our best Deals</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="v.NQGDr" name="Edit a painting">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_edit.html.twig:5</note>
+        <note category="file-source" priority="1">templates\painting\painting_edit.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit a painting</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="98HDQx8" name="Latest added">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Latest added</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Rg_CQwN" name="Our latest additions">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>Our latest additions</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="_y4LvYO" name="Post a commentary :">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:45</note>
+      </notes>
+      <segment>
+        <source>Post a commentary :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="6glZsYl" name="Edit your commentary">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_comment\painting_comment_edit.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Edit your commentary</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="z8FpNP_" name="Edit your comment">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_comment\painting_comment_edit.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit your comment</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

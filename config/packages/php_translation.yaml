@@ -1,0 +1,16 @@
+translation:
+    locales: ["en", "fr"]
+    configs:
+        app:
+            dirs: ["%kernel.root_dir%/../src", "%kernel.root_dir%/../templates"]
+            output_dir: "%kernel.root_dir%/../translations"
+            excluded_names: ["*TestCase.php", "*Test.php"]
+            excluded_dirs: [cache, data, logs]
+
+    symfony_profiler:
+        enabled: true
+
+framework:
+    default_locale: 'en'
+    translator:
+        fallbacks: ['en']

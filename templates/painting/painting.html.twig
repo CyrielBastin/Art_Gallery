@@ -1,25 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Paintings{% endblock %}
+{% trans_default_domain 'painting' %}
+
+{% block title %}{% trans %}Paintings{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="section">
         <div class="d-flex justify-content-center" style="margin-bottom: 40px">
-            <h3 class="title-form-custom" style="margin-top: 20px; margin-bottom: 0px;">All our Paintings</h3>
+            <h3 class="title-form-custom" style="margin-top: 20px; margin-bottom: 0px;">{% trans %}All our Paintings{% endtrans %}</h3>
         </div>
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <table class="table table-hover" style="background-color: white">
                     <thead>
                     <tr class="text-center">
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th>Style</th>
-                        <th>Artist</th>
-                        <th>Year</th>
-                        <th>Price</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>{% trans %}Image{% endtrans %}</th>
+                        <th>{% trans %}Title{% endtrans %}</th>
+                        <th>{% trans %}Style{% endtrans %}</th>
+                        <th>{% trans %}Artist{% endtrans %}</th>
+                        <th>{% trans %}Year{% endtrans %}</th>
+                        <th>{% trans %}Price{% endtrans %}</th>
+                        <th>{% trans %}Edit{% endtrans %}</th>
+                        <th>{% trans %}Delete{% endtrans %}</th>
                     </tr>
                     </thead>
                     <tbody>

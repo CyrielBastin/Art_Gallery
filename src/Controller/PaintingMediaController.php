@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/painting/media", name="painting_media_")
@@ -25,11 +26,16 @@ class PaintingMediaController extends AbstractController
      * @var PaintingMediaRepository
      */
     private $mediaRepo;
+    /**
+     * @var TranslatorInterface
+     */
+    private $translator;
 
-    public function __construct(EntityManagerInterface $em, PaintingMediaRepository $mediaRepo)
+    public function __construct(EntityManagerInterface $em, PaintingMediaRepository $mediaRepo, TranslatorInterface $translator)
     {
         $this->em = $em;
         $this->mediaRepo = $mediaRepo;
+        $this->translator = $translator;
     }
 
     /**
@@ -70,7 +76,8 @@ class PaintingMediaController extends AbstractController
             $this->em->persist($media);
             $this->em->flush();
 
-            $this->addFlash('success', 'Media ' . $media->getName() . ' successfully added');
+            $translated = $this->translator->trans('Media %media% successfully added', ['%media%' => $media->getName()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
 
@@ -88,7 +95,8 @@ class PaintingMediaController extends AbstractController
             $this->em->persist($media);
             $this->em->flush();
 
-            $this->addFlash('success', 'Media ' . $media->getName() . ' successfully modified');
+            $translated = $this->translator->trans('Media %media% successfully modified', ['%media%' => $media->getName()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
 
@@ -104,7 +112,8 @@ class PaintingMediaController extends AbstractController
         $this->em->remove($media);
         $this->em->flush();
 
-        $this->addFlash('success', 'Media ' . $media->getName() . ' successfully removed');
+        $translated = $this->translator->trans('Media %media% successfully removed', ['%media%' => $media->getName()]);
+        $this->addFlash('success', $translated);
         return $this->redirectToRoute('homepage');
     }
 }

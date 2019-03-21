@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Profil: {{ profile['pseudo'] }}{% endblock %}
+{% trans_default_domain 'profile' %}
+
+{% block title %}{% trans %}Profile:{% endtrans %} {{ profile['pseudo'] }}{% endblock %}
 
 {% block body %}
     <div class="container">
@@ -10,7 +12,7 @@
                 <table class="table-profile">
                     <tr>
                         <td class="width-label">
-                            Email :
+                            {% trans %}Email :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['email'] }}
@@ -18,7 +20,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Role :
+                            {% trans %}Role :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['role'] }}
@@ -26,7 +28,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Pseudo :
+                            {% trans %}Pseudo :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['pseudo'] }}
@@ -34,7 +36,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Signature :
+                            {% trans %}Signature :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['signature'] }}
@@ -42,7 +44,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Lastname :
+                            {% trans %}Lastname :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['lastname'] }}
@@ -50,7 +52,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Firstname :
+                            {% trans %}Firstname :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['firstname'] }}
@@ -58,7 +60,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Date of birth :
+                            {% trans %}Date of birth :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {% if profile['date_of_birth'] != null %}
@@ -68,7 +70,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Country :
+                            {% trans %}Country :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['country'] }}
@@ -76,7 +78,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Like :
+                            {% trans %}Likes :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['likes'] }}
@@ -84,7 +86,7 @@
                     </tr>
                     <tr>
                         <td class="width-label">
-                            Dislikes :
+                            {% trans %}Dislikes :{% endtrans %}
                         </td>
                         <td class="input-profile">
                             {{ profile['dislikes'] }}

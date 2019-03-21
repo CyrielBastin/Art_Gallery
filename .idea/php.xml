@@ -128,6 +128,11 @@
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
       <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/nsa" />
+      <path value="$PROJECT_DIR$/vendor/php-translation/symfony-bundle" />
+      <path value="$PROJECT_DIR$/vendor/php-translation/extractor" />
+      <path value="$PROJECT_DIR$/vendor/php-translation/common" />
+      <path value="$PROJECT_DIR$/vendor/php-translation/symfony-storage" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Add a media{% endblock %}
+{% trans_default_domain 'media' %}
+
+{% block title %}{% trans %}Add a media{% endtrans %}{% endblock %}
 
 {% block body %}
 
     <div class="container">
-        <h1 class="text-center title-form-custom">Add a media</h1>
+        <h1 class="text-center title-form-custom">{% trans %}Add a media{% endtrans %}</h1>
         {{ form_start(form) }}
         <div class="d-flex justify-content-center align-items-end">
             <div class="col-md-4">

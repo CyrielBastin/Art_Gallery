@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Create a newsletter{% endblock %}
+{% trans_default_domain 'newsletter' %}
+
+{% block title %}{% trans %}Create a newsletter{% endtrans %}{% endblock %}
 
 
 {% block body %}
     <div class="container">
-        <h1 class="text-center title-form-custom">Send a Newsletter</h1>
+        <h1 class="text-center title-form-custom">{% trans %}Send a Newsletter{% endtrans %}</h1>
         {{ form_start(form) }}
         <div class="form-group">
             <div class="col-md-5 offset-md-1">

@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ style['name'] }} : Description{% endblock %}
+{% trans_default_domain 'style' %}
+
+{% block title %}{{ style['name'] }} : {% trans %}Description{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="big-screen-adjustment-painting" style="margin-top: 100px; margin-bottom: 100px">
@@ -24,17 +26,17 @@
     </div>
 
     <div class="section">
-        <h1 class="text-center" style="margin-bottom: 20px;">Artworks painted in {{ style['name'] }} style :</h1>
+        <h1 class="text-center" style="margin-bottom: 20px;">{% trans with { '%style%': style['name'] } %}Artworks painted in %style% style :{% endtrans %}</h1>
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <table class="table table-hover" style="background-color: white">
                     <thead>
                     <tr class="text-center">
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th>Artist</th>
-                        <th>Year</th>
-                        <th>Price</th>
+                        <th>{% trans from 'painting' %}Image{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Title{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Artist{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Year{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Price{% endtrans %}</th>
                     </tr>
                     </thead>
                     <tbody>

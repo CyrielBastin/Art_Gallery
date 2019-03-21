@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ artist['full_name'] }} : Biography{% endblock %}
+{% trans_default_domain 'artist' %}
+
+{% block title %}{{ artist['full_name'] }} : {% trans %}Biography{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="big-screen-adjustment-painting" style="margin-top: 100px; margin-bottom: 100px">
@@ -21,23 +23,23 @@
             </div>
         </div>
         <div class="d-flex justify-content-around">
-            <a href="{{ path('artist_edit_one', {id:artist['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Edit</span></a>
-            <a href="{{ path('artist_delete_one', {id:artist['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Delete</span></a>
+            <a href="{{ path('artist_edit_one', {id:artist['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Edit{% endtrans %}</span></a>
+            <a href="{{ path('artist_delete_one', {id:artist['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Delete{% endtrans %}</span></a>
         </div>
     </div>
 
     <div class="section">
-        <h1 class="text-center" style="margin-bottom: 20px;">His/Her Paintings :</h1>
+        <h1 class="text-center" style="margin-bottom: 20px;">{% trans %}His/Her Paintings :{% endtrans %}</h1>
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <table class="table table-hover" style="background-color: white">
                     <thead>
                     <tr class="text-center">
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th>Style</th>
-                        <th>Year</th>
-                        <th>Price</th>
+                        <th>{% trans %}Image{% endtrans %}</th>
+                        <th>{% trans %}Title{% endtrans %}</th>
+                        <th>{% trans %}Style{% endtrans %}</th>
+                        <th>{% trans %}Year{% endtrans %}</th>
+                        <th>{% trans %}Price{% endtrans %}</th>
                     </tr>
                     </thead>
                     <tbody>

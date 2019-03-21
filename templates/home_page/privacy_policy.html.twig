@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
-<h1 style="text-decoration: underline">Privacy Policy</h1>
+{% trans_default_domain 'homepage' %}
+
+{% block title %}{% trans %}Privacy Policy{% endtrans %}{% endblock %}
+
+<h1 style="text-decoration: underline">{% trans %}Privacy Policy{% endtrans %}</h1>
 
 <h1 style="margin-bottom: 50px; font-size: 3em">Art Gallery</h1>
 
@@ -44,4 +48,4 @@
 
 <p style="margin-bottom: 100px"></p>
 
-<a href="{{ path('homepage') }}" class="btn btn-secondary btn-lg fixed-bottom" role="button">Back to HomePage</a>
+<a href="{{ path('homepage') }}" class="btn btn-secondary btn-lg fixed-bottom" role="button">{% trans %}Back to HomePage{% endtrans %}</a>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="header.en">
+    <unit id="nWMiwfT" name="Login">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:11</note>
+      </notes>
+      <segment>
+        <source>Login</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="1pajW90" name="Profile">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:32</note>
+      </notes>
+      <segment>
+        <source>Profile</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="BNe0gzk" name="Messages">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:35</note>
+      </notes>
+      <segment>
+        <source>Messages</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="SWFhRVF" name="Log out">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:38</note>
+      </notes>
+      <segment>
+        <source>Log out</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="OnhpU4i" name="Home">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:53</note>
+      </notes>
+      <segment>
+        <source>Home</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="1AanUxq" name="Paintings">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:56</note>
+      </notes>
+      <segment>
+        <source>Paintings</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="pSrOQg8" name="All">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:58</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:71</note>
+      </notes>
+      <segment>
+        <source>All</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="98HDQx8" name="Latest added">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:59</note>
+      </notes>
+      <segment>
+        <source>Latest added</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="y3LsmFt" name="Discount">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:60</note>
+      </notes>
+      <segment>
+        <source>Discount</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="caVNJB7" name="Medias">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:62</note>
+      </notes>
+      <segment>
+        <source>Medias</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Nibn.eo" name="Styles">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:64</note>
+      </notes>
+      <segment>
+        <source>Styles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="lOPopEB" name="Artists">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:69</note>
+      </notes>
+      <segment>
+        <source>Artists</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="qCE2S.b" name="Sign-Up">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:75</note>
+      </notes>
+      <segment>
+        <source>Sign-Up</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="K1w9JnI" name="Contact">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:77</note>
+      </notes>
+      <segment>
+        <source>Contact</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Tae9Qqu" name="Forum">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:79</note>
+      </notes>
+      <segment>
+        <source>Forum</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="wcIksDz" name="Admin">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:82</note>
+      </notes>
+      <segment>
+        <source>Admin</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Z7aWRoY" name="Dashboard">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:84</note>
+      </notes>
+      <segment>
+        <source>Dashboard</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="upBk4j2" name="Add painting">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:85</note>
+      </notes>
+      <segment>
+        <source>Add painting</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="1dXSZs6" name="Add media">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:86</note>
+      </notes>
+      <segment>
+        <source>Add media</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="nD2BUsF" name="Add style">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:87</note>
+      </notes>
+      <segment>
+        <source>Add style</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="o6nmNu0" name="Add artist">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:88</note>
+      </notes>
+      <segment>
+        <source>Add artist</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="_Eyi53F" name="Newsletter">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:89</note>
+      </notes>
+      <segment>
+        <source>Newsletter</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

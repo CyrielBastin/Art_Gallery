@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="homepage.fr">
+    <unit id="mLZwY8_" name="Contact Us">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\contact.html.twig:5</note>
+        <note category="file-source" priority="1">templates\home_page\contact.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>Contact Us</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="7ikLPdv" name="Cookie Policy">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:7</note>
+        <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Cookie Policy</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="TJDtWD1" name="Back to HomePage">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:51</note>
+        <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:153</note>
+        <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:51</note>
+      </notes>
+      <segment>
+        <source>Back to HomePage</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Oj2L7DM" name="General Terms and Conditions">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:7</note>
+        <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:5</note>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:7</note>
+      </notes>
+      <segment>
+        <source>General Terms and Conditions</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="1u1AqOO" name="Hello, hello, hello">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\index.html.twig:11</note>
+      </notes>
+      <segment>
+        <source>Hello, hello, hello</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Mwef.yj" name="Welcome on Art Gallery">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\index.html.twig:12</note>
+      </notes>
+      <segment>
+        <source>Welcome on Art Gallery</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="mUhVsKh" name="b86b42f">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\index.html.twig:13</note>
+      </notes>
+      <segment>
+        <source>Here, you can find hundred of paintings to discover and/or buy.&lt;br/&gt;
+                    You can subscribe to our Newsletter to be inform of our latest news&lt;br/&gt;
+                    or you can sign-in to participate in this site's life and share with&lt;br/&gt;
+                    your fellow art lovers.</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="J1aGeeu" name="All paintings here are REPRODUCTION of the original oeuvres">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\index.html.twig:56</note>
+      </notes>
+      <segment>
+        <source>All paintings here are REPRODUCTION of the original oeuvres</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="UG.zlGI" name="Privacy Policy">
+      <notes>
+        <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:7</note>
+        <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Privacy Policy</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="ukRc.zi" name="Privacy policy">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Privacy policy</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="7dWy.Z9" name="Cookie policy">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:11</note>
+      </notes>
+      <segment>
+        <source>Cookie policy</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="eb84RnJ" name="Follow us on :">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:16</note>
+      </notes>
+      <segment>
+        <source>Follow us on :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="NIhB71P" name="Belgium">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:21</note>
+      </notes>
+      <segment>
+        <source>Belgium</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Z3AMJ45" name="NEWSLETTER">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:30</note>
+      </notes>
+      <segment>
+        <source>NEWSLETTER</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="T_6ag8M" name="email address">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:31</note>
+      </notes>
+      <segment>
+        <source>email address</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="zA442px" name="Subscribe">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\footer.html.twig:33</note>
+      </notes>
+      <segment>
+        <source>Subscribe</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

@@ -7,9 +7,11 @@
     }
 </style>
 
-<h2>Your account has been successfully registered</h2>
-<p>You have received this email following your registration on Art Gallery</p>
+{% trans_default_domain 'email' %}
 
-<p>You can access Art Gallery here <a href="http://localhost/symfony/Art_Gallery/public/">here</a></p>
-<p>If this action wasn't your doing, you can contact us<br/>
+<h2>{% trans %}Your account has been successfully registered{% endtrans %}</h2>
+<p>{% trans %}You have received this email following your registration on Art Gallery{% endtrans %}</p>
+
+<p>{% trans %}You can access Art Gallery{% endtrans %} <a href="http://localhost/symfony/Art_Gallery/public/">{% trans %}here{% endtrans %}</a></p>
+<p>{% trans %}If this action wasn't your doing, you can contact us{% endtrans %}<br/>
     @ info@art_gallery.com</p>

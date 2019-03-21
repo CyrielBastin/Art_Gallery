@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ media['name'] }} : Description{% endblock %}
+{% trans_default_domain 'media' %}
+
+{% block title %}{{ media['name'] }} : {% trans %}Description{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="big-screen-adjustment-painting" style="margin-top: 100px; margin-bottom: 100px">
@@ -19,23 +21,23 @@
         </div>
     </div>
     <div class="d-flex justify-content-around" style="margin-top: -60px; margin-bottom: 30px;">
-        <a href="{{ path('painting_media_edit_one', {id:media['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Edit</span></a>
-        <a href="{{ path('painting_media_delete_one', {id:media['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Delete</span></a>
+        <a href="{{ path('painting_media_edit_one', {id:media['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Edit{% endtrans %}</span></a>
+        <a href="{{ path('painting_media_delete_one', {id:media['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Delete{% endtrans %}</span></a>
     </div>
 
     <div class="section">
-        <h1 class="text-center" style="margin-bottom: 20px;">Artworks using {{ media['name'] }} as media :</h1>
+        <h1 class="text-center" style="margin-bottom: 20px;">{% trans with { '%media%': media['name'] } %}Artworks using %media% as media :{% endtrans %}</h1>
         <div class="row">
             <div class="col-md-10 offset-md-1">
                 <table class="table table-hover" style="background-color: white">
                     <thead>
                     <tr class="text-center">
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th>Style</th>
-                        <th>Artist</th>
-                        <th>Year</th>
-                        <th>Price</th>
+                        <th>{% trans from 'painting' %}Image{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Title{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Style{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Artist{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Year{% endtrans %}</th>
+                        <th>{% trans from 'painting' %}Price{% endtrans %}</th>
                     </tr>
                     </thead>
                     <tbody>

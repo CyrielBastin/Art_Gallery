@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit your commentary{% endblock %}
+{% trans_default_domain 'painting' %}
+
+{% block title %}{% trans %}Edit your commentary{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="container">
-        <h1 class="text-center title-form-custom">Edit your comment</h1>
+        <h1 class="text-center title-form-custom">{% trans %}Edit your comment{% endtrans %}</h1>
         {{ form_start(form) }}
         <div class="d-flex justify-content-center">
             {{ form_row(form.commentary, { 'label': app.user.userprofile.pseudo ~ ' :', 'label_attr': { 'style': 'font-size: 2em;' }, 'attr': { 'style': 'width: 500px; height: 180px;' } }) }}

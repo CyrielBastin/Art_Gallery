@@ -1,22 +1,24 @@
+{% trans_default_domain 'homepage' %}
+
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <div class="row">
         {# Column Terms & Conditions #}
         <div class="col-md-4">
-            <a href="{{ path('terms_and_conditions') }}" class="footer-link">General Terms and Conditions</a>
+            <a href="{{ path('terms_and_conditions') }}" class="footer-link">{% trans %}General Terms and Conditions{% endtrans %}</a>
             <p></p>
-            <a href="{{ path('privacy_policy') }}" class="footer-link">Privacy policy</a>
+            <a href="{{ path('privacy_policy') }}" class="footer-link">{% trans %}Privacy policy{% endtrans %}</a>
             <p></p>
-            <a href="{{ path('cookie_policy') }}" class="footer-link">Cookie policy</a>
+            <a href="{{ path('cookie_policy') }}" class="footer-link">{% trans %}Cookie policy{% endtrans %}</a>
         </div>
         {# Column Informations #}
         <div class="col-md-4">
             <figure>
-                <figcaption class="font-white">Follow us on :</figcaption>
+                <figcaption class="font-white">{% trans %}Follow us on :{% endtrans %}</figcaption>
                 <a href="https://www.facebook.com/" target="_blank"><img src="{{ asset('assets/images/base_images/logo_facebook.png') }}" alt="facebook" style="margin-right: 15px;"></a>
                 <a href="https://twitter.com/?lang=en" target="_blank"><img src="{{ asset('assets/images/base_images/logo_twitter.jpg') }}" alt="twitter"></a>
             </figure>
             <p class="font-white">ART GALLERY</p>
-            <p class="font-white">Belgium</p>
+            <p class="font-white">{% trans %}Belgium{% endtrans %}</p>
             <p></p>
             <p class="font-white">+32 (0)499 99 99 99</p>
             <p class="font-white">info@art_gallery.com</p>
@@ -25,10 +27,10 @@
         <div class="col-md-4">
                 <form method="post" action="{{ path('newsletter_subscribe') }}">
                 <div class="form-group">
-                    <label class="font-white" style="font-size: 1.2em;">NEWSLETTER</label>
-                    <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="email address">
+                    <label class="font-white" style="font-size: 1.2em;">{% trans %}NEWSLETTER{% endtrans %}</label>
+                    <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="{% trans %}email address{% endtrans %}">
                 </div>
-                <button type="submit" class="btn btn-secondary" style="background-color: #343a40; border: none; width: 100%; margin-top: -17px;">Subscribe</button>
+                <button type="submit" class="btn btn-secondary" style="background-color: #343a40; border: none; width: 100%; margin-top: -17px;">{% trans %}Subscribe{% endtrans %}</button>
                 </form>
             {# {{ render(controller('App\\Controller\\HomePageController::subscribeToNewsletter')) }} #}
         </div>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="style.en">
+    <unit id="Nibn.eo" name="Styles">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_style\style.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Styles</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="e8GbAMn" name="Add a style">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_style\style_add.html.twig:5</note>
+        <note category="file-source" priority="1">templates\painting_style\style_add.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add a style</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="ArK0U2K" name="Edit a style">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_style\style_edit.html.twig:5</note>
+        <note category="file-source" priority="1">templates\painting_style\style_edit.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit a style</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Um4Ah8w" name="Description">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="0MCRLtr" name="Artworks painted in %style% style :">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:29</note>
+      </notes>
+      <segment>
+        <source>Artworks painted in %style% style :</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

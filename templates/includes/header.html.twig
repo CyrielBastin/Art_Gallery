@@ -1,3 +1,5 @@
+{% trans_default_domain 'header' %}
+
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3" style="margin-top: 50px; margin-bottom: 53px;">
@@ -6,7 +8,7 @@
         <div class="col-md-3">
             {% if not app.user %}
                 <div class="login-zone">
-                    <a href="{{ path('app_login') }}#loginform">Login</a>
+                    <a href="{{ path('app_login') }}#loginform">{% trans %}Login{% endtrans %}</a>
                 </div>
             {% else %}
                 <div class="profil-zone">
@@ -27,13 +29,13 @@
                                     <p class="card-text" style="margin-top: -10px; margin-bottom: 20px; font-size: 1.2em;">{{ app.user.userprofile.pseudo }}</p>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">profil</a></p>
+                                    <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">{% trans %}Profile{% endtrans %}</a></p>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <p style="font-size: 1.2em;"><a href="#">messages</a></p>
+                                    <p style="font-size: 1.2em;"><a href="#">{% trans %}Messages{% endtrans %}</a></p>
                                 </div>
                                 <div class="d-flex justify-content-center" style="background-color: white;">
-                                    <p style="margin-bottom: 0px; font-size: 1.4em;"><a href="{{ path('app_logout') }}"><span style="color: #343a40;">Log out</span></a></p>
+                                    <p style="margin-bottom: 0px; font-size: 1.4em;"><a href="{{ path('app_logout') }}"><span style="color: #343a40;">{% trans %}Log out{% endtrans %}</span></a></p>
                                 </div>
                             </div>
                         </div>
@@ -48,43 +50,43 @@
         <div class="menu-custom-border-grey">
             <div class="navbar-custom">
                 {# Element Home #}
-                <a href="{{ path('homepage') }}">Home</a>
+                <a href="{{ path('homepage') }}">{% trans %}Home{% endtrans %}</a>
                 {# Element Painting#}
                 <div class="dropdown-custom">
-                    <button class="dropbtn-custom"><a href="{{ path('painting_all') }}">Paintings</a></button>
+                    <button class="dropbtn-custom"><a href="{{ path('painting_all') }}">{% trans %}Paintings{% endtrans %}</a></button>
                     <div class="dropdown-content-custom">
-                        <a href="{{ path('painting_all') }}">All</a>
-                        <a href="{{ path('painting_latest_added') }}">latest added</a>
-                        <a href="{{ path('painting_discount') }}">Discount</a>
+                        <a href="{{ path('painting_all') }}">{% trans %}All{% endtrans %}</a>
+                        <a href="{{ path('painting_latest_added') }}">{% trans %}Latest added{% endtrans %}</a>
+                        <a href="{{ path('painting_discount') }}">{% trans %}Discount{% endtrans %}</a>
                         <span>===========</span>
-                        <a href="{{ path('painting_media_all') }}">Medias</a>
+                        <a href="{{ path('painting_media_all') }}">{% trans %}Medias{% endtrans %}</a>
                         <span>===========</span>
-                        <a href="{{ path('painting_style_all') }}">Styles</a>
+                        <a href="{{ path('painting_style_all') }}">{% trans %}Styles{% endtrans %}</a>
                     </div>
                 </div>
                 {# Element Artists #}
                 <div class="dropdown-custom">
-                    <button class="dropbtn-custom"><a href="{{ path('artist_all') }}">Artists</a></button>
+                    <button class="dropbtn-custom"><a href="{{ path('artist_all') }}">{% trans %}Artists{% endtrans %}</a></button>
                     <div class="dropdown-content-custom">
-                        <a href="{{ path('artist_all') }}">All</a>
+                        <a href="{{ path('artist_all') }}">{% trans %}All{% endtrans %}</a>
                     </div>
                 </div>
                 {# Element Subscribe #}
-                <a href="{{ path('signup') }}">Sign-Up</a>
+                <a href="{{ path('signup') }}">{% trans %}Sign-Up{% endtrans %}</a>
                 {# Element Contact #}
-                <a href="{{ path('contact_us') }}#form-contact">Contact</a>
+                <a href="{{ path('contact_us') }}#form-contact">{% trans %}Contact{% endtrans %}</a>
                 {# Element Forum #}
-                <a href="#">Forum</a>
+                <a href="#">{% trans %}Forum{% endtrans %}</a>
                 {# Elemnt Admin #}
                 <div class="dropdown-custom">
-                    <button class="dropbtn-custom"><a href="#">Admin</a></button>
+                    <button class="dropbtn-custom"><a href="#">{% trans %}Admin{% endtrans %}</a></button>
                     <div class="dropdown-content-custom">
-                        <a href="{{ path('sonata_admin_dashboard') }}">Dashboard</a>
-                        <a href="{{ path('painting_add') }}">Add painting</a>
-                        <a href="{{ path('painting_media_add') }}">Add media</a>
-                        <a href="{{ path('painting_style_add') }}">Add style</a>
-                        <a href="{{ path('artist_add') }}">Add artist</a>
-                        <a href="{{ path('newsletter_view_all') }}">Newsletter</a>
+                        <a href="{{ path('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a>
+                        <a href="{{ path('painting_add') }}">{% trans %}Add painting{% endtrans %}</a>
+                        <a href="{{ path('painting_media_add') }}">{% trans %}Add media{% endtrans %}</a>
+                        <a href="{{ path('painting_style_add') }}">{% trans %}Add style{% endtrans %}</a>
+                        <a href="{{ path('artist_add') }}">{% trans %}Add artist{% endtrans %}</a>
+                        <a href="{{ path('newsletter_view_all') }}">{% trans %}Newsletter{% endtrans %}</a>
                     </div>
                 </div>
             </div>

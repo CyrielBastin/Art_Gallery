@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/painting/style", name="painting_style_")
@@ -25,11 +26,16 @@ class PaintingStyleController extends AbstractController
      * @var PaintingStyleRepository
      */
     private $styleRepo;
+    /**
+     * @var TranslatorInterface
+     */
+    private $translator;
 
-    public function __construct(EntityManagerInterface $em, PaintingStyleRepository $styleRepo)
+    public function __construct(EntityManagerInterface $em, PaintingStyleRepository $styleRepo, TranslatorInterface $translator)
     {
         $this->em = $em;
         $this->styleRepo = $styleRepo;
+        $this->translator = $translator;
     }
 
     /**
@@ -70,7 +76,8 @@ class PaintingStyleController extends AbstractController
             $this->em->persist($style);
             $this->em->flush();
 
-            $this->addFlash('success', 'Style ' . $style->getName() . ' successfully added');
+            $translated = $this->translator->trans('Style %style% successfully added', ['%style%' => $style->getName()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
 
@@ -88,7 +95,8 @@ class PaintingStyleController extends AbstractController
             $this->em->persist($style);
             $this->em->flush();
 
-            $this->addFlash('success', 'Style ' . $style->getName() . ' successfully modified');
+            $translated = $this->translator->trans('Style %style% successfully modified', ['%style%' => $style->getName()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
         return $this->render('painting_style/style_edit.html.twig', ['style' => $style, 'form' => $form->createView()]);
@@ -103,7 +111,8 @@ class PaintingStyleController extends AbstractController
         $this->em->remove($style);
         $this->em->flush();
 
-        $this->addFlash('success', 'Style ' . $style->getName() . ' successfully removed');
+        $translated = $this->translator->trans('Style %style% successfully removed', ['%style%' => $style->getName()]);
+        $this->addFlash('success', $translated);
         return $this->redirectToRoute('homepage');
     }
 }

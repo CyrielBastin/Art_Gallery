@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="artist.fr">
+    <unit id="lOPopEB" name="Artists">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Artists</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="O8ZP8uY" name="Add an artist">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_add.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Add an artist</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="4k2yTVv" name="Edit an artist">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_edit.html.twig:5</note>
+        <note category="file-source" priority="1">templates\artist\artist_edit.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit an artist</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="lC2_2pF" name="Biography">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Biography</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="RkxP.QG" name="Edit">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:26</note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="4tClSWj" name="Delete">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:27</note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Gr03dVN" name="His/Her Paintings :">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:32</note>
+      </notes>
+      <segment>
+        <source>His/Her Paintings :</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="GqTLC8y" name="Image">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:38</note>
+      </notes>
+      <segment>
+        <source>Image</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="fozSBW2" name="Title">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:39</note>
+      </notes>
+      <segment>
+        <source>Title</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="fnRBQbQ" name="Style">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:40</note>
+      </notes>
+      <segment>
+        <source>Style</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="ifaDJWD" name="Year">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:41</note>
+      </notes>
+      <segment>
+        <source>Year</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="k8kchR5" name="Price">
+      <notes>
+        <note category="file-source" priority="1">templates\artist\artist_view_one.html.twig:42</note>
+      </notes>
+      <segment>
+        <source>Price</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

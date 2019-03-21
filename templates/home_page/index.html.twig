@@ -1,17 +1,19 @@
 {% extends 'base.html.twig' %}
 
+{% trans_default_domain 'homepage' %}
+
 {% block title %}Art Gallery{% endblock %}
 
 {% block body %}
     <div class="row" style="margin-left: 5px;">
         <div class="big-screen-adjustment" style="display: flex;">
             <div class="col-md-6">
-                <h1>Hello, hello, hello</h1>
-                <h3>Welcome on Art Gallery</h3>
-                <p><br/>Here, you can find hundred of paintings to discover and/or buy.<br/>
+                <h1>{% trans %}Hello, hello, hello{% endtrans %}</h1>
+                <h3>{% trans %}Welcome on Art Gallery{% endtrans %}</h3>
+                <p><br/>{% trans %}Here, you can find hundred of paintings to discover and/or buy.<br/>
                     You can subscribe to our Newsletter to be inform of our latest news<br/>
                     or you can sign-in to participate in this site's life and share with<br/>
-                    your fellow art lovers.</p>
+                    your fellow art lovers.{% endtrans %}</p>
             </div>
             {# Carousel #}
             <div class="col-md-6" style="margin-right: 15px">
@@ -51,7 +53,7 @@
     </div>
     <div class="row" style="margin-left: 15px">
         <div class="big-screen-adjustment">
-            <p style="font-size: large">All paintings here are REPRODUCTION of the original oeuvres</p>
+            <p style="font-size: large">{% trans %}All paintings here are REPRODUCTION of the original oeuvres{% endtrans %}</p>
         </div>
     </div>
 {% endblock %}

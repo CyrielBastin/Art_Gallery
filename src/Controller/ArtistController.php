@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/artist", name="artist_")
@@ -25,11 +26,16 @@ class ArtistController extends AbstractController
      * @var ArtistRepository
      */
     private $artistRepo;
+    /**
+     * @var TranslatorInterface
+     */
+    private $translator;
 
-    public function __construct(EntityManagerInterface $em, ArtistRepository $artistRepo)
+    public function __construct(EntityManagerInterface $em, ArtistRepository $artistRepo, TranslatorInterface $translator)
     {
         $this->em = $em;
         $this->artistRepo = $artistRepo;
+        $this->translator = $translator;
     }
 
 
@@ -71,7 +77,8 @@ class ArtistController extends AbstractController
             $this->em->persist($artist);
             $this->em->flush();
 
-            $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully added');
+            $translated = $this->translator->trans('Artist %artist% successfully added', ['%artist%' => $artist->getArtist()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
 
@@ -89,7 +96,8 @@ class ArtistController extends AbstractController
             $this->em->persist($artist);
             $this->em->flush();
 
-            $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully modified');
+            $translated = $this->translator->trans('Artist %artist% successfully modified', ['%artist%' => $artist->getArtist()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
         return $this->render('artist/artist_edit.html.twig', ['artist' => $artist, 'form' => $form->createView()]);
@@ -105,7 +113,8 @@ class ArtistController extends AbstractController
         $this->em->remove($artist);
         $this->em->flush();
 
-        $this->addFlash('success', 'Artist ' . $artist->getArtist() . ' successfully removed');
+        $translated = $this->translator->trans('Artist %artist% successfully removed', ['%artist%' => $artist->getArtist()]);
+        $this->addFlash('success', $translated);
         return $this->redirectToRoute('homepage');
     }
 }

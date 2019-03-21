@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="security.fr">
+    <unit id="wYmEDPf" name="Log in">
+      <notes>
+        <note category="file-source" priority="1">templates\security\login.html.twig:5</note>
+        <note category="file-source" priority="1">templates\security\login.html.twig:45</note>
+        <note category="file-source" priority="1">templates\security\login_form_painting_view_one.html.twig:26</note>
+      </notes>
+      <segment>
+        <source>Log in</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="oJCZqal" name="Log-in to post a comment">
+      <notes>
+        <note category="file-source" priority="1">templates\security\login_form_painting_view_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Log-in to post a comment</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="lpzL089" name="Email">
+      <notes>
+        <note category="file-source" priority="1">templates\security\login_form_painting_view_one.html.twig:14</note>
+      </notes>
+      <segment>
+        <source>Email</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="PMCOvp1" name="Sign-up">
+      <notes>
+        <note category="file-source" priority="1">templates\security\signup.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Sign-up</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="fTOdXa3" name="Sign Up here">
+      <notes>
+        <note category="file-source" priority="1">templates\security\signup.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Sign Up here</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

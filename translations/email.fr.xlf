@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="email.fr">
+    <unit id="eGLUlb6" name="Your account has been successfully registered">
+      <notes>
+        <note category="file-source" priority="1">templates\emails\registration.html.twig:12</note>
+      </notes>
+      <segment>
+        <source>Your account has been successfully registered</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="S5aCEyg" name="You have received this email following your registration on Art Gallery">
+      <notes>
+        <note category="file-source" priority="1">templates\emails\registration.html.twig:13</note>
+      </notes>
+      <segment>
+        <source>You have received this email following your registration on Art Gallery</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="vmirzP0" name="You can access Art Gallery">
+      <notes>
+        <note category="file-source" priority="1">templates\emails\registration.html.twig:15</note>
+      </notes>
+      <segment>
+        <source>You can access Art Gallery</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id=".OyRUJd" name="here">
+      <notes>
+        <note category="file-source" priority="1">templates\emails\registration.html.twig:15</note>
+      </notes>
+      <segment>
+        <source>here</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Dbmbjfa" name="If this action wasn't your doing, you can contact us">
+      <notes>
+        <note category="file-source" priority="1">templates\emails\registration.html.twig:16</note>
+      </notes>
+      <segment>
+        <source>If this action wasn't your doing, you can contact us</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

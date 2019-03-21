@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="newsletter.fr">
+    <unit id="Ub2DeGt" name="Create a newsletter">
+      <notes>
+        <note category="file-source" priority="1">templates\newsletter\newsletter_create_one.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Create a newsletter</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="aWz939y" name="Send a Newsletter">
+      <notes>
+        <note category="file-source" priority="1">templates\newsletter\newsletter_create_one.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>Send a Newsletter</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id=".z1.ESf" name="Newsletter: All">
+      <notes>
+        <note category="file-source" priority="1">templates\newsletter\newsletter_view_all.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Newsletter: All</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="KgjqDi1" name="All Newsletters">
+      <notes>
+        <note category="file-source" priority="1">templates\newsletter\newsletter_view_all.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>All Newsletters</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="IBD0sxG" name="Create One">
+      <notes>
+        <note category="file-source" priority="1">templates\newsletter\newsletter_view_all.html.twig:13</note>
+      </notes>
+      <segment>
+        <source>Create One</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

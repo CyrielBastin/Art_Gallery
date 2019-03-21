@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="messages.en">
+    <unit id="rRmZW4l" name="You are already registered to our Newsletter">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\NewsletterController.php:51</note>
+      </notes>
+      <segment>
+        <source>You are already registered to our Newsletter</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="RuO7MGT" name="You are now subscribed to our Newsletter. Congratulations !">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\NewsletterController.php:58</note>
+      </notes>
+      <segment>
+        <source>You are now subscribed to our Newsletter. Congratulations !</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="di8_C7W" name="Your comment has been successfully modified">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingCommentController.php:52</note>
+      </notes>
+      <segment>
+        <source>Your comment has been successfully modified</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="BNWsQ7Z" name="You comment has been successfully deleted">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingCommentController.php:71</note>
+      </notes>
+      <segment>
+        <source>You comment has been successfully deleted</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="YNJseLS" name="207386a">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\SecurityController.php:61</note>
+      </notes>
+      <segment>
+        <source>You are now registered to Art Gallery. You can now login and share with other users</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="I8ZxRBq" name="Your profile has been updated">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\UserProfileController.php:68</note>
+      </notes>
+      <segment>
+        <source>Your profile has been updated</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="GqTLC8y" name="Image">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:20</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:20</note>
+        <note category="file-source" priority="1">src\Form\PaintingMediaEditType.php:20</note>
+        <note category="file-source" priority="1">src\Form\PaintingMediaType.php:20</note>
+      </notes>
+      <segment>
+        <source>Image</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="htiPHRy" name="Lastname">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:21</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:21</note>
+        <note category="file-source" priority="1">src\Form\ContactType.php:20</note>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:21</note>
+      </notes>
+      <segment>
+        <source>Lastname</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="ZHz6kbI" name="Firstname">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:22</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:22</note>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:22</note>
+      </notes>
+      <segment>
+        <source>Firstname</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="cB0CHQj" name="Country">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:23</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:23</note>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:26</note>
+      </notes>
+      <segment>
+        <source>Country</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="IqwPFgm" name="Commentary on the artist">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:24</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:24</note>
+      </notes>
+      <segment>
+        <source>Commentary on the artist</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="60xOI5E" name="Date of birth">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:25</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:25</note>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:25</note>
+      </notes>
+      <segment>
+        <source>Date of birth</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="iqOgZKp" name="Date of death">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:26</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:26</note>
+      </notes>
+      <segment>
+        <source>Date of death</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="dUkL17k" name="submit">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ArtistEditType.php:19</note>
+        <note category="file-source" priority="1">src\Form\ArtistType.php:19</note>
+        <note category="file-source" priority="1">src\Form\PaintingCommentType.php:16</note>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:24</note>
+        <note category="file-source" priority="1">src\Form\PaintingMediaEditType.php:18</note>
+        <note category="file-source" priority="1">src\Form\PaintingMediaType.php:18</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleEditType.php:18</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleType.php:18</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:24</note>
+        <note category="file-source" priority="1">src\Form\UserType.php:17</note>
+      </notes>
+      <segment>
+        <source>submit</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="1w2Ukvj" name="Firtsname">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ContactType.php:19</note>
+      </notes>
+      <segment>
+        <source>Firtsname</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="lpzL089" name="Email">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ContactType.php:21</note>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:29</note>
+      </notes>
+      <segment>
+        <source>Email</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="aJcSg4Q" name="Subject">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ContactType.php:22</note>
+        <note category="file-source" priority="1">src\Form\NewsletterMessageType.php:18</note>
+      </notes>
+      <segment>
+        <source>Subject</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="L3dmip3" name="Message">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ContactType.php:23</note>
+        <note category="file-source" priority="1">src\Form\NewsletterMessageType.php:19</note>
+      </notes>
+      <segment>
+        <source>Message</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="9vRoj.I" name="Send">
+      <notes>
+        <note category="file-source" priority="1">src\Form\ContactType.php:24</note>
+        <note category="file-source" priority="1">src\Form\NewsletterMessageType.php:20</note>
+      </notes>
+      <segment>
+        <source>Send</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="8aDBGnK" name="commentary">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingCommentType.php:16</note>
+      </notes>
+      <segment>
+        <source>commentary</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="fozSBW2" name="Title">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:25</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:25</note>
+      </notes>
+      <segment>
+        <source>Title</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="YQXWzHa" name="image">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:26</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleEditType.php:20</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleType.php:20</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:26</note>
+      </notes>
+      <segment>
+        <source>image</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="VGZ3RzR" name="Dimensions ( cm )">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:27</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:27</note>
+      </notes>
+      <segment>
+        <source>Dimensions ( cm )</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="ifaDJWD" name="Year">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:28</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:28</note>
+      </notes>
+      <segment>
+        <source>Year</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Um4Ah8w" name="Description">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:29</note>
+        <note category="file-source" priority="1">src\Form\PaintingMediaEditType.php:21</note>
+        <note category="file-source" priority="1">src\Form\PaintingMediaType.php:21</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleEditType.php:21</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleType.php:21</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:29</note>
+      </notes>
+      <segment>
+        <source>Description</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="puKa67D" name="Price ( € )">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:30</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:30</note>
+      </notes>
+      <segment>
+        <source>Price ( € )</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="G15OJYy" name="Discount ( % )">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:31</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:31</note>
+      </notes>
+      <segment>
+        <source>Discount ( % )</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="y4brLZF" name="style">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:24</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:24</note>
+      </notes>
+      <segment>
+        <source>style</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="chyVJa3" name="media">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:24</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:24</note>
+      </notes>
+      <segment>
+        <source>media</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="cLHo4Ge" name="artist">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:24</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:24</note>
+      </notes>
+      <segment>
+        <source>artist</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="SEeChDG" name="-- Choose an artist">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:34</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:34</note>
+      </notes>
+      <segment>
+        <source>-- Choose an artist</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="PwP8D1k" name="-- Choose a media">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:37</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:37</note>
+      </notes>
+      <segment>
+        <source>-- Choose a media</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="5B0n8ZV" name="-- Choose a style">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingEditType.php:40</note>
+        <note category="file-source" priority="1">src\Form\PaintingType.php:40</note>
+      </notes>
+      <segment>
+        <source>-- Choose a style</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="3NHVIj9" name="Name">
+      <notes>
+        <note category="file-source" priority="1">src\Form\PaintingMediaEditType.php:19</note>
+        <note category="file-source" priority="1">src\Form\PaintingMediaType.php:19</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleEditType.php:19</note>
+        <note category="file-source" priority="1">src\Form\PaintingStyleType.php:19</note>
+      </notes>
+      <segment>
+        <source>Name</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="yo6CbZw" name="Avatar">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:20</note>
+      </notes>
+      <segment>
+        <source>Avatar</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="BH9Ys5T" name="Pseudo">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:23</note>
+      </notes>
+      <segment>
+        <source>Pseudo</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="8ac_IgS" name="Signature">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:24</note>
+      </notes>
+      <segment>
+        <source>Signature</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="zKBmL53" name="Likes">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:27</note>
+      </notes>
+      <segment>
+        <source>Likes</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="ydWjM6Z" name="Dislikes">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:28</note>
+      </notes>
+      <segment>
+        <source>Dislikes</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="FQn1YfJ" name="Save">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserProfileType.php:30</note>
+      </notes>
+      <segment>
+        <source>Save</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="tRVRYvi" name="confirmPassword">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserType.php:17</note>
+      </notes>
+      <segment>
+        <source>confirmPassword</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="XohImNo" name="password">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserType.php:17</note>
+      </notes>
+      <segment>
+        <source>password</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="giREF.l" name="email">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserType.php:17</note>
+      </notes>
+      <segment>
+        <source>email</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="_jhUlyj" name="Artist %artist% successfully added">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:80</note>
+      </notes>
+      <segment>
+        <source>Artist %artist% successfully added</source>
+        <target>Artist %artist% successfully added</target>
+      </segment>
+    </unit>
+    <unit id="vBRA9Wp" name="Artist %artist% successfully modified">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:99</note>
+      </notes>
+      <segment>
+        <source>Artist %artist% successfully modified</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="tgXkkVi" name="Artist %artist% successfully removed">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:116</note>
+      </notes>
+      <segment>
+        <source>Artist %artist% successfully removed</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="uPAidcd" name="The artwork %painting% has been correctly added">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:121</note>
+      </notes>
+      <segment>
+        <source>The artwork %painting% has been correctly added</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="9_2njLm" name="The artwork %painting% has been correctly modified">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:140</note>
+      </notes>
+      <segment>
+        <source>The artwork %painting% has been correctly modified</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="Zv1liYm" name="The artwork %painting% has been properly deleted">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:156</note>
+      </notes>
+      <segment>
+        <source>The artwork %painting% has been properly deleted</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="MYDU.lu" name="Media %media% successfully added">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:79</note>
+      </notes>
+      <segment>
+        <source>Media %media% successfully added</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="pesPPQo" name="Media %media% successfully modified">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:98</note>
+      </notes>
+      <segment>
+        <source>Media %media% successfully modified</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="iwIxyUU" name="Media %media% successfully removed">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:115</note>
+      </notes>
+      <segment>
+        <source>Media %media% successfully removed</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="kpBFYGz" name="Style %style% successfully added">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:79</note>
+      </notes>
+      <segment>
+        <source>Style %style% successfully added</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="RNSm0Wq" name="Style %style% successfully modified">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:98</note>
+      </notes>
+      <segment>
+        <source>Style %style% successfully modified</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="yRyS.3c" name="Style %style% successfully removed">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:114</note>
+      </notes>
+      <segment>
+        <source>Style %style% successfully removed</source>
+        <target></target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

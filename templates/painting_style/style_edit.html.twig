@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit a style{% endblock %}
+{% trans_default_domain 'style' %}
+
+{% block title %}{% trans %}Edit a style{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="container">
-        <h1 class="text-center title-form-custom">Edit a style</h1>
+        <h1 class="text-center title-form-custom">{% trans %}Edit a style{% endtrans %}</h1>
         {{ form_start(form) }}
         <div class="d-flex justify-content-center align-items-end">
             <div class="col-md-4">

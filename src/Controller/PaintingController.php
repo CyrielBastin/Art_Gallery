@@ -14,6 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/painting", name="painting_")
@@ -29,11 +30,16 @@ class PaintingController extends AbstractController
      * @var PaintingRepository
      */
     private $paintingRepo;
+    /**
+     * @var TranslatorInterface
+     */
+    private $translator;
 
-    public function __construct(EntityManagerInterface $em, PaintingRepository $paintingRepo)
+    public function __construct(EntityManagerInterface $em, PaintingRepository $paintingRepo, TranslatorInterface $translator)
     {
         $this->em = $em;
         $this->paintingRepo = $paintingRepo;
+        $this->translator = $translator;
     }
 
     /**
@@ -112,7 +118,8 @@ class PaintingController extends AbstractController
             $this->em->persist($painting);
             $this->em->flush();
 
-            $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been correctly added');
+            $translated = $this->translator->trans('The artwork %painting% has been correctly added', ['%painting%' => $painting->getTitle()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
 
@@ -130,7 +137,8 @@ class PaintingController extends AbstractController
             $this->em->persist($painting);
             $this->em->flush();
 
-            $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been correctly modified');
+            $translated = $this->translator->trans('The artwork %painting% has been correctly modified', ['%painting%' => $painting->getTitle()]);
+            $this->addFlash('success', $translated);
             return $this->redirectToRoute('homepage');
         }
         return $this->render('painting/painting_edit.html.twig', ['painting' => $painting, 'form' => $form->createView()]);
@@ -145,7 +153,8 @@ class PaintingController extends AbstractController
         $this->em->remove($painting);
         $this->em->flush();
 
-        $this->addFlash('success', 'The artwork ' . $painting->getTitle() . ' has been properly deleted');
+        $translated = $this->translator->trans('The artwork %painting% has been properly deleted', ['%painting%' => $painting->getTitle()]);
+        $this->addFlash('success', $translated);
         return $this->redirectToRoute('homepage');
     }
 
