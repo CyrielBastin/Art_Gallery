@@ -13,6 +13,20 @@ header{
     background-color: black;
     margin: 0px 15px 15px 15px;
 }
+
+.locale-active{
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.locale-inactive{
+    color: #adb0b5;
+    height: 14px;
+    width: 16px;
+    font-size: 0.7em;
+}
 /*------------------------------------
  * if NOT user
  -----------------------------------*/

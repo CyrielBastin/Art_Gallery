@@ -150,4 +150,4 @@
 
 <p style="margin-bottom: 100px"></p>
 
-<a href="{{ path('homepage') }}" class="btn btn-secondary btn-lg fixed-bottom" role="button">{% trans %}Back to HomePage{% endtrans %}</a>
+<a href="{{ path('homepage', {'_locale': app.request.locale}) }}" class="btn btn-secondary btn-lg fixed-bottom" role="button">{% trans %}Back to HomePage{% endtrans %}</a>

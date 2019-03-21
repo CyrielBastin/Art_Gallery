@@ -25,7 +25,7 @@
       </notes>
       <segment>
         <source>Personnal informations</source>
-        <target>Informations personnels</target>
+        <target>Informations personnelles</target>
       </segment>
     </unit>
     <unit id="jcvvFTa" name="Account informations">
@@ -134,6 +134,24 @@
       <segment>
         <source>Dislikes :</source>
         <target>N'aime pas :</target>
+      </segment>
+    </unit>
+    <unit id="oxJ7T6b" name="Modify informations">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_view_one.html.twig:111</note>
+      </notes>
+      <segment>
+        <source>Modify informations</source>
+        <target>Modifier informations</target>
+      </segment>
+    </unit>
+    <unit id="jAn1cd6" name="Profile - edit :">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Profile - edit :</source>
+        <target>Profil - editer :</target>
       </segment>
     </unit>
   </file>

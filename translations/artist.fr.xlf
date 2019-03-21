@@ -13,6 +13,7 @@
     <unit id="O8ZP8uY" name="Add an artist">
       <notes>
         <note category="file-source" priority="1">templates\artist\artist_add.html.twig:5</note>
+        <note category="file-source" priority="1">templates\artist\artist_add.html.twig:9</note>
       </notes>
       <segment>
         <source>Add an artist</source>

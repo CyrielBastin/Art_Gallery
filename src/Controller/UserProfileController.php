@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/user/profile", name="user_profile_")
+ * @Route("/{_locale}/user/profile", name="user_profile_", requirements={"_locale"="%app.locales%"})
  */
 class UserProfileController extends AbstractController
 {

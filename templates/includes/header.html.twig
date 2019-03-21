@@ -2,19 +2,37 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 offset-md-3" style="margin-top: 50px; margin-bottom: 53px;">
+        <div class="col-md-2">
+            <div class="col" style="margin-top: 20px;">
+                <a href="{{ path('change_locale_to_en') }}">
+                    <figure class="d-flex {% if app.request.locale == 'en' %}locale-active{% else %}locale-inactive{% endif %}">
+                        <img src="{{ asset('assets/images/base_images/flag_english.jpg') }}" alt="icon_english_language"/>
+                        <figcaption style="margin-left: 5px;">en</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col">
+                <a href="{{ path('change_locale_to_fr') }}">
+                    <figure class="d-flex {% if app.request.locale == 'fr' %}locale-active{% else %}locale-inactive{% endif %}">
+                        <img src="{{ asset('assets/images/base_images/flag_french.png') }}" alt="icon_french_language"/>
+                        <figcaption style="margin-left: 5px;">fr</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 offset-md-1" style="margin-top: 50px; margin-bottom: 53px;">
             <img id="logo_site" src="{{ asset('assets/images/base_images/logo_site.png') }}" alt="site logo"/>
         </div>
         <div class="col-md-3">
             {% if not app.user %}
                 <div class="login-zone">
-                    <a href="{{ path('app_login') }}#loginform">{% trans %}Login{% endtrans %}</a>
+                    <a href="{{ path('app_login', {'_locale': app.request.locale}) }}#loginform">{% trans %}Login{% endtrans %}</a>
                 </div>
             {% else %}
                 <div class="profil-zone">
                     <div class="card text-white bg-dark mb-3" style="width: 150px;">
                         <div class="d-flex justify-content-center">
-                            <a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">
+                            <a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo, '_locale': app.request.locale}) }}">
                                 <img class="rounded-circle" src="{% if app.user.userprofile.avatar == 'avatar_default.png' %}
                                                                     {{ asset('assets/images/avatar_default.png') }}
                                                                  {% else %}
@@ -29,7 +47,7 @@
                                     <p class="card-text" style="margin-top: -10px; margin-bottom: 20px; font-size: 1.2em;">{{ app.user.userprofile.pseudo }}</p>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo}) }}">{% trans %}Profile{% endtrans %}</a></p>
+                                    <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo, '_locale': app.request.locale}) }}">{% trans %}Profile{% endtrans %}</a></p>
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <p style="font-size: 1.2em;"><a href="#">{% trans %}Messages{% endtrans %}</a></p>
@@ -50,31 +68,31 @@
         <div class="menu-custom-border-grey">
             <div class="navbar-custom">
                 {# Element Home #}
-                <a href="{{ path('homepage') }}">{% trans %}Home{% endtrans %}</a>
+                <a href="{{ path('homepage', {'_locale': app.request.locale}) }}">{% trans %}Home{% endtrans %}</a>
                 {# Element Painting#}
                 <div class="dropdown-custom">
-                    <button class="dropbtn-custom"><a href="{{ path('painting_all') }}">{% trans %}Paintings{% endtrans %}</a></button>
+                    <button class="dropbtn-custom"><a href="{{ path('painting_all', {'_locale': app.request.locale}) }}">{% trans %}Paintings{% endtrans %}</a></button>
                     <div class="dropdown-content-custom">
-                        <a href="{{ path('painting_all') }}">{% trans %}All{% endtrans %}</a>
-                        <a href="{{ path('painting_latest_added') }}">{% trans %}Latest added{% endtrans %}</a>
-                        <a href="{{ path('painting_discount') }}">{% trans %}Discount{% endtrans %}</a>
+                        <a href="{{ path('painting_all', {'_locale': app.request.locale}) }}">{% trans %}All{% endtrans %}</a>
+                        <a href="{{ path('painting_latest_added', {'_locale': app.request.locale}) }}">{% trans %}Latest added{% endtrans %}</a>
+                        <a href="{{ path('painting_discount', {'_locale': app.request.locale}) }}">{% trans %}Discount{% endtrans %}</a>
                         <span>===========</span>
-                        <a href="{{ path('painting_media_all') }}">{% trans %}Medias{% endtrans %}</a>
+                        <a href="{{ path('painting_media_all', {'_locale': app.request.locale}) }}">{% trans %}Medias{% endtrans %}</a>
                         <span>===========</span>
-                        <a href="{{ path('painting_style_all') }}">{% trans %}Styles{% endtrans %}</a>
+                        <a href="{{ path('painting_style_all', {'_locale': app.request.locale}) }}">{% trans %}Styles{% endtrans %}</a>
                     </div>
                 </div>
                 {# Element Artists #}
                 <div class="dropdown-custom">
-                    <button class="dropbtn-custom"><a href="{{ path('artist_all') }}">{% trans %}Artists{% endtrans %}</a></button>
+                    <button class="dropbtn-custom"><a href="{{ path('artist_all', {'_locale': app.request.locale}) }}">{% trans %}Artists{% endtrans %}</a></button>
                     <div class="dropdown-content-custom">
-                        <a href="{{ path('artist_all') }}">{% trans %}All{% endtrans %}</a>
+                        <a href="{{ path('artist_all', {'_locale': app.request.locale}) }}">{% trans %}all.m{% endtrans %}</a>
                     </div>
                 </div>
                 {# Element Subscribe #}
-                <a href="{{ path('signup') }}">{% trans %}Sign-Up{% endtrans %}</a>
+                <a href="{{ path('signup', {'_locale': app.request.locale}) }}">{% trans %}Sign-Up{% endtrans %}</a>
                 {# Element Contact #}
-                <a href="{{ path('contact_us') }}#form-contact">{% trans %}Contact{% endtrans %}</a>
+                <a href="{{ path('contact_us', {'_locale': app.request.locale}) }}#form-contact">{% trans %}Contact{% endtrans %}</a>
                 {# Element Forum #}
                 <a href="#">{% trans %}Forum{% endtrans %}</a>
                 {# Elemnt Admin #}
@@ -82,11 +100,11 @@
                     <button class="dropbtn-custom"><a href="#">{% trans %}Admin{% endtrans %}</a></button>
                     <div class="dropdown-content-custom">
                         <a href="{{ path('sonata_admin_dashboard') }}">{% trans %}Dashboard{% endtrans %}</a>
-                        <a href="{{ path('painting_add') }}">{% trans %}Add painting{% endtrans %}</a>
-                        <a href="{{ path('painting_media_add') }}">{% trans %}Add media{% endtrans %}</a>
-                        <a href="{{ path('painting_style_add') }}">{% trans %}Add style{% endtrans %}</a>
-                        <a href="{{ path('artist_add') }}">{% trans %}Add artist{% endtrans %}</a>
-                        <a href="{{ path('newsletter_view_all') }}">{% trans %}Newsletter{% endtrans %}</a>
+                        <a href="{{ path('painting_add', {'_locale': app.request.locale}) }}">{% trans %}Add painting{% endtrans %}</a>
+                        <a href="{{ path('painting_media_add', {'_locale': app.request.locale}) }}">{% trans %}Add media{% endtrans %}</a>
+                        <a href="{{ path('painting_style_add', {'_locale': app.request.locale}) }}">{% trans %}Add style{% endtrans %}</a>
+                        <a href="{{ path('artist_add', {'_locale': app.request.locale}) }}">{% trans %}Add artist{% endtrans %}</a>
+                        <a href="{{ path('newsletter_view_all', {'_locale': app.request.locale}) }}">{% trans %}Newsletter{% endtrans %}</a>
                     </div>
                 </div>
             </div>

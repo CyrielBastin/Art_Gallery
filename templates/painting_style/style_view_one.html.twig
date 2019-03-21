@@ -21,8 +21,8 @@
         </div>
     </div>
     <div class="d-flex justify-content-around" style="margin-top: -60px; margin-bottom: 30px;">
-        <a href="{{ path('painting_style_edit_one', {id:style['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Edit</span></a>
-        <a href="{{ path('painting_style_delete_one', {id:style['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">Delete</span></a>
+        <a href="{{ path('painting_style_edit_one', {'id': style['id'], '_locale': app.request.locale}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Edit{% endtrans %}</span></a>
+        <a href="{{ path('painting_style_delete_one', {'id': style['id'], '_locale': app.request.locale}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Delete{% endtrans %}</span></a>
     </div>
 
     <div class="section">
@@ -43,11 +43,11 @@
                     {% for painting in paintings %}
                         <tr class="text-center">
                             <td><figure style="text-align: center">
-                                    <a href="{{ path('painting_view_one', {id:painting['id']}) }}"><img src="{{ asset('assets/images/paintings/') ~ painting['image'] }}" alt="{{ painting['image'] }}" style="width: 200px; height: 150px"></a>
+                                    <a href="{{ path('painting_view_one', {'id': painting['id'], '_locale': app.request.locale}) }}"><img src="{{ asset('assets/images/paintings/') ~ painting['image'] }}" alt="{{ painting['image'] }}" style="width: 200px; height: 150px"></a>
                                     <figcaption style="font-size: 0.8em">{{ painting['media'] ~ ' ( ' ~ painting['dimensions'] ~ ' cm )' }}</figcaption>
                                 </figure></td>
-                            <td class="align-middle"><a class="painting-link" href="{{ path('painting_view_one', {id:painting['id']}) }}">{{ painting['title'] }}</a></td>
-                            <td class="align-middle"><a href="{{ path('artist_view_one', {id:painting['artist_id']}) }}" class="painting-link">{{ painting['artist'] }}</a></td>
+                            <td class="align-middle"><a class="painting-link" href="{{ path('painting_view_one', {'id': painting['id'], '_locale': app.request.locale}) }}">{{ painting['title'] }}</a></td>
+                            <td class="align-middle"><a href="{{ path('artist_view_one', {'id': painting['artist_id'], '_locale': app.request.locale}) }}" class="painting-link">{{ painting['artist'] }}</a></td>
                             <td class="align-middle">{{ painting['year'] }}</td>
                             {% if painting['discount']==0 %}
                                 <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>

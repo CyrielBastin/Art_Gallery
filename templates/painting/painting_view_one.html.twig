@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{ painting['title'] ~ ' by ' }} <a class="painting-link" href="{{ path('artist_view_one', {id:painting['artist_id'] }) }}">{{ painting['artist'] }}</a></h5>
+                        <h5 class="card-title">{{ painting['title'] }} {% trans %}by{% endtrans %} <a class="painting-link" href="{{ path('artist_view_one', {'id': painting['artist_id'], '_locale': app.request.locale}) }}">{{ painting['artist'] }}</a></h5>
                         <p class="card-text">{{ painting['description'] }} <br/><br/>
                             {{ painting['style'] }}
                             <small class="text-muted" style="margin-left: 30px">{{ painting['media'] ~ ' ( ' ~ painting['dimensions'] ~ ' cm )' }}</small>
@@ -34,8 +34,8 @@
         </div>
     </div>
     <div class="d-flex justify-content-around">
-        <a href="{{ path('painting_edit_one', {id:painting['id']}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Edit{% endtrans %}</span></a>
-        <a href="{{ path('painting_delete_one', {id:painting['id']}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Delete{% endtrans %}</span></a>
+        <a href="{{ path('painting_edit_one', {'id': painting['id'], '_locale': app.request.locale}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Edit{% endtrans %}</span></a>
+        <a href="{{ path('painting_delete_one', {'id': painting['id'], '_locale': app.request.locale}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Delete{% endtrans %}</span></a>
     </div>
     {# END Section #}
 
@@ -76,7 +76,7 @@
             <div class="row" style="margin-bottom: 30px;">
                 <div class="col-md-10 offset-md-1">
                     <div class="media" style="border: solid white 2px; border-radius: 15px;">
-                        <a href="{{ path('user_profile_view_one', { 'pseudo': commentary['pseudo'] }) }}">
+                        <a href="{{ path('user_profile_view_one', { 'pseudo': commentary['pseudo'], '_locale': app.request.locale }) }}">
                             <img src="
                     {% if commentary['avatar'] == 'avatar_default.png' %}
                         {{ asset('assets/images/avatar_default.png') }}
@@ -88,10 +88,10 @@
 
                             <div class="d-flex">
                                 <div class="col-md-8">
-                                    <h5 class="mt-0"><a href="{{ path('user_profile_view_one', { 'pseudo': commentary['pseudo'] }) }}" style="color: black;">{{ commentary['pseudo'] }}</a> wrote :</h5>
+                                    <h5 class="mt-0"><a href="{{ path('user_profile_view_one', { 'pseudo': commentary['pseudo'], '_locale': app.request.locale }) }}" style="color: black;">{{ commentary['pseudo'] }}</a> {% trans %}wrote :{% endtrans %}</h5>
                                 </div>
                                 <div class="text-muted">
-                                    {{ 'posted : ' ~ commentary['posted_at']|date('d/m/Y, H:i:s') }}
+                                    {% trans %}posted :{% endtrans %} {{ commentary['posted_at']|date('d/m/Y, H:i:s') }}
                                 </div>
                             </div>
                             {{ commentary['commentary'] }}
@@ -105,8 +105,8 @@
                                 {% if app.user %}
                                     {% if app.user.userprofile.pseudo == commentary['pseudo'] %}
                                         <div class="d-flex" style="margin-top: -17px;">
-                                            <a href="{{ path('painting_comment_edit_user_comment', { 'id': commentary['id'], 'painting_id': painting['id'] }) }}" style="margin-right: 40px;"><i class="fa fa-pencil-square-o" aria-hidden="true" style="color: green; font-size: 1.5em;"><span style="font-size: 0.7em; color: black; margin-left: 5px;">Edit</span></i></a>
-                                            <a href="{{ path('painting_comment_delete_user_comment', { 'commentary_id': commentary['id'], 'painting_id': painting['id'] }) }}"><i class="fa fa-trash" aria-hidden="true" style="color: red; font-size: 1.5em;"><span style="font-size: 0.7em; color: black; margin-left: 5px;">Delete</span></i></a>
+                                            <a href="{{ path('painting_comment_edit_user_comment', { 'id': commentary['id'], 'painting_id': painting['id'], '_locale': app.request.locale }) }}" style="margin-right: 40px;"><i class="fa fa-pencil-square-o" aria-hidden="true" style="color: green; font-size: 1.5em;"><span style="font-size: 0.7em; color: black; margin-left: 5px;">{% trans %}Edit{% endtrans %}</span></i></a>
+                                            <a href="{{ path('painting_comment_delete_user_comment', { 'commentary_id': commentary['id'], 'painting_id': painting['id'], '_locale': app.request.locale }) }}"><i class="fa fa-trash" aria-hidden="true" style="color: red; font-size: 1.5em;"><span style="font-size: 0.7em; color: black; margin-left: 5px;">{% trans %}Delete{% endtrans %}</span></i></a>
                                         </div>
                                     {% endif %}
                                 {% endif %}

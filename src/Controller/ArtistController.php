@@ -12,9 +12,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
-
 /**
- * @Route("/artist", name="artist_")
+ * @Route("/{_locale}/artist", name="artist_", requirements={"_locale"="%app.locales%"})
  */
 class ArtistController extends AbstractController
 {

@@ -4,11 +4,11 @@
     <div class="row">
         {# Column Terms & Conditions #}
         <div class="col-md-4">
-            <a href="{{ path('terms_and_conditions') }}" class="footer-link">{% trans %}General Terms and Conditions{% endtrans %}</a>
+            <a href="{{ path('terms_and_conditions', {'_locale': app.request.locale}) }}" class="footer-link">{% trans %}General Terms and Conditions{% endtrans %}</a>
             <p></p>
-            <a href="{{ path('privacy_policy') }}" class="footer-link">{% trans %}Privacy policy{% endtrans %}</a>
+            <a href="{{ path('privacy_policy', {'_locale': app.request.locale}) }}" class="footer-link">{% trans %}Privacy policy{% endtrans %}</a>
             <p></p>
-            <a href="{{ path('cookie_policy') }}" class="footer-link">{% trans %}Cookie policy{% endtrans %}</a>
+            <a href="{{ path('cookie_policy', {'_locale': app.request.locale}) }}" class="footer-link">{% trans %}Cookie policy{% endtrans %}</a>
         </div>
         {# Column Informations #}
         <div class="col-md-4">
@@ -25,7 +25,7 @@
         </div>
         {# Column Newsletter #}
         <div class="col-md-4">
-                <form method="post" action="{{ path('newsletter_subscribe') }}">
+                <form method="post" action="{{ path('newsletter_subscribe', {'_locale': app.request.locale}) }}">
                 <div class="form-group">
                     <label class="font-white" style="font-size: 1.2em;">{% trans %}NEWSLETTER{% endtrans %}</label>
                     <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="{% trans %}email address{% endtrans %}">

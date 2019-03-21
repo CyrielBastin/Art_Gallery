@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/painting-comment", name="painting_comment_")
+ * @Route("/{_locale}/painting-comment", name="painting_comment_", requirements={"_locale"="%app.locales%"})
  */
 class PaintingCommentController extends AbstractController
 {

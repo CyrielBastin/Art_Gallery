@@ -9,7 +9,7 @@
         <div class="row">
             {% for artist in artists %}
                 <div class="col-md-3 margin-top-bottom">
-                    <a href="{{ path('artist_view_one', {id:artist['id']}) }}">
+                    <a href="{{ path('artist_view_one', {'id' :artist['id'], '_locale': app.request.locale}) }}">
                         <div class="card" style="background-color: lightgrey;">
                             <img src="{{ vich_uploader_asset(artist, 'imageFile', 'App\\Entity\\Artist') | imagine_filter('image_listing') }}" class="card-img-top" alt="{{ artist['image'] }}">
                             <div class="card-body">

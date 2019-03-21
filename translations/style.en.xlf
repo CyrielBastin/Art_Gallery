@@ -48,5 +48,23 @@
         <target>Artworks painted in %style% style :</target>
       </segment>
     </unit>
+    <unit id="RkxP.QG" name="Edit">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:24</note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Edit</target>
+      </segment>
+    </unit>
+    <unit id="4tClSWj" name="Delete">
+      <notes>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:25</note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Delete</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

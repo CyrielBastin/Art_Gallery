@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * @Route("/painting/media", name="painting_media_")
+ * @Route("/{_locale}/painting/media", name="painting_media_", requirements={"_locale"="%app.locales%"})
  */
 class PaintingMediaController extends AbstractController
 {

@@ -1,6 +1,6 @@
 {% trans_default_domain 'security' %}
 
-<form method="post" action="{{ path('app_login') }}">
+<form method="post" action="{{ path('app_login', {'_locale': app.request.locale}) }}">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -12,11 +12,11 @@
             <div class="container-form-custom">
                 <div class="form-group">
                     <label for="inputEmail">{% trans %}Email{% endtrans %}</label>
-                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" style="width: 350px;" required>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="{% trans %}Email{% endtrans %}" style="width: 350px;" required>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword">Password</label>
-                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" style="width: 350px;" required>
+                    <label for="inputPassword">{% trans %}Password{% endtrans %}</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="{% trans %}Password{% endtrans %}" style="width: 350px;" required>
                 </div>
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">

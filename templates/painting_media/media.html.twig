@@ -9,7 +9,7 @@
         <div class="row">
             {% for media in medias %}
                 <div class="col-md-3 margin-top-bottom">
-                    <a href="{{ path('painting_media_view_one', {id:media['id']}) }}">
+                    <a href="{{ path('painting_media_view_one', {'id': media['id'], '_locale': app.request.locale}) }}">
                         <div class="card bg-dark text-white max-image-size">
                             <img src="{{ asset('assets/images/medias/' ~ media['image']) }}" class="card-img" alt="{{ media['image'] }}" style="width: 198px; height: 198px;">
                             <div class="card-img-overlay">

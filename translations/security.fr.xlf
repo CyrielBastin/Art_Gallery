@@ -23,7 +23,10 @@
     </unit>
     <unit id="lpzL089" name="Email">
       <notes>
+        <note category="file-source" priority="1">templates\security\login.html.twig:22</note>
+        <note category="file-source" priority="1">templates\security\login.html.twig:23</note>
         <note category="file-source" priority="1">templates\security\login_form_painting_view_one.html.twig:14</note>
+        <note category="file-source" priority="1">templates\security\login_form_painting_view_one.html.twig:15</note>
       </notes>
       <segment>
         <source>Email</source>
@@ -46,6 +49,27 @@
       <segment>
         <source>Sign Up here</source>
         <target>S'inscrire ici</target>
+      </segment>
+    </unit>
+    <unit id="lpdWIhz" name="Please Log in">
+      <notes>
+        <note category="file-source" priority="1">templates\security\login.html.twig:14</note>
+      </notes>
+      <segment>
+        <source>Please Log in</source>
+        <target>Veuillez vous identifier</target>
+      </segment>
+    </unit>
+    <unit id="588_9PF" name="Password">
+      <notes>
+        <note category="file-source" priority="1">templates\security\login.html.twig:26</note>
+        <note category="file-source" priority="1">templates\security\login.html.twig:27</note>
+        <note category="file-source" priority="1">templates\security\login_form_painting_view_one.html.twig:18</note>
+        <note category="file-source" priority="1">templates\security\login_form_painting_view_one.html.twig:19</note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target>Mot de passe</target>
       </segment>
     </unit>
   </file>

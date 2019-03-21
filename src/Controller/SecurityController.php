@@ -15,7 +15,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/{_locale}/login", name="app_login", requirements={"_locale"="%app.locales%"})
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -43,7 +43,7 @@ class SecurityController extends AbstractController
     public function logout(){}
 
     /**
-     * @Route("/sign-up", name="signup")
+     * @Route("/{_locale}/sign-up", name="signup", requirements={"_locale"="%app.locales%"})
      */
     public function subscribe(Request $request, UserPasswordEncoderInterface $passwordEncoder, SignupService $service)
     {

@@ -13,7 +13,7 @@
             {% for discount in discounts %}
                 <div class="col-md-3" style="margin-top: 15px;">
                     <div class="card" style="max-width: 250px;">
-                        <a href="{{ path('painting_view_one', {id:discount['id']}) }}"><img src="{{ vich_uploader_asset(discount, 'imageFile', 'App\\Entity\\Painting') | imagine_filter('discount_listing') }}" class="card-img-top" alt="{{ discount['image'] }}" style="max-width: 250px; max-height: 250px;"></a>
+                        <a href="{{ path('painting_view_one', {'id': discount['id'], '_locale': app.request.locale}) }}"><img src="{{ vich_uploader_asset(discount, 'imageFile', 'App\\Entity\\Painting') | imagine_filter('discount_listing') }}" class="card-img-top" alt="{{ discount['image'] }}" style="max-width: 250px; max-height: 250px;"></a>
                         <div class="card-body">
                             <h5 class="card-title">{{ discount['title'] }}</h5>
                             <div class="d-flex justify-content-start">
@@ -23,7 +23,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="d-flex justify-content-center">
-                                    <a href="{{ path('painting_edit_one', {id:discount['id']}) }}" class="btn btn-outline-info" role="button">{% trans %}Edit{% endtrans %}</a>
+                                    <a href="{{ path('painting_edit_one', {'id': discount['id'], '_locale': app.request.locale}) }}" class="btn btn-outline-info" role="button">{% trans %}Edit{% endtrans %}</a>
                                 </div>
                             </div>
                         </div>

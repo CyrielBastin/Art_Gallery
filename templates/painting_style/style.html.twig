@@ -9,7 +9,7 @@
         <div class="row">
             {% for style in styles %}
                     <div class="col-md-3 margin-top-bottom">
-                        <a href="{{ path('painting_style_view_one', {id:style['id']}) }}">
+                        <a href="{{ path('painting_style_view_one', {'id': style['id'], '_locale': app.request.locale}) }}">
                             <div class="card bg-dark text-white max-image-size">
                                 <img src="{{ asset('assets/images/styles/' ~ style['image']) }}" class="card-img" alt="{{ style['image'] }}" style="width: 198px; height: 198px;">
                                 <div class="card-img-overlay">

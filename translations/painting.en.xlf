@@ -95,6 +95,7 @@
         <note category="file-source" priority="1">templates\painting\painting.html.twig:23</note>
         <note category="file-source" priority="1">templates\painting\painting_discount.html.twig:26</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:37</note>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:108</note>
       </notes>
       <segment>
         <source>Edit</source>
@@ -105,6 +106,7 @@
       <notes>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:24</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:38</note>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:109</note>
       </notes>
       <segment>
         <source>Delete</source>
@@ -192,6 +194,33 @@
       <segment>
         <source>Edit your comment</source>
         <target>Edit your comment</target>
+      </segment>
+    </unit>
+    <unit id="p_LSbo0" name="by">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>by</source>
+        <target>by</target>
+      </segment>
+    </unit>
+    <unit id="2aiaqb7" name="wrote :">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:91</note>
+      </notes>
+      <segment>
+        <source>wrote :</source>
+        <target>wrote :</target>
+      </segment>
+    </unit>
+    <unit id="NAxD74_" name="posted :">
+      <notes>
+        <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:94</note>
+      </notes>
+      <segment>
+        <source>posted :</source>
+        <target>posted :</target>
       </segment>
     </unit>
   </file>

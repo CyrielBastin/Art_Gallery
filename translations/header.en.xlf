@@ -58,7 +58,6 @@
     <unit id="pSrOQg8" name="All">
       <notes>
         <note category="file-source" priority="1">templates\includes\header.html.twig:58</note>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:71</note>
       </notes>
       <segment>
         <source>All</source>
@@ -198,6 +197,15 @@
       <segment>
         <source>Newsletter</source>
         <target>Newsletter</target>
+      </segment>
+    </unit>
+    <unit id="GbBu75v" name="all.m">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:71</note>
+      </notes>
+      <segment>
+        <source>all.m</source>
+        <target>All</target>
       </segment>
     </unit>
   </file>

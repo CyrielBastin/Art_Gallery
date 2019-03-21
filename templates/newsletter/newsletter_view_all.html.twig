@@ -10,7 +10,7 @@
         <h3 class="title-form-custom" style="margin-top: 20px; margin-bottom: 0px;">{% trans %}All Newsletters{% endtrans %}</h3>
     </div>
     <div class="d-flex justify-content-center" style="margin-bottom: 30px;">
-        <a href="{{ path('newsletter_create_one') }}"><button class="btn btn-info btn-lg">{% trans %}Create One{% endtrans %}</button></a>
+        <a href="{{ path('newsletter_create_one', {'_locale': app.request.locale}) }}"><button class="btn btn-info btn-lg">{% trans %}Create One{% endtrans %}</button></a>
     </div>
     {% for newsletter in newsletters %}
         <div class="row" style="margin: 20px 0px">

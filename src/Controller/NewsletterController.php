@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/newsletter", name="newsletter_")
+ * @Route("/{_locale}/newsletter", name="newsletter_", requirements={"_locale"="%app.locales%"})
  */
 class NewsletterController extends AbstractController
 {

@@ -17,7 +17,7 @@ use Symfony\Component\Security\Http\Util\TargetPathTrait;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * @Route("/painting", name="painting_")
+ * @Route("/{_locale}/painting", name="painting_", requirements={"_locale"="%app.locales%"})
  */
 class PaintingController extends AbstractController
 {
@@ -76,7 +76,7 @@ class PaintingController extends AbstractController
 
             return $this->redirectToRoute('redirect_from_painting_view_one', ['painting_id' => $id]);
         }
-        $this->saveTargetPath($request->getSession(), 'main', 'http://localhost/symfony/Art_Gallery/public/painting/view/'.$id.'#post-a-commentary');
+        $this->saveTargetPath($request->getSession(), 'main', 'http://localhost/symfony/Art_Gallery/public/' . $request->getLocale() . '/painting/view/'.$id.'#post-a-commentary');
 
         return $this->render('painting/painting_view_one.html.twig', ['painting' => $painting, 'commentaries' => $pagination, 'form' => $form->createView()]);
     }

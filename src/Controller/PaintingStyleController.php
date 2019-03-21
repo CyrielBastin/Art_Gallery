@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * @Route("/painting/style", name="painting_style_")
+ * @Route("/{_locale}/painting/style", name="painting_style_", requirements={"_locale"="%app.locales%"})
  */
 class PaintingStyleController extends AbstractController
 {

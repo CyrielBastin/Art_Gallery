@@ -439,7 +439,7 @@
     </unit>
     <unit id="_jhUlyj" name="Artist %artist% successfully added">
       <notes>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:80</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:79</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully added</source>
@@ -448,7 +448,7 @@
     </unit>
     <unit id="vBRA9Wp" name="Artist %artist% successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:99</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:98</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully modified</source>
@@ -457,7 +457,7 @@
     </unit>
     <unit id="tgXkkVi" name="Artist %artist% successfully removed">
       <notes>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:116</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:115</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully removed</source>
@@ -543,6 +543,129 @@
       <segment>
         <source>Style %style% successfully removed</source>
         <target>Le style %style% a bien été supprimé</target>
+      </segment>
+    </unit>
+    <unit id="588_9PF" name="Password">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </segment>
+    </unit>
+    <unit id="wpIhDEQ" name="Confirm Password">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Confirm Password</source>
+        <target>Confirmer mot de passe</target>
+      </segment>
+    </unit>
+    <unit id="PMCOvp1" name="Sign-up">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Sign-up</source>
+        <target>S'inscrire</target>
+      </segment>
+    </unit>
+    <unit id="HTmBuh4" name="Artist">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Artist</source>
+        <target>Artiste</target>
+      </segment>
+    </unit>
+    <unit id="FTajaxK" name="example: 50 x 50">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>example: 50 x 50</source>
+        <target>exemple: 50 x 50</target>
+      </segment>
+    </unit>
+    <unit id="01cXXP6" name="Media">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Media</source>
+        <target>Support</target>
+      </segment>
+    </unit>
+    <unit id="3YEsfBH" name="set 0 if you don't want to discount the artwork">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>set 0 if you don't want to discount the artwork</source>
+        <target>mettez 0 si vous ne voulez pas solder</target>
+      </segment>
+    </unit>
+    <unit id="FV_BbAQ" name="Submit">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Submit</source>
+        <target>Soumettre</target>
+      </segment>
+    </unit>
+    <unit id="fnRBQbQ" name="Style">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Style</source>
+        <target>Style</target>
+      </segment>
+    </unit>
+    <unit id="MQylA_8" name="Month">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Month</source>
+        <target>Mois</target>
+      </segment>
+    </unit>
+    <unit id="jyNk4Ru" name="Day">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Day</source>
+        <target>Jour</target>
+      </segment>
+    </unit>
+    <unit id="A45HKSP" name="dd/mm/yyyy">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>dd/mm/yyyy</source>
+        <target>dd/mm/yyyy</target>
+      </segment>
+    </unit>
+    <unit id="F3ZZOch" name="dd/mm/YYYY">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>dd/mm/YYYY</source>
+        <target>dd/mm/YYYY</target>
+      </segment>
+    </unit>
+    <unit id="ocxN3Cr" name="max: 500 car.">
+      <segment>
+        <source>max: 500 car.</source>
+        <target>max: 500 car.</target>
       </segment>
     </unit>
   </file>

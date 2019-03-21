@@ -165,17 +165,16 @@
     <unit id="mUhVsKh" name="b86b42f">
       <notes>
         <note category="file-source" priority="1">templates\home_page\index.html.twig:13</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Here, you can find hundred of paintings to discover and/or buy.&lt;br/&gt;
                     You can subscribe to our Newsletter to be inform of our latest news&lt;br/&gt;
                     or you can sign-in to participate in this site's life and share with&lt;br/&gt;
                     your fellow art lovers.</source>
-        <target>Ici, vous pouvez trouver une centaine de peintures à découvrir et/ou acheter.&lt;br/&gt;
-        Vous pouvez vous inscrire à notre Newsletter pour être informé de nos dernières news&lt;br/&gt;
-        ou vous pouvez vous connecter pour participer à la vie du site et partager avec d'autres membres.
-        </target>
+        <target><![CDATA[Ici, vous pouvez trouver une centaine de peintures à<br/> découvrir et/ou acheter.
+        Vous pouvez vous inscrire à notre Newsletter<br/> pour être informé de nos dernières news
+        ou vous pouvez vous connecter<br/> pour participer à la vie du site et partager avec d'autres membres.
+        ]]></target>
       </segment>
     </unit>
   </file>

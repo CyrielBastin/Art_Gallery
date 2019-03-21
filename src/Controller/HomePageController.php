@@ -14,16 +14,51 @@ class HomePageController extends AbstractController
 {
 
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="indexpage")
      */
-    public function index()
+    public function index(Request $request)
+    {
+        if($request->cookies->has('_locale')){
+            setcookie('_locale', $request->cookies->get('_locale'), time() + 3600*24*3, null, null, false, true);
+            return $this->redirectToRoute('homepage', ['_locale' => $request->cookies->get('_locale')]);
+        }else{
+            setcookie('_locale', 'en', time() + 3600*24*3, null, null, false, true);
+        }
+
+        return $this->redirectToRoute('homepage', ['_locale' => 'en']);
+    }
+
+    /**
+     * @Route("/change-locale-to-en", name="change_locale_to_en")
+     */
+    public function changeLocaleToEn()
+    {
+        setcookie('_locale', 'en', time() + 3600*24*3, null, null, false, true);
+
+        return $this->redirectToRoute('homepage', ['_locale' => 'en']);
+    }
+
+    /**
+     * @Route("/change-locale-to-fr", name="change_locale_to_fr")
+     */
+    public function changeLocaleToFr()
+    {
+        setcookie('_locale', 'fr', time() + 3600*24*3, null, null, false, true);
+
+        return $this->redirectToRoute('homepage', ['_locale' => 'fr']);
+    }
+
+    /**
+     * @Route("/{_locale}/", name="homepage", requirements={"_locale"="%app.locales%"})
+     */
+    public function homePage()
     {
         return $this->render('home_page/index.html.twig');
     }
 
 
     /**
-     * @Route("/contact-us", name="contact_us")
+     * @Route("/{_locale}/contact-us", name="contact_us", requirements={"_locale"="%app.locales%"})
      */
     public function contactUs(Request $request, ContactService $contactService)
     {
@@ -44,21 +79,21 @@ class HomePageController extends AbstractController
     // ===========================================================================================
 
     /**
-     * @Route("/general-terms-and-conditions.html", name="terms_and_conditions")
+     * @Route("/{_locale}/general-terms-and-conditions.html", name="terms_and_conditions", requirements={"_locale"="%app.locales%"})
      */
     public function termsAndConditions(){
         return $this->render('home_page/general_terms_and_conditions.html.twig');
     }
 
     /**
-     * @Route("/privacy-policy.html", name="privacy_policy")
+     * @Route("/{_locale}/privacy-policy.html", name="privacy_policy", requirements={"_locale"="%app.locales%"})
      */
     public function privacyPolicy(){
         return $this->render('home_page/privacy_policy.html.twig');
     }
 
     /**
-     * @Route("/cookie-policy.html", name="cookie_policy")
+     * @Route("/{_locale}/cookie-policy.html", name="cookie_policy", requirements={"_locale"="%app.locales%"})
      */
     public function cookiePolicy(){
         return $this->render('home_page/cookie_policy.html.twig');
