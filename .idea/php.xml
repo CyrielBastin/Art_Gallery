@@ -109,20 +109,7 @@
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu-bundle" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-menu" />
-      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-acl" />
       <path value="$PROJECT_DIR$/vendor/symfony/templating" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/datagrid-bundle" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/doctrine-extensions" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/admin-bundle" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/block-bundle" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/cache" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/core-bundle" />
-      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
-      <path value="$PROJECT_DIR$/vendor/sonata-project/doctrine-orm-admin-bundle" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
       <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
@@ -133,6 +120,7 @@
       <path value="$PROJECT_DIR$/vendor/php-translation/extractor" />
       <path value="$PROJECT_DIR$/vendor/php-translation/common" />
       <path value="$PROJECT_DIR$/vendor/php-translation/symfony-storage" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
