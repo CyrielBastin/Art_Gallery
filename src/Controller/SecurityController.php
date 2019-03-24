@@ -59,7 +59,7 @@ class SecurityController extends AbstractController
 
             $service->registrationEmail($user);
             $this->addFlash('success', 'You are now registered to Art Gallery. You can now login and share with other users');
-            $this->redirectToRoute('homepage');
+            $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 
         return $this->render('security/signup.html.twig', ['form' => $form->createView()]);

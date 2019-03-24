@@ -50,7 +50,7 @@ class PaintingCommentController extends AbstractController
             $this->em->flush();
 
             $this->addFlash('success','Your comment has been successfully modified');
-            return $this->redirectToRoute('painting_view_one', ['id' => $painting_id]);
+            return $this->redirectToRoute('painting_view_one', ['_locale' => $request->getLocale(), 'id' => $painting_id]);
         }
 
         return $this->render('painting_comment/painting_comment_edit.html.twig', ['commentary' => $paintingComment, 'form' => $form->createView()]);
@@ -62,14 +62,14 @@ class PaintingCommentController extends AbstractController
      * @param $painting_id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function deleteOneUserComment($commentary_id, $painting_id)
+    public function deleteOneUserComment(Request $request, $commentary_id, $painting_id)
     {
         $painting_comment = $this->paintingCommentRepository->find($commentary_id);
         $this->em->remove($painting_comment);
         $this->em->flush();
 
         $this->addFlash('success', 'You comment has been successfully deleted');
-        return $this->redirectToRoute('painting_view_one', ['id' => $painting_id]);
+        return $this->redirectToRoute('painting_view_one', ['_locale' => $request->getLocale(), 'id' => $painting_id]);
     }
 
 }

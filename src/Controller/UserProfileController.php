@@ -66,7 +66,7 @@ class UserProfileController extends AbstractController
             $userProfile->setImageFile(null);
 
             $this->addFlash('info', 'Your profile has been updated');
-            return $this->redirectToRoute('user_profile_view_one', ['pseudo' => $userProfile->getPseudo()]);
+            return $this->redirectToRoute('user_profile_view_one', ['_locale' => $request->getLocale(), 'pseudo' => $userProfile->getPseudo()]);
         }
 
         return $this->render('user_profile/user_profile_edit_one.html.twig', ['profile' => $userProfile, 'form' => $form->createView()]);

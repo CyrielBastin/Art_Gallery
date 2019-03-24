@@ -78,7 +78,8 @@ class PaintingStyleController extends AbstractController
 
             $translated = $this->translator->trans('Style %style% successfully added', ['%style%' => $style->getName()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 
         return $this->render('painting_style/style_add.html.twig', ['style' => $style, 'form' => $form->createView()]);
@@ -97,7 +98,8 @@ class PaintingStyleController extends AbstractController
 
             $translated = $this->translator->trans('Style %style% successfully modified', ['%style%' => $style->getName()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
         return $this->render('painting_style/style_edit.html.twig', ['style' => $style, 'form' => $form->createView()]);
     }
@@ -113,6 +115,7 @@ class PaintingStyleController extends AbstractController
 
         $translated = $this->translator->trans('Style %style% successfully removed', ['%style%' => $style->getName()]);
         $this->addFlash('success', $translated);
-        return $this->redirectToRoute('homepage');
+
+        return $this->redirectToRoute('indexpage');
     }
 }

@@ -8,7 +8,7 @@
 /********************************************************************************************************
  ** Style for the HEADER
  *******************************************************************************************************/
-header{
+.header{
     min-height: 380px;
     background-color: black;
     margin: 0px 15px 15px 15px;
@@ -19,6 +19,8 @@ header{
     text-decoration: underline;
     font-weight: bold;
     font-size: 1.1em;
+    width: 18px;
+    height: 24px;
 }
 
 .locale-inactive{
@@ -316,6 +318,51 @@ body{
 .input-profile{
     font-size: 2.3em;
     min-width: 300px;
+}
+/********************************************************************************************************
+ ** Style for the ADMIN Dashboard
+ *******************************************************************************************************/
+.header-admin{
+    height: 120px;
+    background-color: #343a40;
+    font-size: 1.5em;
+}
+
+.header-admin a{
+    color: white;
+}
+
+.nav-admin{
+    display: flex;
+    list-style: none;
+}
+
+.nav-admin li{
+    width: 150px;
+    height: 70px;
+    border: solid grey 1px;
+    font-size: 1.3em;
+}
+
+.active-link{
+    background-color: #343a40;
+}
+
+.nav-admin li a{
+    color: white;
+}
+
+.admin-painting, .admin-media, .admin-style{
+    font-size: 1.3em;
+    margin-left: 15px;
+}
+
+.dashboard-link, .dashboard-link:hover{
+    color: #6c757d;
+}
+
+.painting-list-cell tr td{
+    margin-top: 40px;
 }
 /********************************************************************************************************
  ** Media Queries

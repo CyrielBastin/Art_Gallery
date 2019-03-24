@@ -72,6 +72,7 @@
         <note category="file-source" priority="1">src\Form\ArtistEditType.php:21</note>
         <note category="file-source" priority="1">src\Form\ArtistType.php:21</note>
         <note category="file-source" priority="1">src\Form\ContactType.php:20</note>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:24</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:21</note>
       </notes>
       <segment>
@@ -83,6 +84,7 @@
       <notes>
         <note category="file-source" priority="1">src\Form\ArtistEditType.php:22</note>
         <note category="file-source" priority="1">src\Form\ArtistType.php:22</note>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:25</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:22</note>
       </notes>
       <segment>
@@ -94,6 +96,7 @@
       <notes>
         <note category="file-source" priority="1">src\Form\ArtistEditType.php:23</note>
         <note category="file-source" priority="1">src\Form\ArtistType.php:23</note>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:29</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:26</note>
       </notes>
       <segment>
@@ -115,6 +118,7 @@
       <notes>
         <note category="file-source" priority="1">src\Form\ArtistEditType.php:25</note>
         <note category="file-source" priority="1">src\Form\ArtistType.php:25</note>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:28</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:25</note>
       </notes>
       <segment>
@@ -162,6 +166,7 @@
     <unit id="lpzL089" name="Email">
       <notes>
         <note category="file-source" priority="1">src\Form\ContactType.php:21</note>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:32</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:29</note>
       </notes>
       <segment>
@@ -358,6 +363,7 @@
     </unit>
     <unit id="yo6CbZw" name="Avatar">
       <notes>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:23</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:20</note>
       </notes>
       <segment>
@@ -367,6 +373,7 @@
     </unit>
     <unit id="BH9Ys5T" name="Pseudo">
       <notes>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:26</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:23</note>
       </notes>
       <segment>
@@ -376,6 +383,7 @@
     </unit>
     <unit id="8ac_IgS" name="Signature">
       <notes>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:27</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:24</note>
       </notes>
       <segment>
@@ -385,6 +393,7 @@
     </unit>
     <unit id="zKBmL53" name="Likes">
       <notes>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:30</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:27</note>
       </notes>
       <segment>
@@ -394,6 +403,7 @@
     </unit>
     <unit id="ydWjM6Z" name="Dislikes">
       <notes>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:31</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:28</note>
       </notes>
       <segment>
@@ -403,6 +413,7 @@
     </unit>
     <unit id="FQn1YfJ" name="Save">
       <notes>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:35</note>
         <note category="file-source" priority="1">src\Form\UserProfileType.php:30</note>
       </notes>
       <segment>
@@ -439,6 +450,7 @@
     </unit>
     <unit id="_jhUlyj" name="Artist %artist% successfully added">
       <notes>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:303</note>
         <note category="file-source" priority="1">src\Controller\ArtistController.php:79</note>
       </notes>
       <segment>
@@ -448,7 +460,8 @@
     </unit>
     <unit id="vBRA9Wp" name="Artist %artist% successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:98</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:323</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:99</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully modified</source>
@@ -457,7 +470,8 @@
     </unit>
     <unit id="tgXkkVi" name="Artist %artist% successfully removed">
       <notes>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:115</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:341</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:117</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully removed</source>
@@ -466,7 +480,8 @@
     </unit>
     <unit id="uPAidcd" name="The artwork %painting% has been correctly added">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingController.php:121</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:88</note>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:122</note>
       </notes>
       <segment>
         <source>The artwork %painting% has been correctly added</source>
@@ -475,7 +490,8 @@
     </unit>
     <unit id="9_2njLm" name="The artwork %painting% has been correctly modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingController.php:140</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:108</note>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:142</note>
       </notes>
       <segment>
         <source>The artwork %painting% has been correctly modified</source>
@@ -484,7 +500,8 @@
     </unit>
     <unit id="Zv1liYm" name="The artwork %painting% has been properly deleted">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingController.php:156</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:126</note>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:160</note>
       </notes>
       <segment>
         <source>The artwork %painting% has been properly deleted</source>
@@ -493,6 +510,7 @@
     </unit>
     <unit id="MYDU.lu" name="Media %media% successfully added">
       <notes>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:159</note>
         <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:79</note>
       </notes>
       <segment>
@@ -502,7 +520,8 @@
     </unit>
     <unit id="pesPPQo" name="Media %media% successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:98</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:179</note>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:99</note>
       </notes>
       <segment>
         <source>Media %media% successfully modified</source>
@@ -511,7 +530,8 @@
     </unit>
     <unit id="iwIxyUU" name="Media %media% successfully removed">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:115</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:197</note>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:117</note>
       </notes>
       <segment>
         <source>Media %media% successfully removed</source>
@@ -520,6 +540,7 @@
     </unit>
     <unit id="kpBFYGz" name="Style %style% successfully added">
       <notes>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:230</note>
         <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:79</note>
       </notes>
       <segment>
@@ -529,7 +550,8 @@
     </unit>
     <unit id="RNSm0Wq" name="Style %style% successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:98</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:250</note>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:99</note>
       </notes>
       <segment>
         <source>Style %style% successfully modified</source>
@@ -538,7 +560,8 @@
     </unit>
     <unit id="yRyS.3c" name="Style %style% successfully removed">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:114</note>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:268</note>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:116</note>
       </notes>
       <segment>
         <source>Style %style% successfully removed</source>
@@ -663,9 +686,66 @@
       </segment>
     </unit>
     <unit id="ocxN3Cr" name="max: 500 car.">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
       <segment>
         <source>max: 500 car.</source>
         <target>max: 500 car.</target>
+      </segment>
+    </unit>
+    <unit id="rqxjIJQ" name="Add a painting">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Add a painting</source>
+        <target>Ajouter une peinture</target>
+      </segment>
+    </unit>
+    <unit id="v.NQGDr" name="Edit a painting">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Edit a painting</source>
+        <target>Editer une peinture</target>
+      </segment>
+    </unit>
+    <unit id="SxaNiNy" name="role">
+      <notes>
+        <note category="file-source" priority="1">src\Form\UserDashboardType.php:22</note>
+      </notes>
+      <segment>
+        <source>role</source>
+        <target>Role</target>
+      </segment>
+    </unit>
+    <unit id="3Fcv3Zy" name="The user profile %user% has been updated">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:415</note>
+      </notes>
+      <segment>
+        <source>The user profile %user% has been updated</source>
+        <target>L'utilisateur %user% a été mis à jour</target>
+      </segment>
+    </unit>
+    <unit id="MSd2.Wl" name="The user profile %user% has been properly deleted">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\AdminController.php:433</note>
+      </notes>
+      <segment>
+        <source>The user profile %user% has been properly deleted</source>
+        <target>L'utilisateur %user% a été supprimé</target>
+      </segment>
+    </unit>
+    <unit id="FHNqLrn" name="Role">
+      <notes>
+        <note category="state" priority="1">obsolete</note>
+      </notes>
+      <segment>
+        <source>Role</source>
+        <target>Role</target>
       </segment>
     </unit>
   </file>

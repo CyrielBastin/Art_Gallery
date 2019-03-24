@@ -22,6 +22,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class PaintingController extends AbstractController
 {
     use TargetPathTrait;
+
     /**
      * @var EntityManagerInterface
      */
@@ -120,7 +121,8 @@ class PaintingController extends AbstractController
 
             $translated = $this->translator->trans('The artwork %painting% has been correctly added', ['%painting%' => $painting->getTitle()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 
         return $this->render('painting/painting_add.html.twig', ['painting' => $painting, 'form' => $form->createView()]);
@@ -139,15 +141,17 @@ class PaintingController extends AbstractController
 
             $translated = $this->translator->trans('The artwork %painting% has been correctly modified', ['%painting%' => $painting->getTitle()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
+
         return $this->render('painting/painting_edit.html.twig', ['painting' => $painting, 'form' => $form->createView()]);
     }
 
     /**
      * @Route("/delete/{id}", name="delete_one")
      */
-    public function deleteOnePainting($id)
+    public function deleteOnePainting(Request $request, $id)
     {
         $painting = $this->paintingRepo->find($id);
         $this->em->remove($painting);
@@ -155,7 +159,8 @@ class PaintingController extends AbstractController
 
         $translated = $this->translator->trans('The artwork %painting% has been properly deleted', ['%painting%' => $painting->getTitle()]);
         $this->addFlash('success', $translated);
-        return $this->redirectToRoute('homepage');
+
+        return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
     }
 
 }

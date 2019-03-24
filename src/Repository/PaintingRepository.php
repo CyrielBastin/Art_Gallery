@@ -182,4 +182,20 @@ class PaintingRepository extends ServiceEntityRepository
         return $request->fetchAll();
     }
 
+    public function adminListPainting()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT id, image, title, price, discount, (ABS(discount - 100)/100)*price AS price_reduced
+            FROM painting
+            ORDER BY title
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
 }

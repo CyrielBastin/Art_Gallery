@@ -19,32 +19,35 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
-    // /**
-    //  * @return User[] Returns an array of User objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function adminListUser()
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('u.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $conn = $this->getEntityManager()->getConnection();
 
-    /*
-    public function findOneBySomeField($value): ?User
-    {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $sql='
+            SELECT u.id, up.avatar, u.email, up.pseudo, ur.name as role, u.roles_id
+            FROM user u
+            LEFT JOIN user_roles ur on u.roles_id = ur.id
+            LEFT JOIN user_profile up on u.id = up.user_id
+            ORDER BY u.roles_id, up.pseudo
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
     }
-    */
+
+    public function adminSetRole($user_id, $role_id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            UPDATE user
+            SET roles_id = :role_id
+            WHERE id = :user_id
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute(['role_id' => $role_id, 'user_id' => $user_id]);
+    }
 }

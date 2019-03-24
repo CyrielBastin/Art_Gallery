@@ -57,4 +57,20 @@ class PaintingStyleRepository extends ServiceEntityRepository
         return $request->fetch();
     }
 
+    public function adminListStyle()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT id, image, name
+            FROM painting_style
+            ORDER BY name
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
 }

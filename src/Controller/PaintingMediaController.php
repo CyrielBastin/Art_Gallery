@@ -78,7 +78,8 @@ class PaintingMediaController extends AbstractController
 
             $translated = $this->translator->trans('Media %media% successfully added', ['%media%' => $media->getName()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 
         return $this->render('painting_media/media_add.html.twig', ['media' => $media, 'form' => $form->createView()]);
@@ -97,7 +98,8 @@ class PaintingMediaController extends AbstractController
 
             $translated = $this->translator->trans('Media %media% successfully modified', ['%media%' => $media->getName()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 
         return $this->render('painting_media/media_edit.html.twig', ['media' => $media, 'form' => $form->createView()]);
@@ -114,6 +116,7 @@ class PaintingMediaController extends AbstractController
 
         $translated = $this->translator->trans('Media %media% successfully removed', ['%media%' => $media->getName()]);
         $this->addFlash('success', $translated);
-        return $this->redirectToRoute('homepage');
+
+        return $this->redirectToRoute('indexpage');
     }
 }

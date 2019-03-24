@@ -1,0 +1,42 @@
+{% extends 'base_admin.html.twig' %}
+
+{% trans_default_domain 'admin' %}
+
+{% block title %}{% trans %}Users : All{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <table class="table table-hover table-dark">
+            <thead>
+            <tr class="text-center">
+                <th scope="col">{% trans %}Avatar{% endtrans %}</th>
+                <th scope="col">{% trans %}Email{% endtrans %}</th>
+                <th scope="col">{% trans %}Username{% endtrans %}</th>
+                <th scope="col">{% trans %}Role{% endtrans %}</th>
+                <th scope="col">{% trans %}Edit{% endtrans %}</th>
+                <th scope="col">{% trans %}Delete{% endtrans %}</th>
+            </tr>
+            </thead>
+            <tbody class="painting-list-cell">
+            {% for user in users %}
+                <tr class="text-center">
+                    <th scope="row"><a href="{{ path('user_profile_view_one', { '_locale': app.request.locale, 'pseudo': user['pseudo'] }) }}"><img src="{% if user['avatar'] == 'avatar_default.png' %}
+                                                                                                                                                         {{ asset('assets/images/avatar_default.png') }}
+                                                                                                                                                         {% else %}
+                                                                                                                                                         {{ vich_uploader_asset(user, 'imageFile', 'App\\Entity\\UserProfile')|imagine_filter('listing_element_admin') }}
+                                                                                                                                                         {% endif %}
+                                                                                                                                                         " alt="{{ user['avatar'] }}" style="{% if user['avatar'] == 'avatar_default.png' %}width: 100px; height: 80px;{% endif %}"/></a></th>
+                    <td class="align-middle">{{ user['email'] }}</td>
+                    <td class="align-middle">{{ user['pseudo'] }}</td>
+                    <td class="align-middle">{{ user['role'] }}</td>
+                    <td class="align-middle"><a href="{{ path('admin_user_edit', { '_locale': app.request.locale, 'pseudo': user['pseudo'] }) }}"><i class="fa fa-magic fa-2x" aria-hidden="true" style="color: white;"></i></a></td>
+                    <td class="align-middle"><a href="{{ path('admin_user_delete', { '_locale': app.request.locale, 'id': user['id'] }) }}"><i class="fa fa-ban fa-2x" aria-hidden="true" style="color: white;"></i></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        {{ knp_pagination_render(users) }}
+    </div>
+{% endblock %}

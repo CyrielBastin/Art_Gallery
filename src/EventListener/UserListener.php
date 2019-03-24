@@ -15,6 +15,15 @@ class UserListener
     {
         $em = $args->getEntityManager();
 
+        $conn = $em->getConnection();
+        $sql='
+            UPDATE user
+            SET roles_id = 6
+            WHERE id = :id
+        ';
+        $request = $conn->prepare($sql);
+        $request->execute(['id' => $user->getId()]);
+
         $user_profile = new UserProfile();
         $array = explode('@', $user->getEmail());
         $pseudo = $array[0].$user->getId();

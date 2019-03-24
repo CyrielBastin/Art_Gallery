@@ -1,0 +1,32 @@
+{% extends 'base_admin.html.twig' %}
+
+{% trans_default_domain 'admin' %}
+
+{% block title %}{% trans %}Newsletters : All{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div class="section">
+        <div class="d-flex justify-content-center" style="margin-bottom: 40px">
+            <h3 class="title-form-custom" style="margin-top: 20px; margin-bottom: 0px;">{% trans %}All Newsletters{% endtrans %}</h3>
+        </div>
+        <div class="d-flex justify-content-center" style="margin-bottom: 30px;">
+            <a href="{{ path('admin_newsletter_create_one', {'_locale': app.request.locale}) }}"><button class="btn btn-outline-info btn-lg">{% trans %}Create One{% endtrans %}</button></a>
+        </div>
+        {% for newsletter in newsletters %}
+            <div class="row" style="margin: 20px 0px">
+                <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 1.5em;">{{ newsletter.subject }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ newsletter.created_at|date('d/m/Y') ~ ' at ' ~ newsletter.created_at|date('H:i:s') }}</h6>
+                            <p class="card-text">{{ newsletter.message }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="d-flex justify-content-center">
+            {{ knp_pagination_render(newsletters) }}
+        </div>
+    </div>
+{% endblock %}

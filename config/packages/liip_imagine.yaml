@@ -30,6 +30,13 @@ liip_imagine:
           size: [200, 200]
           mode: outbound
 
+    listing_element_admin:
+      quality: 90
+      filters:
+        thumbnail:
+          size: [100, 80]
+          mode: outbound
+
 #liip_imagine:
 #    # valid drivers options include "gd" or "gmagick" or "imagick"
 #    driver: "gd"

@@ -49,14 +49,14 @@ class NewsletterController extends AbstractController
 
             if($exists){
                 $this->addFlash('danger', 'You are already registered to our Newsletter');
-                $this->redirectToRoute('homepage');
+                $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
             }else{
                 $newsletter->setEmail($email);
                 $this->em->persist($newsletter);
                 $this->em->flush();
 
                 $this->addFlash('success', 'You are now subscribed to our Newsletter. Congratulations !');
-                $this->redirectToRoute('homepage');
+                $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
             }
         }
 

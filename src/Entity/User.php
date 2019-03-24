@@ -100,13 +100,11 @@ class User implements UserInterface
         /*
         return ($this->roles == '1')? ['ROLE_ROOT']:
                ($this->roles == '2')? ['ROLE_SUPER_ADMIN']:
-               ($this->roles == '3')? ['ROLE_SONATA_ADMIN']:
                ($this->roles == '4')? ['ROLE_ADMIN']:
                ($this->roles == '5')? ['ROLE_MODERATOR']: ['ROLE_USER']
             ;*/
         if($this->roles == '1') return ['ROLE_ROOT'];
         elseif ($this->roles == '2') return ['ROLE_SUPER_ADMIN'];
-        elseif ($this->roles == '3') return ['ROLE_SONATA_ADMIN'];
         elseif ($this->roles == '4') return ['ROLE_ADMIN'];
         elseif ($this->roles == '5') return ['ROLE_MODERATOR'];
         else return ['ROLE_USER'];

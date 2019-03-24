@@ -3,7 +3,7 @@
   <file id="header.fr">
     <unit id="nWMiwfT" name="Login">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:11</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:29</note>
       </notes>
       <segment>
         <source>Login</source>
@@ -12,7 +12,7 @@
     </unit>
     <unit id="1pajW90" name="Profile">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:32</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:50</note>
       </notes>
       <segment>
         <source>Profile</source>
@@ -21,7 +21,7 @@
     </unit>
     <unit id="BNe0gzk" name="Messages">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:35</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:53</note>
       </notes>
       <segment>
         <source>Messages</source>
@@ -30,7 +30,7 @@
     </unit>
     <unit id="SWFhRVF" name="Log out">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:38</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:56</note>
       </notes>
       <segment>
         <source>Log out</source>
@@ -39,7 +39,7 @@
     </unit>
     <unit id="OnhpU4i" name="Home">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:53</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:71</note>
       </notes>
       <segment>
         <source>Home</source>
@@ -48,7 +48,7 @@
     </unit>
     <unit id="1AanUxq" name="Paintings">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:56</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:74</note>
       </notes>
       <segment>
         <source>Paintings</source>
@@ -57,7 +57,7 @@
     </unit>
     <unit id="pSrOQg8" name="All">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:58</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:76</note>
       </notes>
       <segment>
         <source>All</source>
@@ -66,7 +66,7 @@
     </unit>
     <unit id="98HDQx8" name="Latest added">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:59</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:77</note>
       </notes>
       <segment>
         <source>Latest added</source>
@@ -75,7 +75,7 @@
     </unit>
     <unit id="y3LsmFt" name="Discount">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:60</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:78</note>
       </notes>
       <segment>
         <source>Discount</source>
@@ -84,7 +84,7 @@
     </unit>
     <unit id="caVNJB7" name="Medias">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:62</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:80</note>
       </notes>
       <segment>
         <source>Medias</source>
@@ -93,7 +93,7 @@
     </unit>
     <unit id="Nibn.eo" name="Styles">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:64</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:82</note>
       </notes>
       <segment>
         <source>Styles</source>
@@ -102,7 +102,7 @@
     </unit>
     <unit id="lOPopEB" name="Artists">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:69</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:87</note>
       </notes>
       <segment>
         <source>Artists</source>
@@ -111,7 +111,7 @@
     </unit>
     <unit id="qCE2S.b" name="Sign-Up">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:75</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:93</note>
       </notes>
       <segment>
         <source>Sign-Up</source>
@@ -120,7 +120,7 @@
     </unit>
     <unit id="K1w9JnI" name="Contact">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:77</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:95</note>
       </notes>
       <segment>
         <source>Contact</source>
@@ -129,7 +129,7 @@
     </unit>
     <unit id="Tae9Qqu" name="Forum">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:79</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:97</note>
       </notes>
       <segment>
         <source>Forum</source>
@@ -138,7 +138,7 @@
     </unit>
     <unit id="wcIksDz" name="Admin">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:82</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:100</note>
       </notes>
       <segment>
         <source>Admin</source>
@@ -147,7 +147,7 @@
     </unit>
     <unit id="Z7aWRoY" name="Dashboard">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:84</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:102</note>
       </notes>
       <segment>
         <source>Dashboard</source>
@@ -156,7 +156,7 @@
     </unit>
     <unit id="upBk4j2" name="Add painting">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:85</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:103</note>
       </notes>
       <segment>
         <source>Add painting</source>
@@ -165,7 +165,7 @@
     </unit>
     <unit id="1dXSZs6" name="Add media">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:86</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:104</note>
       </notes>
       <segment>
         <source>Add media</source>
@@ -174,7 +174,7 @@
     </unit>
     <unit id="nD2BUsF" name="Add style">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:87</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:105</note>
       </notes>
       <segment>
         <source>Add style</source>
@@ -183,7 +183,7 @@
     </unit>
     <unit id="o6nmNu0" name="Add artist">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:88</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:106</note>
       </notes>
       <segment>
         <source>Add artist</source>
@@ -192,7 +192,7 @@
     </unit>
     <unit id="_Eyi53F" name="Newsletter">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:89</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:107</note>
       </notes>
       <segment>
         <source>Newsletter</source>
@@ -201,7 +201,7 @@
     </unit>
     <unit id="GbBu75v" name="all.m">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:71</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:89</note>
       </notes>
       <segment>
         <source>all.m</source>

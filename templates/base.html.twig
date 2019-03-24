@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-            <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
-        {% endblock %}
-    </head>
-    <body>
-    {% block header %}
-        <header>
-            {% include 'includes/header.html.twig' %}
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
     {% endblock %}
+</head>
+<body>
+{% block header %}
+    <header class="header">
+        {% include 'includes/header.html.twig' %}
+    </header>
+{% endblock %}
 
-    {# Flash Messages #}
-    {% block message %}
-        <div style="margin: 10px 15px">
-            {% for label, messages in app.flashes %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ label }} alert-dismissible" role="alert">
-                        {{ message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                {% endfor %}
+{# Flash Messages #}
+{% block message %}
+    <div style="margin: 10px 15px">
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }} alert-dismissible" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             {% endfor %}
-        </div>
-    {% endblock %}
-    {# End Flash Messages #}
+        {% endfor %}
+    </div>
+{% endblock %}
+{# End Flash Messages #}
 
-    {% block body %}
-    {% endblock %}
+{% block body %}
+{% endblock %}
 
-    {% block footer %}
-        <footer>
-            {% include 'includes/footer.html.twig' %}
-        </footer>
-    {% endblock %}
+{% block footer %}
+    <footer>
+        {% include 'includes/footer.html.twig' %}
+    </footer>
+{% endblock %}
 
-        {% block javascripts %}
-            <script src="{{ asset('assets/js/jquery.js') }}"></script>
-            <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-        {% endblock %}
-    </body>
+{% block javascripts %}
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+{% endblock %}
+</body>
 </html>

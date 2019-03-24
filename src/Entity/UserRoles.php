@@ -98,6 +98,11 @@ class UserRoles
         return $this;
     }
 
+    public function getRole()
+    {
+        return $this->getName();
+    }
+
     public function __toString()
     {
         return (string)$this->getId();

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Dashboard{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
+    {% endblock %}
+</head>
+<body>
+{% block header %}
+    <header class="header-admin">
+        <div class="row" style="padding-top: 40px;">
+            <div class="col-md-4">
+                <a href="{{ path('homepage', { '_locale': app.request.locale }) }}" style="margin-left: 20px;">{% trans from 'admin' %}Back to Art Gallery{% endtrans %}</a>
+            </div>
+            <div class="col-md-2">
+                <div class="col" style="margin-top: -13px;">
+                    <a href="{{ path('admin_change_locale_to_en') }}">
+                        <figure class="d-flex {% if app.request.locale == 'en' %}locale-active{% else %}locale-inactive{% endif %}">
+                            <img src="{{ asset('assets/images/base_images/flag_english.jpg') }}" alt="icon_english_language"/>
+                            <figcaption style="margin-left: 5px; margin-top: -7px;">en</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{{ path('admin_change_locale_to_fr') }}">
+                        <figure class="d-flex {% if app.request.locale == 'fr' %}locale-active{% else %}locale-inactive{% endif %}">
+                            <img src="{{ asset('assets/images/base_images/flag_french.png') }}" alt="icon_french_language"/>
+                            <figcaption style="margin-left: 5px; margin-top: -7px;">fr</figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 offset-md-3" style="margin-top: -15px;">
+                <figure class="d-flex" style="align-items: center;">
+                    <img class="rounded-circle" src="{% if app.user.userprofile.avatar == 'avatar_default.png' %}
+                                                                    {{ asset('assets/images/avatar_default.png') }}
+                                                                 {% else %}
+                                                                    {{ vich_uploader_asset(app.user.userprofile, 'imageFile')|imagine_filter('avatar_comment') }}
+                                                                 {% endif %}
+                                                            " alt="{{ app.user.userprofile.avatar }}" style="width: 60px; height: 60px;"/>
+                    <figcaption style="margin-left: 20px;"><a href="{{ path('app_logout') }}">{% trans from 'admin' %}LOGOUT{% endtrans %}</a></figcaption>
+                </figure>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block navigation %}
+    <div class="d-flex justify-content-center" style="margin-top: 30px; margin-bottom: 40px;">
+        <nav role="navigation">
+                <ul class="nav-admin">
+                    <li class="active-link">
+                        <div class="d-flex justify-content-center" style="padding-top: 17px;">
+                            <a href="{{ path('admin_dashboard', { '_locale': app.request.locale }) }}"><i class="fa fa-desktop"></i>{% trans from 'admin' %}Dashboard{% endtrans %}</a>
+                        </div>
+                    </li>
+                </ul>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block message %}
+    <div class="container" style="margin-bottom: 20px;">
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }} alert-dismissible" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>

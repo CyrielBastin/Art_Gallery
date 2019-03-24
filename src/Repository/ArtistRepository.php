@@ -57,4 +57,20 @@ class ArtistRepository extends ServiceEntityRepository
 
         return $request->fetch();
     }
+
+    public function adminListArtist()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT id, image, lastname, firstname, country
+            FROM artist
+            ORDER BY lastname, firstname
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
 }

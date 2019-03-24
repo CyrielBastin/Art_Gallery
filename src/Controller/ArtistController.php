@@ -78,7 +78,8 @@ class ArtistController extends AbstractController
 
             $translated = $this->translator->trans('Artist %artist% successfully added', ['%artist%' => $artist->getArtist()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 
         return $this->render('artist/artist_add.html.twig', ['artist' => $artist, 'form' => $form->createView()]);
@@ -97,7 +98,8 @@ class ArtistController extends AbstractController
 
             $translated = $this->translator->trans('Artist %artist% successfully modified', ['%artist%' => $artist->getArtist()]);
             $this->addFlash('success', $translated);
-            return $this->redirectToRoute('homepage');
+
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
         return $this->render('artist/artist_edit.html.twig', ['artist' => $artist, 'form' => $form->createView()]);
     }
@@ -105,7 +107,7 @@ class ArtistController extends AbstractController
     /**
      * @Route("/delete/{id}", name="delete_one")
      */
-    public function deleteOneArtist($id)
+    public function deleteOneArtist(Request $request, $id)
     {
         $repository = $this->getDoctrine()->getRepository(Artist::class);
         $artist = $repository->find($id);
@@ -114,6 +116,7 @@ class ArtistController extends AbstractController
 
         $translated = $this->translator->trans('Artist %artist% successfully removed', ['%artist%' => $artist->getArtist()]);
         $this->addFlash('success', $translated);
-        return $this->redirectToRoute('homepage');
+
+        return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
     }
 }

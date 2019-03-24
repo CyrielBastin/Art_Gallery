@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="admin.fr">
+    <unit id="f6D_zr_" name="Back to Art Gallery">
+      <notes>
+        <note category="file-source" priority="1">templates\base_admin.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>Back to Art Gallery</source>
+        <target>Retour sur Art Gallery</target>
+      </segment>
+    </unit>
+    <unit id="N3s3Wtz" name="LOGOUT">
+      <notes>
+        <note category="file-source" priority="1">templates\base_admin.html.twig:45</note>
+      </notes>
+      <segment>
+        <source>LOGOUT</source>
+        <target>DECONNEXION</target>
+      </segment>
+    </unit>
+    <unit id="Z7aWRoY" name="Dashboard">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:5</note>
+        <note category="file-source" priority="1">templates\base_admin.html.twig:58</note>
+      </notes>
+      <segment>
+        <source>Dashboard</source>
+        <target>Dashboard</target>
+      </segment>
+    </unit>
+    <unit id="Q6AkTPo" name="PAINTINGS">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:14</note>
+      </notes>
+      <segment>
+        <source>PAINTINGS</source>
+        <target>PEINTURES</target>
+      </segment>
+    </unit>
+    <unit id="kZ8C1xx" name="MEDIAS">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:25</note>
+      </notes>
+      <segment>
+        <source>MEDIAS</source>
+        <target>SUPPORTS</target>
+      </segment>
+    </unit>
+    <unit id="dngPEAM" name="STYLES">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:33</note>
+      </notes>
+      <segment>
+        <source>STYLES</source>
+        <target>STYLES</target>
+      </segment>
+    </unit>
+    <unit id="Pm3q4C_" name="ARTISTS">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:46</note>
+      </notes>
+      <segment>
+        <source>ARTISTS</source>
+        <target>ARTISTES</target>
+      </segment>
+    </unit>
+    <unit id="Z3AMJ45" name="NEWSLETTER">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:58</note>
+      </notes>
+      <segment>
+        <source>NEWSLETTER</source>
+        <target>NEWSLETTER</target>
+      </segment>
+    </unit>
+    <unit id="U_Z_uFz" name="USERS">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:70</note>
+      </notes>
+      <segment>
+        <source>USERS</source>
+        <target>UTILISATEURS</target>
+      </segment>
+    </unit>
+    <unit id="rqxjIJQ" name="Add a painting">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_add_one.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\painting\painting_add_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add a painting</source>
+        <target>Ajouter une peinture</target>
+      </segment>
+    </unit>
+    <unit id="v.NQGDr" name="Edit a painting">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_edit_one.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\painting\painting_edit_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit a painting</source>
+        <target>Editer une peinture</target>
+      </segment>
+    </unit>
+    <unit id="1AanUxq" name="Paintings">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Paintings</source>
+        <target>Peintures</target>
+      </segment>
+    </unit>
+    <unit id="FW4pTV3" name="Add one">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add one</source>
+        <target>Ajouter une</target>
+      </segment>
+    </unit>
+    <unit id="GqTLC8y" name="Image">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:16</note>
+        <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:16</note>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:16</note>
+        <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:16</note>
+      </notes>
+      <segment>
+        <source>Image</source>
+        <target>Image</target>
+      </segment>
+    </unit>
+    <unit id="fozSBW2" name="Title">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>Title</source>
+        <target>Titre</target>
+      </segment>
+    </unit>
+    <unit id="cSGT4zA" name="Base_price">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:18</note>
+      </notes>
+      <segment>
+        <source>Base_price</source>
+        <target>Prix_de_base</target>
+      </segment>
+    </unit>
+    <unit id="y3LsmFt" name="Discount">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:19</note>
+      </notes>
+      <segment>
+        <source>Discount</source>
+        <target>Solde</target>
+      </segment>
+    </unit>
+    <unit id="Q0X.1v9" name="Reduced_price">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:20</note>
+      </notes>
+      <segment>
+        <source>Reduced_price</source>
+        <target>Prix_réduit</target>
+      </segment>
+    </unit>
+    <unit id="RkxP.QG" name="Edit">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:20</note>
+        <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:18</note>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:21</note>
+        <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:18</note>
+        <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:16</note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Editer</target>
+      </segment>
+    </unit>
+    <unit id="4tClSWj" name="Delete">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:21</note>
+        <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:19</note>
+        <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:22</note>
+        <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:19</note>
+        <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </segment>
+    </unit>
+    <unit id="0axWApa" name="Add a media">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\media\media_add_one.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\media\media_add_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add a media</source>
+        <target>Ajouter un support</target>
+      </segment>
+    </unit>
+    <unit id="1f9t6EO" name="Edit a media">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\media\media_edit_one.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\media\media_edit_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit a media</source>
+        <target>Editer un support</target>
+      </segment>
+    </unit>
+    <unit id="caVNJB7" name="Medias">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Medias</source>
+        <target>Supports</target>
+      </segment>
+    </unit>
+    <unit id="mpUysTa" name="Add one.m">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:9</note>
+        <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:9</note>
+        <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add one.m</source>
+        <target>Ajouter un</target>
+      </segment>
+    </unit>
+    <unit id="3NHVIj9" name="Name">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:17</note>
+        <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>Name</source>
+        <target>Nom</target>
+      </segment>
+    </unit>
+    <unit id="e8GbAMn" name="Add a style">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\style\style_add_one.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\style\style_add_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add a style</source>
+        <target>Ajouter un style</target>
+      </segment>
+    </unit>
+    <unit id="hziEvx0" name="Edit a Style">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\style\style_edit_one.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\style\style_edit_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit a Style</source>
+        <target>Editer un style</target>
+      </segment>
+    </unit>
+    <unit id="Nibn.eo" name="Styles">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Styles</source>
+        <target>Styles</target>
+      </segment>
+    </unit>
+    <unit id="O8ZP8uY" name="Add an artist">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_add_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Add an artist</source>
+        <target>Ajouter un artiste</target>
+      </segment>
+    </unit>
+    <unit id="4k2yTVv" name="Edit an artist">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_edit_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit an artist</source>
+        <target>Editer un artiste</target>
+      </segment>
+    </unit>
+    <unit id="htiPHRy" name="Lastname">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>Lastname</source>
+        <target>Nom de famille</target>
+      </segment>
+    </unit>
+    <unit id="ZHz6kbI" name="Firstname">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:18</note>
+      </notes>
+      <segment>
+        <source>Firstname</source>
+        <target>Prénom</target>
+      </segment>
+    </unit>
+    <unit id="cB0CHQj" name="Country">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:19</note>
+      </notes>
+      <segment>
+        <source>Country</source>
+        <target>Pays</target>
+      </segment>
+    </unit>
+    <unit id="7JUBBhO" name="Create a Newsletter">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\newsletter\newsletter_create_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Create a Newsletter</source>
+        <target>Créer une Newsletter</target>
+      </segment>
+    </unit>
+    <unit id="gpg2mK6" name="Newsletters : All">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\newsletter\newsletter_list.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Newsletters : All</source>
+        <target>Newsletters : Toutes</target>
+      </segment>
+    </unit>
+    <unit id="KgjqDi1" name="All Newsletters">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\newsletter\newsletter_list.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>All Newsletters</source>
+        <target>Toutes les Newsletters</target>
+      </segment>
+    </unit>
+    <unit id="IBD0sxG" name="Create One">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\newsletter\newsletter_list.html.twig:13</note>
+      </notes>
+      <segment>
+        <source>Create One</source>
+        <target>Créer Une</target>
+      </segment>
+    </unit>
+    <unit id="z24DZpu" name="Users : All">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Users : All</source>
+        <target>Utilisateurs : Tous</target>
+      </segment>
+    </unit>
+    <unit id="yo6CbZw" name="Avatar">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:12</note>
+      </notes>
+      <segment>
+        <source>Avatar</source>
+        <target>Avatar</target>
+      </segment>
+    </unit>
+    <unit id="lpzL089" name="Email">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:13</note>
+      </notes>
+      <segment>
+        <source>Email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="47ienTP" name="Username">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:14</note>
+      </notes>
+      <segment>
+        <source>Username</source>
+        <target>Pseudo</target>
+      </segment>
+    </unit>
+    <unit id="FHNqLrn" name="Role">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:15</note>
+      </notes>
+      <segment>
+        <source>Role</source>
+        <target>Role</target>
+      </segment>
+    </unit>
+    <unit id="bMBFRcf" name="Edit a User">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_edit_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit a User</source>
+        <target>Editer un Utilisateur</target>
+      </segment>
+    </unit>
+    <unit id="R.csSwa" name="Personnal informations">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_edit_one.html.twig:11</note>
+      </notes>
+      <segment>
+        <source>Personnal informations</source>
+        <target>Informations personnelles</target>
+      </segment>
+    </unit>
+    <unit id="jcvvFTa" name="Account informations">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_edit_one.html.twig:43</note>
+      </notes>
+      <segment>
+        <source>Account informations</source>
+        <target>Informations du compte</target>
+      </segment>
+    </unit>
+    <unit id="5EAHCyz" name="User - Edit :">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user\user_edit_one.html.twig:5</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>User - Edit :</source>
+        <target>Utilisateur - Editer :</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

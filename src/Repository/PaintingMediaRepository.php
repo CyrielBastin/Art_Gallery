@@ -57,4 +57,20 @@ class PaintingMediaRepository extends ServiceEntityRepository
         return $request->fetch();
     }
 
+    public function adminListMedia()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT id, image, name
+            FROM painting_media
+            ORDER BY name
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
 }

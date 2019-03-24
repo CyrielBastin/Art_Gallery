@@ -49,7 +49,7 @@ class HomePageController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
             $contactService->contactNotify($contact);
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 
         return $this->render('home_page/contact.html.twig', ['form' => $form->createView()]);

@@ -13,7 +13,7 @@
     <unit id="0axWApa" name="Add a media">
       <notes>
         <note category="file-source" priority="1">templates\painting_media\media_add.html.twig:5</note>
-        <note category="file-source" priority="1">templates\painting_media\media_add.html.twig:10</note>
+        <note category="file-source" priority="1">templates\painting_media\media_add.html.twig:9</note>
       </notes>
       <segment>
         <source>Add a media</source>
