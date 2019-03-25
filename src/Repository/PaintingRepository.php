@@ -198,4 +198,62 @@ class PaintingRepository extends ServiceEntityRepository
         return $request->fetchAll();
     }
 
+    public function adminCommentsPaintingOverview()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT p.id, p.image, p.title, CONCAT(a.firstname, \' \', a.lastname) as artist, COUNT(pc.commentary) as number_of_comments
+            FROM painting p
+            LEFT JOIN painting_comment pc on p.id = pc.painting_id
+            LEFT JOIN artist a on p.artist_id = a.id
+            GROUP BY p.title
+            ORDER BY p.title
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
+    public function adminPaintingCommentByUser($id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT p.id, p.image, p.title
+            FROM painting p
+            LEFT JOIN painting_comment pc on p.id = pc.painting_id
+            LEFT JOIN user u on pc.user_id = u.id
+            WHERE u.id = :id
+            GROUP BY p.title
+            ORDER BY p.title
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute(['id' => $id]);
+
+        return $request->fetchAll();
+    }
+
+    public function adminCommentsUserByPaintingId($user_id, $painting_id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT u.id, pc.commentary, pc.posted_at, pc.id as painting_comment_id
+            FROM user u
+            LEFT JOIN painting_comment pc on u.id = pc.user_id
+            LEFT JOIN painting p on pc.painting_id = p.id
+            WHERE u.id = :user_id AND p.id = :painting_id
+            ORDER BY pc.posted_at DESC
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute(['user_id' => $user_id, 'painting_id' => $painting_id]);
+
+        return $request->fetchAll();
+    }
+
 }

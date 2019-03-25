@@ -124,6 +124,7 @@
     <unit id="GqTLC8y" name="Image">
       <notes>
         <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:16</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:54</note>
         <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:16</note>
         <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:16</note>
         <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:16</note>
@@ -135,6 +136,7 @@
     </unit>
     <unit id="fozSBW2" name="Title">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:55</note>
         <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:17</note>
       </notes>
       <segment>
@@ -172,6 +174,7 @@
     <unit id="RkxP.QG" name="Edit">
       <notes>
         <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:20</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_by_user_per_painting.html.twig:13</note>
         <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:18</note>
         <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:21</note>
         <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:18</note>
@@ -185,6 +188,7 @@
     <unit id="4tClSWj" name="Delete">
       <notes>
         <note category="file-source" priority="1">templates\admin\artist\artist_list.html.twig:21</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_by_user_per_painting.html.twig:16</note>
         <note category="file-source" priority="1">templates\admin\media\media_list.html.twig:19</note>
         <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:22</note>
         <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:19</note>
@@ -366,6 +370,7 @@
     </unit>
     <unit id="yo6CbZw" name="Avatar">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:20</note>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:12</note>
       </notes>
       <segment>
@@ -384,6 +389,7 @@
     </unit>
     <unit id="47ienTP" name="Username">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:21</note>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:14</note>
       </notes>
       <segment>
@@ -393,6 +399,7 @@
     </unit>
     <unit id="FHNqLrn" name="Role">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:22</note>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:15</note>
       </notes>
       <segment>
@@ -430,11 +437,113 @@
     <unit id="5EAHCyz" name="User - Edit :">
       <notes>
         <note category="file-source" priority="1">templates\admin\user\user_edit_one.html.twig:5</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>User - Edit :</source>
         <target>User - Edit :</target>
+      </segment>
+    </unit>
+    <unit id="nHORxNm" name="User_comment : Overview">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>User_comment : Overview</source>
+        <target>User_comment : Overview</target>
+      </segment>
+    </unit>
+    <unit id="NV958p1" name="Comments">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:23</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:57</note>
+      </notes>
+      <segment>
+        <source>Comments</source>
+        <target>Comments</target>
+      </segment>
+    </unit>
+    <unit id="aGMGfrC" name="See">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:24</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:58</note>
+      </notes>
+      <segment>
+        <source>See</source>
+        <target>See</target>
+      </segment>
+    </unit>
+    <unit id="HTmBuh4" name="Artist">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:56</note>
+      </notes>
+      <segment>
+        <source>Artist</source>
+        <target>Artist</target>
+      </segment>
+    </unit>
+    <unit id="GbJHos7" name="COMMENTS">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:77</note>
+      </notes>
+      <segment>
+        <source>COMMENTS</source>
+        <target>COMMENTS</target>
+      </segment>
+    </unit>
+    <unit id="rwXkZaO" name="By Users">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>By Users</source>
+        <target>By Users</target>
+      </segment>
+    </unit>
+    <unit id="nSMeT0M" name="By Paintings">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:11</note>
+      </notes>
+      <segment>
+        <source>By Paintings</source>
+        <target>By Paintings</target>
+      </segment>
+    </unit>
+    <unit id="efVbFeq" name="Edit a commentary">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_edit_one.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_edit_one.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Edit a commentary</source>
+        <target>Edit a commentary</target>
+      </segment>
+    </unit>
+    <unit id="jJLaEWT" name="Comments by Users">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_user_detail.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Comments by Users</source>
+        <target>Comments by Users</target>
+      </segment>
+    </unit>
+    <unit id="qpCqXGX" name="Commentaries :">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_user_detail.html.twig:22</note>
+      </notes>
+      <segment>
+        <source>Commentaries :</source>
+        <target>Commentaries :</target>
+      </segment>
+    </unit>
+    <unit id="sda5G2f" name="at">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_by_user_per_painting.html.twig:10</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>at</source>
+        <target>at</target>
       </segment>
     </unit>
   </file>

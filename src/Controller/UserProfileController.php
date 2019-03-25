@@ -38,7 +38,10 @@ class UserProfileController extends AbstractController
         $user_profile = $this->userProfileRepository->findOneByPseudo($pseudo);
         if($user_profile['role'] === null){
             $user_profile['role'] = 'User';
-        }else{
+        }elseif($user_profile['role'] == 'ROLE_SUPER_ADMIN'){
+            $user_profile['role'] = 'Super Admin';
+        }
+        else{
             $temp = explode('_', $user_profile['role']);
             $user_profile['role'] = ucfirst(strtolower($temp[1]));
         }

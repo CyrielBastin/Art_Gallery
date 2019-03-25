@@ -25,7 +25,7 @@ class PaintingCommentRepository extends ServiceEntityRepository
         $conn = $this->getEntityManager()->getConnection();
 
         $sql='
-            SELECT c.id, c.commentary, c.posted_at, up.avatar, up.pseudo, up.signature
+            SELECT c.id, c.commentary, c.posted_at, up.avatar, up.pseudo, up.signature, u.id as user_id
             FROM painting_comment c
             INNER JOIN user u on c.user_id = u.id
             INNER JOIN user_profile up on u.id = up.user_id

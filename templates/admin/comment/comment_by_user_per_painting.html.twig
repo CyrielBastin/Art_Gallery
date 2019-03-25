@@ -1,0 +1,24 @@
+{% trans_default_domain 'admin' %}
+
+{% for comment in comments %}
+    <div class="row" style="margin-bottom: 15px;">
+        <div class="col">
+            <div class="card" style="height: 150px; overflow: auto;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h6 class="card-title text-muted">{{ comment['posted_at']|date('d/m/y') }} {% trans %}at{% endtrans %} {{ comment['posted_at']|date('h:i:s') }}</h6>
+                        </div>
+                        <div class="col-md-2 offset-md-2">
+                            <a href="{{ path('admin_comment_edit', { '_locale': app.request.locale, 'id': comment['painting_comment_id'], 'user_id': comment['id'] }) }}" style="color: green;"><i class="fa fa-pencil" aria-hidden="true"></i>{% trans %}Edit{% endtrans %}</a>
+                        </div>
+                        <div class="col-md-3" style="color: red;">
+                            <a href="{{ path('admin_comment_delete', { '_locale': app.request.locale, 'commentary_id': comment['painting_comment_id'], 'user_id': comment['id'] }) }}" style="color: red;"><i class="fa fa-trash-o" aria-hidden="true"></i>{% trans %}Delete{% endtrans %}</a>
+                        </div>
+                    </div>
+                    <p class="card-text">{{ comment['commentary'] }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

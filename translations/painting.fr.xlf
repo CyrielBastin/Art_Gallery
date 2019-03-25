@@ -92,6 +92,8 @@
     </unit>
     <unit id="RkxP.QG" name="Edit">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:28</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:82</note>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:23</note>
         <note category="file-source" priority="1">templates\painting\painting_discount.html.twig:26</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:37</note>
@@ -104,6 +106,8 @@
     </unit>
     <unit id="4tClSWj" name="Delete">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:29</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:83</note>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:24</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:38</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:109</note>
@@ -171,6 +175,7 @@
     </unit>
     <unit id="_y4LvYO" name="Post a commentary :">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:35</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:45</note>
       </notes>
       <segment>
@@ -198,6 +203,7 @@
     </unit>
     <unit id="p_LSbo0" name="by">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:17</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:17</note>
       </notes>
       <segment>
@@ -207,6 +213,7 @@
     </unit>
     <unit id="2aiaqb7" name="wrote :">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:67</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:91</note>
       </notes>
       <segment>
@@ -216,11 +223,21 @@
     </unit>
     <unit id="NAxD74_" name="posted :">
       <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:70</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:94</note>
       </notes>
       <segment>
         <source>posted :</source>
         <target>posté :</target>
+      </segment>
+    </unit>
+    <unit id="AyFT8aI" name="Comments by Painting">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Comments by Painting</source>
+        <target>Commentaires par Peinture</target>
       </segment>
     </unit>
   </file>

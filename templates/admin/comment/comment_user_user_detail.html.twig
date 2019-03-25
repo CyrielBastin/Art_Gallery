@@ -1,0 +1,47 @@
+{% extends 'base_admin.html.twig' %}
+
+{% trans_default_domain 'admin' %}
+
+{% block title %}{% trans %}Comments by Users{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div class="container" style="margin-bottom: 20px;">
+        <div class="row">
+            <figure>
+                <img src="{% if user['avatar'] == 'avatar_default.png' %}
+                          {{ asset('assets/images/avatar_default.png') }}
+                          {% else %}
+                          {{ vich_uploader_asset(user, 'imageFile', 'App\\Entity\\UserProfile')|imagine_filter('listing_element_admin') }}
+                          {% endif %}
+                          " alt="{{ user['avatar'] }}" style="{% if user['avatar'] == 'avatar_default.png' %}width: 100px; height: 80px;{% endif %}"/>
+                <figcaption style="float: right; font-size: 2em; margin-top: 13px; margin-left: 10px;">
+                    {{ user['pseudo'] }}
+                </figcaption>
+            </figure>
+            <p style="font-size: 2em; margin-top: 13px; margin-left: 40px; text-decoration: underline;">
+                {% trans %}Commentaries :{% endtrans %}
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        {% for painting in paintings %}
+            <div class="row" style="margin-bottom: 50px;">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{ asset('assets/images/paintings/' ~ painting['image']) }}" class="card-img-top" alt="{{ painting['image'] }}" style="height: 150px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ painting['title'] }}</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-top: 80px;">
+                    {{ render(controller('App\\Controller\\AdminController::generateUserCommentsByPainting', { 'user_id': user['id'],'painting_id': painting['id'] })) }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="d-flex justify-content-center">
+        {{ knp_pagination_render(paintings) }}
+    </div>
+{% endblock %}

@@ -9,6 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/{_locale}/painting-comment", name="painting_comment_", requirements={"_locale"="%app.locales%"})
@@ -23,11 +24,16 @@ class PaintingCommentController extends AbstractController
      * @var PaintingCommentRepository
      */
     private $paintingCommentRepository;
+    /**
+     * @var TranslatorInterface
+     */
+    private $translator;
 
-    public function __construct(EntityManagerInterface $em, PaintingCommentRepository $paintingCommentRepository)
+    public function __construct(EntityManagerInterface $em, PaintingCommentRepository $paintingCommentRepository, TranslatorInterface $translator)
     {
         $this->em = $em;
         $this->paintingCommentRepository = $paintingCommentRepository;
+        $this->translator = $translator;
     }
 
     /******************************************************************************************************************
@@ -49,7 +55,9 @@ class PaintingCommentController extends AbstractController
             $this->em->persist($paintingComment);
             $this->em->flush();
 
-            $this->addFlash('success','Your comment has been successfully modified');
+            $translated = $this->translator->trans('Your comment has been successfully modified');
+            $this->addFlash('success',$translated);
+
             return $this->redirectToRoute('painting_view_one', ['_locale' => $request->getLocale(), 'id' => $painting_id]);
         }
 
@@ -68,7 +76,9 @@ class PaintingCommentController extends AbstractController
         $this->em->remove($painting_comment);
         $this->em->flush();
 
-        $this->addFlash('success', 'You comment has been successfully deleted');
+        $translated = $this->translator->trans('Your comment has been successfully deleted');
+        $this->addFlash('success', $translated);
+
         return $this->redirectToRoute('painting_view_one', ['_locale' => $request->getLocale(), 'id' => $painting_id]);
     }
 

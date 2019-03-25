@@ -1,0 +1,19 @@
+{% extends 'base_admin.html.twig' %}
+
+{% trans_default_domain 'admin' %}
+
+{% block title %}{% trans %}Edit a commentary{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div class="container">
+            <h1 class="text-center title-form-custom">{% trans %}Edit a commentary{% endtrans %}</h1>
+        {{ form_start(form) }}
+        <div class="d-flex justify-content-center">
+            {{ form_row(form.commentary, { 'label': user.userProfile.pseudo ~ '\'s comment :', 'label_attr': { 'style': 'font-size: 2em;' }, 'attr': { 'style': 'width: 500px; height: 180px;' } }) }}
+        </div>
+        <div class="d-flex justify-content-center">
+            {{ form_row(form.submit, { 'label': 'Edit', 'attr': { 'class': 'btn btn-info btn-lg', 'style': 'width: 200px; height: 50px; font-size: 1.8em; padding-bottom: 50px;' } }) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

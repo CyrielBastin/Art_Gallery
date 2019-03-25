@@ -50,4 +50,41 @@ class UserRepository extends ServiceEntityRepository
         $request = $conn->prepare($sql);
         $request->execute(['role_id' => $role_id, 'user_id' => $user_id]);
     }
+
+    public function adminCommentsUserOverview()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT u.id, up.avatar, up.pseudo, ur.name as role, COUNT(pc.commentary) as number_of_comments
+            FROM user u
+            LEFT JOIN user_profile up on u.id = up.user_id
+            LEFT JOIN painting_comment pc on u.id = pc.user_id
+            LEFT JOIN user_roles ur on u.roles_id = ur.id
+            GROUP BY up.pseudo
+            ORDER BY up.pseudo
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
+    public function adminCommentByUser($id)
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT u.id, avatar, pseudo
+            FROM user_profile
+            LEFT JOIN user u on user_profile.user_id = u.id
+            WHERE u.id = :id
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute(['id' => $id]);
+
+        return $request->fetch();
+    }
 }
