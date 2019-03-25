@@ -36,7 +36,7 @@
                             <td class="align-middle">{{ user['pseudo'] }}</td>
                             <td class="align-middle">{{ user['role'] }}</td>
                             <td class="align-middle">{{ user['number_of_comments'] }}</td>
-                            <td class="align-middle"><a href="{{ path('admin_comments_by_user', { '_locale': app.request.locale, 'user_id': user['id'] }) }}"><i class="fa fa-eye fa-3x" aria-hidden="true" style="color: white"></i></a></td>
+                            <td class="align-middle"><a href="{{ path('admin_comment_by_user', { '_locale': app.request.locale, 'user_id': user['id'] }) }}"><i class="fa fa-eye fa-3x" aria-hidden="true" style="color: white"></i></a></td>
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -68,7 +68,7 @@
                             <td class="align-middle">{{ painting['title'] }}</td>
                             <td class="align-middle">{{ painting['artist'] }}</td>
                             <td class="align-middle">{{ painting['number_of_comments'] }}</td>
-                            <td class="align-middle"><a href="{{ path('admin_comments_by_paintings', { '_locale': app.request.locale, 'painting_id': painting['id'] }) }}"><i class="fa fa-eye fa-3x" aria-hidden="true" style="color: white"></i></a></td>
+                            <td class="align-middle"><a href="{{ path('admin_comment_by_paintings', { '_locale': app.request.locale, 'painting_id': painting['id'] }) }}"><i class="fa fa-eye fa-3x" aria-hidden="true" style="color: white"></i></a></td>
                         </tr>
                     {% endfor %}
                     </tbody>

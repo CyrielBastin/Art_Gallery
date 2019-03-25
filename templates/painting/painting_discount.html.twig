@@ -21,11 +21,13 @@
                                 <p class="card-text" style="margin: 20px 15px;"> --> </p>
                                 <p class="card-text" style="margin-top: 20px; color: red;">{{ discount['price_reduced']|number_format(1, ',', ' ') ~ ' €'}}</p>
                             </div>
+                            {% if is_granted('ROLE_ADMIN') %}
                             <div class="card-footer">
                                 <div class="d-flex justify-content-center">
                                     <a href="{{ path('painting_edit_one', {'id': discount['id'], '_locale': app.request.locale}) }}" class="btn btn-outline-info" role="button">{% trans %}Edit{% endtrans %}</a>
                                 </div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

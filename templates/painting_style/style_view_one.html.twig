@@ -20,10 +20,12 @@
             </div>
         </div>
     </div>
+    {% if is_granted('ROLE_ADMIN') %}
     <div class="d-flex justify-content-around" style="margin-top: -60px; margin-bottom: 30px;">
         <a href="{{ path('painting_style_edit_one', {'id': style['id'], '_locale': app.request.locale}) }}" class="btn btn-info btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Edit{% endtrans %}</span></a>
         <a href="{{ path('painting_style_delete_one', {'id': style['id'], '_locale': app.request.locale}) }}" class="btn btn-danger btn-lg btn-submit-custom" role="button"><span style="font-size: 1.5em;">{% trans %}Delete{% endtrans %}</span></a>
     </div>
+    {% endif %}
 
     <div class="section">
         <h1 class="text-center" style="margin-bottom: 20px;">{% trans with { '%style%': style['name'] } %}Artworks painted in %style% style :{% endtrans %}</h1>

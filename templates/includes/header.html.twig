@@ -93,20 +93,20 @@
                 <a href="{{ path('signup', {'_locale': app.request.locale}) }}">{% trans %}Sign-Up{% endtrans %}</a>
                 {# Element Contact #}
                 <a href="{{ path('contact_us', {'_locale': app.request.locale}) }}#form-contact">{% trans %}Contact{% endtrans %}</a>
-                {# Element Forum #}
-                <a href="#">{% trans %}Forum{% endtrans %}</a>
                 {# Elemnt Admin #}
+                {% if is_granted('ROLE_ADMIN') %}
                 <div class="dropdown-custom">
                     <button class="dropbtn-custom"><a href="#">{% trans %}Admin{% endtrans %}</a></button>
                     <div class="dropdown-content-custom">
                         <a href="{{ path('admin_dashboard', { '_locale': app.request.locale }) }}">{% trans %}Dashboard{% endtrans %}</a>
+                        <a href="{{ path('newsletter_view_all', {'_locale': app.request.locale}) }}">{% trans %}Newsletter{% endtrans %}</a>
                         <a href="{{ path('painting_add', {'_locale': app.request.locale}) }}">{% trans %}Add painting{% endtrans %}</a>
                         <a href="{{ path('painting_media_add', {'_locale': app.request.locale}) }}">{% trans %}Add media{% endtrans %}</a>
                         <a href="{{ path('painting_style_add', {'_locale': app.request.locale}) }}">{% trans %}Add style{% endtrans %}</a>
                         <a href="{{ path('artist_add', {'_locale': app.request.locale}) }}">{% trans %}Add artist{% endtrans %}</a>
-                        <a href="{{ path('newsletter_view_all', {'_locale': app.request.locale}) }}">{% trans %}Newsletter{% endtrans %}</a>
                     </div>
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>

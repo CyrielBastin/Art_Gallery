@@ -5,6 +5,9 @@
 {% block title %}{% trans %}Comments by Users{% endtrans %}{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <a href="{{ path('admin_comment_overview', { '_locale': app.request.locale }) }}" class="btn btn-dark btn-lg" role="button" style="margin-top: -200px;">{% trans %}Back{% endtrans %}</a>
+    </div>
     <div class="container" style="margin-bottom: 20px;">
         <div class="row">
             <figure>
@@ -36,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-md-6" style="margin-top: 80px;">
-                    {{ render(controller('App\\Controller\\AdminController::generateUserCommentsByPainting', { 'user_id': user['id'],'painting_id': painting['id'] })) }}
+                    {{ render(controller('App\\Controller\\AdminCommentController::generateUserCommentsByPainting', { 'user_id': user['id'],'painting_id': painting['id'] })) }}
                 </div>
             </div>
         {% endfor %}

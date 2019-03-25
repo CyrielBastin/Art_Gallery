@@ -83,7 +83,7 @@ class RedirectController extends AbstractController
         $translated = $translator->trans('The commentary has been modified with success');
         $this->addFlash('info', $translated);
 
-        return $this->redirectToRoute('admin_comments_by_user', ['_locale' => $request->cookies->get('_locale'), 'user_id' => $user_id]);
+        return $this->redirectToRoute('admin_comment_by_user', ['_locale' => $request->cookies->get('_locale'), 'user_id' => $user_id]);
     }
 
     /**
@@ -94,7 +94,7 @@ class RedirectController extends AbstractController
         $translated = $translator->trans('The commentary has been deleted with success');
         $this->addFlash('info', $translated);
 
-        return $this->redirectToRoute('admin_comments_by_user', ['_locale' => $request->cookies->get('_locale'), 'user_id' => $user_id]);
+        return $this->redirectToRoute('admin_comment_by_user', ['_locale' => $request->cookies->get('_locale'), 'user_id' => $user_id]);
     }
 
     /**
@@ -102,7 +102,7 @@ class RedirectController extends AbstractController
      */
     public function redirectFromAdminCommentByPainting(Request $request, $painting_id)
     {
-        return $this->redirectToRoute('admin_comments_by_paintings', ['_locale' => $request->cookies->get('_locale'), 'painting_id' => $painting_id]);
+        return $this->redirectToRoute('admin_comment_by_paintings', ['_locale' => $request->cookies->get('_locale'), 'painting_id' => $painting_id]);
     }
 
 }

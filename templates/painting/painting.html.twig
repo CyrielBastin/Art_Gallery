@@ -20,8 +20,10 @@
                         <th>{% trans %}Artist{% endtrans %}</th>
                         <th>{% trans %}Year{% endtrans %}</th>
                         <th>{% trans %}Price{% endtrans %}</th>
+                        {% if is_granted('ROLE_SUPER_ADMIN') %}
                         <th>{% trans %}Edit{% endtrans %}</th>
                         <th>{% trans %}Delete{% endtrans %}</th>
+                        {% endif %}
                     </tr>
                     </thead>
                     <tbody>
@@ -36,14 +38,16 @@
                             <td class="align-middle"><a href="{{ path('artist_view_one', {'id': painting['artist_id'], '_locale': app.request.locale}) }}" class="painting-link">{{ painting['artist'] }}</a></td>
                             <td class="align-middle">{{ painting['year'] }}</td>
                             {% if painting['discount']==0 %}
-                                <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>
-                                {% else %}
-                                    <td class="align-middle" style="min-width: 100px;"><span style="text-decoration: line-through">{{ painting['price'] ~ ' €'}}</span><br/>
-                                        <span style="color: red;">{{ painting['price_reduced']|number_format(1, ',', ' ') ~ ' €'}}</span>
-                                    </td>
+                            <td class="align-middle">{{ painting['price'] ~ ' €'}}</td>
+                            {% else %}
+                            <td class="align-middle" style="min-width: 100px;"><span style="text-decoration: line-through">{{ painting['price'] ~ ' €'}}</span><br/>
+                                <span style="color: red;">{{ painting['price_reduced']|number_format(1, ',', ' ') ~ ' €'}}</span>
+                            </td>
                             {% endif %}
-                            <td class="align-middle"><a href="{{ path('painting_edit_one', {'id': painting['id'], '_locale': app.request.locale}) }}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
-                            <td class="align-middle"><a href="{{ path('painting_delete_one', {'id': painting['id'], '_locale': app.request.locale}) }}"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></td>
+                            {% if is_granted('ROLE_SUPER_ADMIN') %}
+                            <td class="align-middle"><a href="{{ path('painting_edit_one', {'id': painting['id'], '_locale': app.request.locale}) }}" style="color: green;"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></td>
+                            <td class="align-middle"><a href="{{ path('painting_delete_one', {'id': painting['id'], '_locale': app.request.locale}) }}" style="color: red;"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></td>
+                            {% endif %}
                         </tr>
                     {% endfor %}
                     </tbody>

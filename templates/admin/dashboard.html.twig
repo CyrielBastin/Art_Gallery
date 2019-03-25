@@ -11,17 +11,17 @@
             <div class="col">
                 <div class="card border-secondary mb-3" style="height: 100px;">
                     <div class="card-body text-secondary">
-                        <a class="dashboard-link" href="{{ path('admin_paintings_list', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-picture-o fa-3x" aria-hidden="true"></i><span class="admin-painting">{% trans %}PAINTINGS{% endtrans %}</span></h5></a>
+                        <a class="dashboard-link" href="{{ path('admin_painting_list', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-picture-o fa-3x" aria-hidden="true"></i><span class="admin-painting">{% trans %}PAINTINGS{% endtrans %}</span></h5></a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card border-secondary mb-3" style="height: 100px;">
                     <div class="card-body text-secondary d-flex">
-                        <a class="dashboard-link" href="{{ path('admin_medias_list', { '_locale': app.request.locale }) }}">
+                        <a class="dashboard-link" href="{{ path('admin_media_list', { '_locale': app.request.locale }) }}">
                             <img src="{{ asset('assets/images/base_images/media_icon.png') }}" alt="media_icon.png">
                         </a>
-                        <a class="dashboard-link" href="{{ path('admin_medias_list', { '_locale': app.request.locale }) }}">
+                        <a class="dashboard-link" href="{{ path('admin_media_list', { '_locale': app.request.locale }) }}">
                             <h5 class="card-title" style="margin-top: 25px;"><span class="admin-media">{% trans %}MEDIAS{% endtrans %}</span></h5>
                         </a>
                     </div>
@@ -30,7 +30,7 @@
             <div class="col">
                 <div class="card border-secondary mb-3" style="height: 100px;">
                     <div class="card-body text-secondary">
-                        <a class="dashboard-link" href="{{ path('admin_styles_list', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i><span class="admin-style">{% trans %}STYLES{% endtrans %}</span></h5></a>
+                        <a class="dashboard-link" href="{{ path('admin_style_list', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i><span class="admin-style">{% trans %}STYLES{% endtrans %}</span></h5></a>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,8 @@
             <div class="col-md-4">
                 <div class="card border-secondary mb-3" style="height: 100px;">
                     <div class="card-body text-secondary d-flex">
-                        <a class="dashboard-link" href="{{ path('admin_artists_list', { '_locale': app.request.locale }) }}"><img src="{{ asset('assets/images/base_images/artist_icon.png') }}" alt="media_icon.png"></a>
-                        <a class="dashboard-link" href="{{ path('admin_artists_list', { '_locale': app.request.locale }) }}"><h5 class="card-title" style="margin-top: 25px;"><span class="admin-media">{% trans %}ARTISTS{% endtrans %}</span></h5></a>
+                        <a class="dashboard-link" href="{{ path('admin_artist_list', { '_locale': app.request.locale }) }}"><img src="{{ asset('assets/images/base_images/artist_icon.png') }}" alt="media_icon.png"></a>
+                        <a class="dashboard-link" href="{{ path('admin_artist_list', { '_locale': app.request.locale }) }}"><h5 class="card-title" style="margin-top: 25px;"><span class="admin-media">{% trans %}ARTISTS{% endtrans %}</span></h5></a>
                     </div>
                 </div>
             </div>
@@ -67,14 +67,14 @@
             <div class="col-md-4">
                 <div class="card border-secondary mb-3" style="height: 100px;">
                     <div class="card-body text-secondary">
-                        <a class="dashboard-link" href="{{ path('admin_users_list', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-users fa-3x" aria-hidden="true"></i><span class="admin-style">{% trans %}USERS{% endtrans %}</span></h5></a>
+                        <a class="dashboard-link" href="{{ path('admin_user_list', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-users fa-3x" aria-hidden="true"></i><span class="admin-style">{% trans %}USERS{% endtrans %}</span></h5></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card border-secondary mb-3" style="height: 100px;">
                     <div class="card-body text-secondary">
-                        <a class="dashboard-link" href="{{ path('admin_comments_overview', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-comment-o fa-3x" aria-hidden="true"></i><span class="admin-style">{% trans %}COMMENTS{% endtrans %}</span></h5></a>
+                        <a class="dashboard-link" href="{{ path('admin_comment_overview', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-comment-o fa-3x" aria-hidden="true"></i><span class="admin-style">{% trans %}COMMENTS{% endtrans %}</span></h5></a>
                     </div>
                 </div>
             </div>

@@ -529,7 +529,7 @@
     </unit>
     <unit id="qpCqXGX" name="Commentaries :">
       <notes>
-        <note category="file-source" priority="1">templates\admin\comment\comment_user_user_detail.html.twig:22</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_user_detail.html.twig:25</note>
       </notes>
       <segment>
         <source>Commentaries :</source>
@@ -539,11 +539,21 @@
     <unit id="sda5G2f" name="at">
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_by_user_per_painting.html.twig:10</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>at</source>
         <target>at</target>
+      </segment>
+    </unit>
+    <unit id="dpAPG.0" name="Back">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:9</note>
+        <note category="file-source" priority="1">templates\admin\comment\comment_user_user_detail.html.twig:9</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Back</source>
+        <target>Back</target>
       </segment>
     </unit>
   </file>

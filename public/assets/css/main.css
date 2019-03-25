@@ -217,11 +217,11 @@ body{
 
 .pagin .pagination>li>a,
 .pagin .pagination>li>span {
-    color: black;
+    color: #343a40;
 }
 .page-item.active .page-link {
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid #343a40;
+    background-color: #343a40;
     color: #fff;
 }
 
