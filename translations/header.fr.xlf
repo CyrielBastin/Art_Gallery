@@ -129,7 +129,7 @@
     </unit>
     <unit id="Tae9Qqu" name="Forum">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:97</note>
+        <note category="state" priority="1">obsolete</note>
       </notes>
       <segment>
         <source>Forum</source>
@@ -138,7 +138,7 @@
     </unit>
     <unit id="wcIksDz" name="Admin">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:100</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:106</note>
       </notes>
       <segment>
         <source>Admin</source>
@@ -147,7 +147,7 @@
     </unit>
     <unit id="Z7aWRoY" name="Dashboard">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:102</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:108</note>
       </notes>
       <segment>
         <source>Dashboard</source>
@@ -156,7 +156,7 @@
     </unit>
     <unit id="upBk4j2" name="Add painting">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:103</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:110</note>
       </notes>
       <segment>
         <source>Add painting</source>
@@ -165,7 +165,7 @@
     </unit>
     <unit id="1dXSZs6" name="Add media">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:104</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:111</note>
       </notes>
       <segment>
         <source>Add media</source>
@@ -174,7 +174,7 @@
     </unit>
     <unit id="nD2BUsF" name="Add style">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:105</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:112</note>
       </notes>
       <segment>
         <source>Add style</source>
@@ -183,7 +183,7 @@
     </unit>
     <unit id="o6nmNu0" name="Add artist">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:106</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:113</note>
       </notes>
       <segment>
         <source>Add artist</source>
@@ -192,7 +192,7 @@
     </unit>
     <unit id="_Eyi53F" name="Newsletter">
       <notes>
-        <note category="file-source" priority="1">templates\includes\header.html.twig:107</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:109</note>
       </notes>
       <segment>
         <source>Newsletter</source>
@@ -202,10 +202,21 @@
     <unit id="GbBu75v" name="all.m">
       <notes>
         <note category="file-source" priority="1">templates\includes\header.html.twig:89</note>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:100</note>
       </notes>
       <segment>
         <source>all.m</source>
         <target>Tous</target>
+      </segment>
+    </unit>
+    <unit id="awzJBNC" name="Users">
+      <notes>
+        <note category="file-source" priority="1">templates\includes\header.html.twig:98</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Users</source>
+        <target>Utilisateurs</target>
       </segment>
     </unit>
   </file>

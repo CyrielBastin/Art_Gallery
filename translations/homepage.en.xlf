@@ -14,7 +14,7 @@
     <unit id="7ikLPdv" name="Cookie Policy">
       <notes>
         <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:7</note>
-        <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:5</note>
+        <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:12</note>
       </notes>
       <segment>
         <source>Cookie Policy</source>
@@ -23,9 +23,9 @@
     </unit>
     <unit id="TJDtWD1" name="Back to HomePage">
       <notes>
-        <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:51</note>
-        <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:153</note>
-        <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:51</note>
+        <note category="file-source" priority="1">templates\home_page\cookie_policy.html.twig:56</note>
+        <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:158</note>
+        <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:56</note>
       </notes>
       <segment>
         <source>Back to HomePage</source>
@@ -35,7 +35,7 @@
     <unit id="Oj2L7DM" name="General Terms and Conditions">
       <notes>
         <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:7</note>
-        <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:5</note>
+        <note category="file-source" priority="1">templates\home_page\general_terms_and_conditions.html.twig:12</note>
         <note category="file-source" priority="1">templates\includes\footer.html.twig:7</note>
       </notes>
       <segment>
@@ -92,7 +92,7 @@
     <unit id="UG.zlGI" name="Privacy Policy">
       <notes>
         <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:7</note>
-        <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:5</note>
+        <note category="file-source" priority="1">templates\home_page\privacy_policy.html.twig:12</note>
       </notes>
       <segment>
         <source>Privacy Policy</source>

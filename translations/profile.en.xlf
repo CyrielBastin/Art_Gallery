@@ -154,5 +154,65 @@
         <target>Profile - edit :</target>
       </segment>
     </unit>
+    <unit id="z24DZpu" name="Users : All">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:5</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Users : All</source>
+        <target>Users : All</target>
+      </segment>
+    </unit>
+    <unit id="SmxDkYS" name="All our Users">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:10</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>All our Users</source>
+        <target>All our Users</target>
+      </segment>
+    </unit>
+    <unit id="yo6CbZw" name="Avatar">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:17</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Avatar</source>
+        <target>Avatar</target>
+      </segment>
+    </unit>
+    <unit id="lpzL089" name="Email">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:18</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="47ienTP" name="Username">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:19</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Username</source>
+        <target>Username</target>
+      </segment>
+    </unit>
+    <unit id="g5Lba3E" name="See Profile">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:20</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>See Profile</source>
+        <target>See Profile</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

@@ -28,6 +28,7 @@ class UserRepository extends ServiceEntityRepository
             FROM user u
             LEFT JOIN user_roles ur on u.roles_id = ur.id
             LEFT JOIN user_profile up on u.id = up.user_id
+            WHERE u.roles_id != 1
             ORDER BY u.roles_id, up.pseudo
         ';
 
@@ -61,6 +62,7 @@ class UserRepository extends ServiceEntityRepository
             LEFT JOIN user_profile up on u.id = up.user_id
             LEFT JOIN painting_comment pc on u.id = pc.user_id
             LEFT JOIN user_roles ur on u.roles_id = ur.id
+            where u.roles_id != 1
             GROUP BY up.pseudo
             ORDER BY up.pseudo
         ';

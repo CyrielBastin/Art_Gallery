@@ -49,6 +49,8 @@ class PaintingCommentController extends AbstractController
      */
     public function editOneUserComment(PaintingComment $paintingComment, Request $request, $painting_id)
     {
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN');
+
         $form = $this->createForm(PaintingCommentType::class, $paintingComment);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
@@ -72,6 +74,8 @@ class PaintingCommentController extends AbstractController
      */
     public function deleteOneUserComment(Request $request, $commentary_id, $painting_id)
     {
+        $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN');
+
         $painting_comment = $this->paintingCommentRepository->find($commentary_id);
         $this->em->remove($painting_comment);
         $this->em->flush();

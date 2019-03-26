@@ -6,6 +6,7 @@ use App\Entity\UserProfile;
 use App\Form\UserProfileType;
 use App\Repository\UserProfileRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,6 +29,18 @@ class UserProfileController extends AbstractController
     {
         $this->em = $em;
         $this->userProfileRepository = $userProfileRepository;
+    }
+
+    /**
+     * @Route("/all", name="all")
+     */
+    public function showAllUser(Request $request, PaginatorInterface $paginator)
+    {
+        $users = $this->getDoctrine()->getRepository(UserProfile::class)->listUser();
+
+        $pagination = $paginator->paginate($users, $request->query->getInt('page', 1), 12);
+
+        return $this->render('user_profile/user_profile_all.html.twig', ['users' => $pagination]);
     }
 
     /**
@@ -58,6 +71,12 @@ class UserProfileController extends AbstractController
      */
     public function editUserProfile(Request $request, UserProfile $userProfile)
     {
+        if(!$this->getUser())
+            return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
+
+        if($this->getUser()->getUserProfile()->getPseudo() != $userProfile->getPseudo())
+            return $this->redirectToRoute('user_profile_edit_one', ['_locale' => $request->getLocale(), 'pseudo' => $this->getUser()->getUserProfile()->getPseudo()]);
+
         $form = $this->createForm(UserProfileType::class, $userProfile);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){

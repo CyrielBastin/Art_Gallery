@@ -23,8 +23,8 @@
       <notes>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:17</note>
         <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:17</note>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:35</note>
-        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:35</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:37</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:37</note>
       </notes>
       <segment>
         <source>Image</source>
@@ -35,8 +35,8 @@
       <notes>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:18</note>
         <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:18</note>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:36</note>
-        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:36</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:38</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:38</note>
       </notes>
       <segment>
         <source>Title</source>
@@ -47,7 +47,7 @@
       <notes>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:19</note>
         <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:19</note>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:37</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:39</note>
       </notes>
       <segment>
         <source>Style</source>
@@ -58,8 +58,8 @@
       <notes>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:20</note>
         <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:20</note>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:38</note>
-        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:37</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:40</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:39</note>
       </notes>
       <segment>
         <source>Artist</source>
@@ -70,8 +70,8 @@
       <notes>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:21</note>
         <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:21</note>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:39</note>
-        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:38</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:41</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:40</note>
       </notes>
       <segment>
         <source>Year</source>
@@ -82,8 +82,8 @@
       <notes>
         <note category="file-source" priority="1">templates\painting\painting.html.twig:22</note>
         <note category="file-source" priority="1">templates\painting\painting_latest_added.html.twig:22</note>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:40</note>
-        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:39</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:42</note>
+        <note category="file-source" priority="1">templates\painting_style\style_view_one.html.twig:41</note>
       </notes>
       <segment>
         <source>Price</source>
@@ -94,8 +94,8 @@
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:31</note>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:85</note>
-        <note category="file-source" priority="1">templates\painting\painting.html.twig:23</note>
-        <note category="file-source" priority="1">templates\painting\painting_discount.html.twig:26</note>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:24</note>
+        <note category="file-source" priority="1">templates\painting\painting_discount.html.twig:27</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:37</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:108</note>
       </notes>
@@ -108,7 +108,7 @@
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:32</note>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:86</note>
-        <note category="file-source" priority="1">templates\painting\painting.html.twig:24</note>
+        <note category="file-source" priority="1">templates\painting\painting.html.twig:25</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:38</note>
         <note category="file-source" priority="1">templates\painting\painting_view_one.html.twig:109</note>
       </notes>

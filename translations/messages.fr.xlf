@@ -21,7 +21,7 @@
     </unit>
     <unit id="di8_C7W" name="Your comment has been successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingCommentController.php:58</note>
+        <note category="file-source" priority="1">src\Controller\PaintingCommentController.php:60</note>
       </notes>
       <segment>
         <source>Your comment has been successfully modified</source>
@@ -48,7 +48,7 @@
     </unit>
     <unit id="I8ZxRBq" name="Your profile has been updated">
       <notes>
-        <note category="file-source" priority="1">src\Controller\UserProfileController.php:71</note>
+        <note category="file-source" priority="1">src\Controller\UserProfileController.php:90</note>
       </notes>
       <segment>
         <source>Your profile has been updated</source>
@@ -450,8 +450,8 @@
     </unit>
     <unit id="_jhUlyj" name="Artist %artist% successfully added">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:304</note>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:79</note>
+        <note category="file-source" priority="1">src\Controller\AdminArtistController.php:61</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:81</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully added</source>
@@ -460,8 +460,8 @@
     </unit>
     <unit id="vBRA9Wp" name="Artist %artist% successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:324</note>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:99</note>
+        <note category="file-source" priority="1">src\Controller\AdminArtistController.php:81</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:103</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully modified</source>
@@ -470,8 +470,8 @@
     </unit>
     <unit id="tgXkkVi" name="Artist %artist% successfully removed">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:342</note>
-        <note category="file-source" priority="1">src\Controller\ArtistController.php:117</note>
+        <note category="file-source" priority="1">src\Controller\AdminArtistController.php:99</note>
+        <note category="file-source" priority="1">src\Controller\ArtistController.php:123</note>
       </notes>
       <segment>
         <source>Artist %artist% successfully removed</source>
@@ -480,8 +480,8 @@
     </unit>
     <unit id="uPAidcd" name="The artwork %painting% has been correctly added">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:89</note>
-        <note category="file-source" priority="1">src\Controller\PaintingController.php:122</note>
+        <note category="file-source" priority="1">src\Controller\AdminPaintingController.php:62</note>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:124</note>
       </notes>
       <segment>
         <source>The artwork %painting% has been correctly added</source>
@@ -490,8 +490,8 @@
     </unit>
     <unit id="9_2njLm" name="The artwork %painting% has been correctly modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:109</note>
-        <note category="file-source" priority="1">src\Controller\PaintingController.php:142</note>
+        <note category="file-source" priority="1">src\Controller\AdminPaintingController.php:82</note>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:146</note>
       </notes>
       <segment>
         <source>The artwork %painting% has been correctly modified</source>
@@ -500,8 +500,8 @@
     </unit>
     <unit id="Zv1liYm" name="The artwork %painting% has been properly deleted">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:127</note>
-        <note category="file-source" priority="1">src\Controller\PaintingController.php:160</note>
+        <note category="file-source" priority="1">src\Controller\AdminPaintingController.php:100</note>
+        <note category="file-source" priority="1">src\Controller\PaintingController.php:166</note>
       </notes>
       <segment>
         <source>The artwork %painting% has been properly deleted</source>
@@ -510,8 +510,8 @@
     </unit>
     <unit id="MYDU.lu" name="Media %media% successfully added">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:160</note>
-        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:79</note>
+        <note category="file-source" priority="1">src\Controller\AdminMediaController.php:58</note>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:81</note>
       </notes>
       <segment>
         <source>Media %media% successfully added</source>
@@ -520,8 +520,8 @@
     </unit>
     <unit id="pesPPQo" name="Media %media% successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:180</note>
-        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:99</note>
+        <note category="file-source" priority="1">src\Controller\AdminMediaController.php:78</note>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:103</note>
       </notes>
       <segment>
         <source>Media %media% successfully modified</source>
@@ -530,8 +530,8 @@
     </unit>
     <unit id="iwIxyUU" name="Media %media% successfully removed">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:198</note>
-        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:117</note>
+        <note category="file-source" priority="1">src\Controller\AdminMediaController.php:96</note>
+        <note category="file-source" priority="1">src\Controller\PaintingMediaController.php:123</note>
       </notes>
       <segment>
         <source>Media %media% successfully removed</source>
@@ -540,8 +540,8 @@
     </unit>
     <unit id="kpBFYGz" name="Style %style% successfully added">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:231</note>
-        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:79</note>
+        <note category="file-source" priority="1">src\Controller\AdminStyleController.php:58</note>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:81</note>
       </notes>
       <segment>
         <source>Style %style% successfully added</source>
@@ -550,8 +550,8 @@
     </unit>
     <unit id="RNSm0Wq" name="Style %style% successfully modified">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:251</note>
-        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:99</note>
+        <note category="file-source" priority="1">src\Controller\AdminStyleController.php:78</note>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:103</note>
       </notes>
       <segment>
         <source>Style %style% successfully modified</source>
@@ -560,8 +560,8 @@
     </unit>
     <unit id="yRyS.3c" name="Style %style% successfully removed">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:269</note>
-        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:116</note>
+        <note category="file-source" priority="1">src\Controller\AdminStyleController.php:96</note>
+        <note category="file-source" priority="1">src\Controller\PaintingStyleController.php:122</note>
       </notes>
       <segment>
         <source>Style %style% successfully removed</source>
@@ -723,7 +723,7 @@
     </unit>
     <unit id="3Fcv3Zy" name="The user profile %user% has been updated">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:416</note>
+        <note category="file-source" priority="1">src\Controller\AdminUserController.php:63</note>
       </notes>
       <segment>
         <source>The user profile %user% has been updated</source>
@@ -732,7 +732,7 @@
     </unit>
     <unit id="MSd2.Wl" name="The user profile %user% has been properly deleted">
       <notes>
-        <note category="file-source" priority="1">src\Controller\AdminController.php:434</note>
+        <note category="file-source" priority="1">src\Controller\AdminUserController.php:81</note>
       </notes>
       <segment>
         <source>The user profile %user% has been properly deleted</source>
@@ -750,7 +750,7 @@
     </unit>
     <unit id=".5y2zLU" name="Your comment has been successfully deleted">
       <notes>
-        <note category="file-source" priority="1">src\Controller\PaintingCommentController.php:79</note>
+        <note category="file-source" priority="1">src\Controller\PaintingCommentController.php:83</note>
       </notes>
       <segment>
         <source>Your comment has been successfully deleted</source>

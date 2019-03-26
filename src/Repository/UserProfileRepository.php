@@ -19,6 +19,24 @@ class UserProfileRepository extends ServiceEntityRepository
         parent::__construct($registry, UserProfile::class);
     }
 
+    public function listUser()
+    {
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql='
+            SELECT up.avatar, u.email, up.pseudo
+            FROM user u
+            LEFT JOIN user_profile up on u.id = up.user_id
+            WHERE u.roles_id != 1
+            ORDER BY up.pseudo
+        ';
+
+        $request = $conn->prepare($sql);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
     public function findOneByPseudo($pseudo)
     {
         $conn = $this->getEntityManager()->getConnection();

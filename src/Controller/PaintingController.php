@@ -111,6 +111,8 @@ class PaintingController extends AbstractController
      */
     public function addOnePainting(Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $painting = new Painting();
         $form = $this->createForm(PaintingType::class, $painting);
         $form->handleRequest($request);
@@ -133,6 +135,8 @@ class PaintingController extends AbstractController
      */
     public function editOnePainting(Request $request, Painting $painting)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(PaintingEditType::class, $painting);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
@@ -153,6 +157,8 @@ class PaintingController extends AbstractController
      */
     public function deleteOnePainting(Request $request, $id)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $painting = $this->paintingRepo->find($id);
         $this->em->remove($painting);
         $this->em->flush();

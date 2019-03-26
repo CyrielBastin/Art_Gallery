@@ -72,6 +72,8 @@ class NewsletterController extends AbstractController
      */
     public function viewAllNewsletter(PaginatorInterface $paginator, Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $newsletter_messages = $this->getDoctrine()->getRepository(NewsletterMessages::class)->findAll();
 
         $pagination = $paginator->paginate($newsletter_messages, $request->query->getInt('page', 1), 6);
@@ -84,6 +86,8 @@ class NewsletterController extends AbstractController
      */
     public function createNewsletter(Request $request, NewsletterService $service)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $newsletter = new NewsletterMessages();
         $form = $this->createForm(NewsletterMessageType::class, $newsletter);
         $form->handleRequest($request);

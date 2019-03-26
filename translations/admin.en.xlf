@@ -549,7 +549,6 @@
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:9</note>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_user_detail.html.twig:9</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Back</source>

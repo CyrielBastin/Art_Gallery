@@ -68,6 +68,8 @@ class PaintingMediaController extends AbstractController
      */
     public function addOneMedia(Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $media = new PaintingMedia();
         $form = $this->createForm(PaintingMediaType::class, $media);
         $form->handleRequest($request);
@@ -90,6 +92,8 @@ class PaintingMediaController extends AbstractController
      */
     public function editOneMedia(Request $request, PaintingMedia $media)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(PaintingMediaEditType::class, $media);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
@@ -110,6 +114,8 @@ class PaintingMediaController extends AbstractController
      */
     public function deleteOneMedia($id)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $media = $this->mediaRepo->find($id);
         $this->em->remove($media);
         $this->em->flush();

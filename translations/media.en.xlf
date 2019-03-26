@@ -41,7 +41,7 @@
     </unit>
     <unit id="RkxP.QG" name="Edit">
       <notes>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:24</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:25</note>
       </notes>
       <segment>
         <source>Edit</source>
@@ -50,7 +50,7 @@
     </unit>
     <unit id="4tClSWj" name="Delete">
       <notes>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:25</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:26</note>
       </notes>
       <segment>
         <source>Delete</source>
@@ -59,7 +59,7 @@
     </unit>
     <unit id="Mab4uhb" name="Artworks using %media% as media :">
       <notes>
-        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:29</note>
+        <note category="file-source" priority="1">templates\painting_media\media_view_one.html.twig:31</note>
       </notes>
       <segment>
         <source>Artworks using %media% as media :</source>

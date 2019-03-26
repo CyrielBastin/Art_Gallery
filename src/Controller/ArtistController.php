@@ -68,6 +68,8 @@ class ArtistController extends AbstractController
      */
     public function addOneArtist(Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $artist = new Artist();
         $form = $this->createForm(ArtistType::class, $artist);
         $form->handleRequest($request);
@@ -90,6 +92,8 @@ class ArtistController extends AbstractController
      */
     public function editOneArtist(Request $request, Artist $artist)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(ArtistEditType::class, $artist);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
@@ -109,6 +113,8 @@ class ArtistController extends AbstractController
      */
     public function deleteOneArtist(Request $request, $id)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $repository = $this->getDoctrine()->getRepository(Artist::class);
         $artist = $repository->find($id);
         $this->em->remove($artist);

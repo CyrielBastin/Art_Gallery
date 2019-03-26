@@ -68,6 +68,8 @@ class PaintingStyleController extends AbstractController
      */
     public function addOneStyle(Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $style = new PaintingStyle();
         $form = $this->createForm(PaintingStyleType::class, $style);
         $form->handleRequest($request);
@@ -90,6 +92,8 @@ class PaintingStyleController extends AbstractController
      */
     public function editOneStyle(Request $request, PaintingStyle $style)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(PaintingStyleEditType::class, $style);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
@@ -109,6 +113,8 @@ class PaintingStyleController extends AbstractController
      */
     public function deleteOneStyle($id)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $style = $this->styleRepo->find($id);
         $this->em->remove($style);
         $this->em->flush();

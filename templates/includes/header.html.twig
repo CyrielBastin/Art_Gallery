@@ -93,6 +93,13 @@
                 <a href="{{ path('signup', {'_locale': app.request.locale}) }}">{% trans %}Sign-Up{% endtrans %}</a>
                 {# Element Contact #}
                 <a href="{{ path('contact_us', {'_locale': app.request.locale}) }}#form-contact">{% trans %}Contact{% endtrans %}</a>
+                {# Element Users #}
+                <div class="dropdown-custom">
+                    <button class="dropbtn-custom"><a href="{{ path('user_profile_all', {'_locale': app.request.locale}) }}">{% trans %}Users{% endtrans %}</a></button>
+                    <div class="dropdown-content-custom">
+                        <a href="{{ path('user_profile_all', {'_locale': app.request.locale}) }}">{% trans %}all.m{% endtrans %}</a>
+                    </div>
+                </div>
                 {# Elemnt Admin #}
                 {% if is_granted('ROLE_ADMIN') %}
                 <div class="dropdown-custom">
