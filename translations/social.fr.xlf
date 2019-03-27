@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="social.fr">
+    <unit id="f6D_zr_" name="Back to Art Gallery">
+      <notes>
+        <note category="file-source" priority="1">templates\base_social.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>Back to Art Gallery</source>
+        <target>Retour sur Art Gallery</target>
+      </segment>
+    </unit>
+    <unit id="N3s3Wtz" name="LOGOUT">
+      <notes>
+        <note category="file-source" priority="1">templates\base_social.html.twig:45</note>
+      </notes>
+      <segment>
+        <source>LOGOUT</source>
+        <target>DECONNEXION</target>
+      </segment>
+    </unit>
+    <unit id="NR8Ux3F" name="Back to Profile">
+      <notes>
+        <note category="file-source" priority="1">templates\base_social.html.twig:58</note>
+      </notes>
+      <segment>
+        <source>Back to Profile</source>
+        <target>Retour au Profil</target>
+      </segment>
+    </unit>
+    <unit id="PO0RmX9" name="Edit your message">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\edit_a_message.html.twig:5</note>
+        <note category="file-source" priority="1">templates\user_messages\edit_a_message.html.twig:12</note>
+      </notes>
+      <segment>
+        <source>Edit your message</source>
+        <target>Editer votre message</target>
+      </segment>
+    </unit>
+    <unit id="dpAPG.0" name="Back">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\edit_a_message.html.twig:9</note>
+        <note category="file-source" priority="1">templates\user_messages\send_a_message.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>Back</source>
+        <target>Retour</target>
+      </segment>
+    </unit>
+    <unit id="z3iGf8g" name="Send a message to">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\send_a_message.html.twig:5</note>
+        <note category="file-source" priority="1">templates\user_messages\send_a_message.html.twig:12</note>
+      </notes>
+      <segment>
+        <source>Send a message to</source>
+        <target>Envoyer un message à</target>
+      </segment>
+    </unit>
+    <unit id="YwyTJTY" name="My conversations ...">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_conversations.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>My conversations ...</source>
+        <target>Mes conversations ...</target>
+      </segment>
+    </unit>
+    <unit id="PjBcxYW" name="Conversation with:">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:5</note>
+      </notes>
+      <segment>
+        <source>Conversation with:</source>
+        <target>Conversation avec:</target>
+      </segment>
+    </unit>
+    <unit id="ePWXWl1" name="New message">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:23</note>
+      </notes>
+      <segment>
+        <source>New message</source>
+        <target>Nouveau message</target>
+      </segment>
+    </unit>
+    <unit id="rbuHKSS" name="posted the">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:42</note>
+      </notes>
+      <segment>
+        <source>posted the</source>
+        <target>posté le</target>
+      </segment>
+    </unit>
+    <unit id="sda5G2f" name="at">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:42</note>
+      </notes>
+      <segment>
+        <source>at</source>
+        <target>à</target>
+      </segment>
+    </unit>
+    <unit id="RkxP.QG" name="Edit">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:50</note>
+      </notes>
+      <segment>
+        <source>Edit</source>
+        <target>Editer</target>
+      </segment>
+    </unit>
+    <unit id="4tClSWj" name="Delete">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:51</note>
+      </notes>
+      <segment>
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </segment>
+    </unit>
+    <unit id="XTQUFze" name="List Users">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_conversations.html.twig:9</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>List Users</source>
+        <target>Liste Utilisateurs</target>
+      </segment>
+    </unit>
+    <unit id="HUMvWGk" name="Conversations">
+      <notes>
+        <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:9</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Conversations</source>
+        <target>Conversations</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

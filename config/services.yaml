@@ -41,4 +41,9 @@ services:
     user_listener_remove:
         class: App\EventListener\UserListener
         tags:
-            - { name: doctrine.orm.entity_listener, event: postRemove, entity: App\Entity\User, entity_manager: custom }
+            - { name: doctrine.orm.entity_listener, event: preRemove, entity: App\Entity\User, entity_manager: custom }
+
+    user_message_listener_remove:
+        class: App\EventListener\UserMessagesListener
+        tags:
+            - { name: doctrine.orm.entity_listener, event: preRemove, entity: App\Entity\UserMessages, entity_manager: custom }

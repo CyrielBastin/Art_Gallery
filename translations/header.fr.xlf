@@ -212,7 +212,6 @@
     <unit id="awzJBNC" name="Users">
       <notes>
         <note category="file-source" priority="1">templates\includes\header.html.twig:98</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Users</source>

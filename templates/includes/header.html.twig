@@ -50,7 +50,7 @@
                                     <p style="font-size: 1.2em;"><a href="{{ path('user_profile_view_one', {'pseudo': app.user.userprofile.pseudo, '_locale': app.request.locale}) }}">{% trans %}Profile{% endtrans %}</a></p>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <p style="font-size: 1.2em;"><a href="#">{% trans %}Messages{% endtrans %}</a></p>
+                                    <p style="font-size: 1.2em;"><a href="{{ path('user_message_show_conversations', { '_locale': app.request.locale }) }}">{% trans %}Messages{% endtrans %}</a></p>
                                 </div>
                                 <div class="d-flex justify-content-center" style="background-color: white;">
                                     <p style="margin-bottom: 0px; font-size: 1.4em;"><a href="{{ path('app_logout') }}"><span style="color: #343a40;">{% trans %}Log out{% endtrans %}</span></a></p>

@@ -157,7 +157,6 @@
     <unit id="z24DZpu" name="Users : All">
       <notes>
         <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:5</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Users : All</source>
@@ -167,7 +166,6 @@
     <unit id="SmxDkYS" name="All our Users">
       <notes>
         <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:10</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>All our Users</source>
@@ -177,7 +175,6 @@
     <unit id="yo6CbZw" name="Avatar">
       <notes>
         <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:17</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Avatar</source>
@@ -187,7 +184,6 @@
     <unit id="lpzL089" name="Email">
       <notes>
         <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:18</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Email</source>
@@ -197,7 +193,6 @@
     <unit id="47ienTP" name="Username">
       <notes>
         <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:19</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Username</source>
@@ -207,11 +202,28 @@
     <unit id="g5Lba3E" name="See Profile">
       <notes>
         <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:20</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>See Profile</source>
         <target>Voir Profil</target>
+      </segment>
+    </unit>
+    <unit id="i_3qCKb" name="See conversation">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:22</note>
+      </notes>
+      <segment>
+        <source>See conversation</source>
+        <target>Voir conversation</target>
+      </segment>
+    </unit>
+    <unit id="VuVBrYb" name="Send a message">
+      <notes>
+        <note category="file-source" priority="1">templates\user_profile\user_profile_all.html.twig:23</note>
+      </notes>
+      <segment>
+        <source>Send a message</source>
+        <target>Envoyer un message</target>
       </segment>
     </unit>
   </file>

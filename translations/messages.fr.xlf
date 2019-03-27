@@ -188,6 +188,7 @@
       <notes>
         <note category="file-source" priority="1">src\Form\ContactType.php:23</note>
         <note category="file-source" priority="1">src\Form\NewsletterMessageType.php:19</note>
+        <note category="file-source" priority="1">src\Form\UserMessagesType.php:17</note>
       </notes>
       <segment>
         <source>Message</source>
@@ -198,6 +199,7 @@
       <notes>
         <note category="file-source" priority="1">src\Form\ContactType.php:24</note>
         <note category="file-source" priority="1">src\Form\NewsletterMessageType.php:20</note>
+        <note category="file-source" priority="1">src\Form\UserMessagesType.php:18</note>
       </notes>
       <segment>
         <source>Send</source>
@@ -759,7 +761,7 @@
     </unit>
     <unit id="IjMJBte" name="The commentary has been modified with success">
       <notes>
-        <note category="file-source" priority="1">src\Controller\RedirectController.php:83</note>
+        <note category="file-source" priority="1">src\Controller\RedirectController.php:103</note>
       </notes>
       <segment>
         <source>The commentary has been modified with success</source>
@@ -768,11 +770,38 @@
     </unit>
     <unit id="okooWax" name="The commentary has been deleted with success">
       <notes>
-        <note category="file-source" priority="1">src\Controller\RedirectController.php:94</note>
+        <note category="file-source" priority="1">src\Controller\RedirectController.php:114</note>
       </notes>
       <segment>
         <source>The commentary has been deleted with success</source>
         <target>Le commentaire a été supprimé avec succès</target>
+      </segment>
+    </unit>
+    <unit id="XsWyrrJ" name="Your message to %user% has been sent">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\UserMessagesController.php:86</note>
+      </notes>
+      <segment>
+        <source>Your message to %user% has been sent</source>
+        <target>Votre message a bien été envoyé à %user%</target>
+      </segment>
+    </unit>
+    <unit id="B_OScsg" name="Your message to %user% has been modified">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\UserMessagesController.php:108</note>
+      </notes>
+      <segment>
+        <source>Your message to %user% has been modified</source>
+        <target>Votre message à %user% a bien été modifié</target>
+      </segment>
+    </unit>
+    <unit id="l6EPOA1" name="Your message to %user% has been deleted">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\UserMessagesController.php:127</note>
+      </notes>
+      <segment>
+        <source>Your message to %user% has been deleted</source>
+        <target>Votre message à %user% a bien été supprimé</target>
       </segment>
     </unit>
   </file>

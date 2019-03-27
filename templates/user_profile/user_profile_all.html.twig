@@ -18,6 +18,10 @@
                         <th>{% trans %}Email{% endtrans %}</th>
                         <th>{% trans %}Username{% endtrans %}</th>
                         <th>{% trans %}See Profile{% endtrans %}</th>
+                        {% if app.user %}
+                        <th>{% trans %}See conversation{% endtrans %}</th>
+                        <th>{% trans %}Send a message{% endtrans %}</th>
+                        {% endif %}
                     </tr>
                     </thead>
                     <tbody>
@@ -33,7 +37,11 @@
                             </td>
                             <td class="align-middle">{{ user['email'] }}</a></td>
                             <td class="align-middle">{{ user['pseudo'] }}</td>
-                            <td class="align-middle"><a href="{{ path('user_profile_view_one', { '_locale': app.request.locale, 'pseudo': user['pseudo'] }) }}" style="color: grey;"><i class="fa fa-eye fa-3x" aria-hidden="true"></i></a></td>
+                            <td class="align-middle"><a href="{{ path('user_profile_view_one', { '_locale': app.request.locale, 'pseudo': user['pseudo'] }) }}" style="color: #17a2b8;"><i class="fa fa-eye fa-3x" aria-hidden="true"></i></a></td>
+                            {% if app.user %}
+                            <td class="align-middle"><a href="{{ path('user_message_show_one_conversation', { '_locale': app.request.locale, 'pseudo': user['pseudo'] }) }}" style="color: #17a2b8;"><i class="fa fa-comments-o fa-3x" aria-hidden="true"></i></a></td>
+                            <td class="align-middle"><a href="{{ path('user_message_send_a_message', { '_locale': app.request.locale, 'pseudo': user['pseudo'] }) }}" style="color: #28a745;"><i class="fa fa-comment-o fa-3x" aria-hidden="true"></i></a></td>
+                            {% endif %}
                         </tr>
                     {% endfor %}
                     </tbody>

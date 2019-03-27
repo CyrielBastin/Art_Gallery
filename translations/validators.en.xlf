@@ -296,5 +296,14 @@
         <target>This field must be {{ compared_value }} letters max !</target>
       </segment>
     </unit>
+    <unit id="tH8ha0w" name="Your message must be {{ compared_value }} maximum">
+      <notes>
+        <note category="file-source" priority="1">src\Entity\UserMessages.php:0</note>
+      </notes>
+      <segment>
+        <source>Your message must be {{ compared_value }} maximum</source>
+        <target>Your message must be {{ compared_value }} letters maximum</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

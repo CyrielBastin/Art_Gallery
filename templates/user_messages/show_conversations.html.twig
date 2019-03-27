@@ -1,0 +1,24 @@
+{% extends 'base_social.html.twig' %}
+
+{% trans_default_domain 'social' %}
+
+{% block title %}{% trans %}My conversations ...{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <a href="{{ path('user_profile_all', { '_locale': app.request.locale }) }}" class="btn btn-dark btn-lg" role="button" style="margin-top: -220px;">{% trans %}List Users{% endtrans %}</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for conversation in conversations %}
+                <div class="col-md-3">
+                    <div class="card border-secondary mb-3" style="height: 130px;">
+                        <div class="card-body text-secondary">
+                            <a class="dashboard-link" href="{{ path('user_message_show_one_conversation', { '_locale': app.request.locale, 'pseudo': conversation['pseudo'] }) }}"><h5 class="card-title"><i class="fa fa-comments-o fa-2x" aria-hidden="true"></i><span class="admin-style" style="float: bottom;">{{ conversation['pseudo'] }}</span></h5></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
