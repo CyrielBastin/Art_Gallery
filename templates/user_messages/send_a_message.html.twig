@@ -6,7 +6,7 @@
 
 {% block body %}
     <div class="container">
-        <a href="{{ path('user_profile_all', { '_locale': app.request.locale }) }}" class="btn btn-dark btn-lg" role="button" style="margin-top: -200px;">{% trans %}Back{% endtrans %}</a>
+        <a href="{{ path('user_profile_all', { '_locale': app.request.locale }) }}" class="btn btn-dark btn-lg" role="button" style="margin-top: -200px;">{% trans %}List Users{% endtrans %}</a>
     </div>
     <div class="container">
         <h1 class="text-center title-form-custom">{% trans %}Send a message to{% endtrans %} {{ receiver }}</h1>

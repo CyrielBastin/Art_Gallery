@@ -286,6 +286,8 @@ body{
 
 .date-custom input{
     max-width: 63px;
+    margin-top: -5px;
+    height: 140%;
 }
 /********************************************************************************************************
  ** Style for Painting(in general)

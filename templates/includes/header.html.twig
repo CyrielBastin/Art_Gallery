@@ -26,7 +26,7 @@
         <div class="col-md-3">
             {% if not app.user %}
                 <div class="login-zone">
-                    <a href="{{ path('app_login', {'_locale': app.request.locale}) }}#loginform">{% trans %}Login{% endtrans %}</a>
+                    <a href="{{ path('app_login', {'_locale': app.request.locale}) }}">{% trans %}Login{% endtrans %}</a>
                 </div>
             {% else %}
                 <div class="profil-zone">

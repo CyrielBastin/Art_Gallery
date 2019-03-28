@@ -11,6 +11,7 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/{_locale}/newsletter", name="newsletter_", requirements={"_locale"="%app.locales%"})
@@ -30,7 +31,7 @@ class NewsletterController extends AbstractController
     /**
      * @Route("/subscribe", name="subscribe")
      */
-    public function subscribeToNewsletter(Request $request)
+    public function subscribeToNewsletter(Request $request, TranslatorInterface $translator)
     {
         $newsletter = new NewsletterSubscribedPeople();
         $form = $request->request->all();
@@ -48,14 +49,18 @@ class NewsletterController extends AbstractController
             }
 
             if($exists){
-                $this->addFlash('danger', 'You are already registered to our Newsletter');
+                $translated = $translator->trans('You are already registered to our Newsletter');
+                $this->addFlash('danger', $translated);
+
                 $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
             }else{
                 $newsletter->setEmail($email);
                 $this->em->persist($newsletter);
                 $this->em->flush();
 
-                $this->addFlash('success', 'You are now subscribed to our Newsletter. Congratulations !');
+                $translated = $translator->trans('You are now subscribed to our Newsletter. Congratulations !');
+                $this->addFlash('success', $translated);
+
                 $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
             }
         }

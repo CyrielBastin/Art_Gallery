@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
- * @Route("/{_locale}/admin/users-messages", name="admin_user_message_", requirements={"_locale"="%app.locales%"})
+ * @Route("/{_locale}/admin/users/messages", name="admin_user_message_", requirements={"_locale"="%app.locales%"})
  */
 class AdminUserMessageController extends AbstractController
 {

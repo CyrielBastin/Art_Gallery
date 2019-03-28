@@ -47,3 +47,8 @@ services:
         class: App\EventListener\UserMessagesListener
         tags:
             - { name: doctrine.orm.entity_listener, event: preRemove, entity: App\Entity\UserMessages, entity_manager: custom }
+
+    painting_comment_listener_remove:
+        class: App\EventListener\PaintingCommentListener
+        tags:
+            - { name: doctrine.orm.entity_listener, event: preRemove, entity: App\Entity\PaintingComment, entity_manager: custom }

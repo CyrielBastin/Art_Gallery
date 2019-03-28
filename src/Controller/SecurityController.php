@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class SecurityController extends AbstractController
 {
@@ -45,7 +46,7 @@ class SecurityController extends AbstractController
     /**
      * @Route("/{_locale}/sign-up", name="signup", requirements={"_locale"="%app.locales%"})
      */
-    public function subscribe(Request $request, UserPasswordEncoderInterface $passwordEncoder, SignupService $service)
+    public function subscribe(Request $request, UserPasswordEncoderInterface $passwordEncoder, SignupService $service, TranslatorInterface $translator)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -58,7 +59,9 @@ class SecurityController extends AbstractController
             $em->flush();
 
             $service->registrationEmail($user);
-            $this->addFlash('success', 'You are now registered to Art Gallery. You can now login and share with other users');
+            $translated = $translator->trans('You are now registered to Art Gallery. You can now login and share with other users');
+            $this->addFlash('success', $translated);
+
             $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
         }
 

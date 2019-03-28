@@ -96,7 +96,7 @@ class RedirectController extends AbstractController
     }
 
     /**
-     * @Route("admin/redirect-to-comment-by/{user_id}/user", name="redirect_from_admin_comment_edit")
+     * @Route("/admin/redirect-to-comment-by/{user_id}/user", name="redirect_from_admin_comment_edit")
      */
     public function redirectFromAdminCommentEdit(Request $request, TranslatorInterface $translator, $user_id)
     {
@@ -107,7 +107,7 @@ class RedirectController extends AbstractController
     }
 
     /**
-     * @Route("admin/redirect-to-comment/{user_id}/user-after-delete", name="redirect_from_admin_comment_delete")
+     * @Route("/admin/redirect-to-comment/{user_id}/user-after-delete", name="redirect_from_admin_comment_delete")
      */
     public function redirectFomAdminCommentDelete(Request $request, TranslatorInterface $translator, $user_id)
     {
@@ -118,7 +118,7 @@ class RedirectController extends AbstractController
     }
 
     /**
-     * @Route("admin/redirect-to-comment-for/{painting_id}/user-after-posting-comment", name="redirect_from_admin_comment_by_painting")
+     * @Route("/admin/redirect-to-comment-for/{painting_id}/user-after-posting-comment", name="redirect_from_admin_comment_by_painting")
      */
     public function redirectFromAdminCommentByPainting(Request $request, $painting_id)
     {

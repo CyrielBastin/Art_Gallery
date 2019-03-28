@@ -10,6 +10,7 @@ use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/{_locale}/user/profile", name="user_profile_", requirements={"_locale"="%app.locales%"})
@@ -69,7 +70,7 @@ class UserProfileController extends AbstractController
     /**
      * @Route("/modify/edit-{pseudo}", name="edit_one")
      */
-    public function editUserProfile(Request $request, UserProfile $userProfile)
+    public function editUserProfile(Request $request, UserProfile $userProfile, TranslatorInterface $translator)
     {
         if(!$this->getUser())
             return $this->redirectToRoute('homepage', ['_locale' => $request->getLocale()]);
@@ -87,7 +88,9 @@ class UserProfileController extends AbstractController
             $this->em->flush();
             $userProfile->setImageFile(null);
 
-            $this->addFlash('info', 'Your profile has been updated');
+            $translated = $translator->trans('Your profile has been updated');
+            $this->addFlash('info', $translated);
+
             return $this->redirectToRoute('user_profile_view_one', ['_locale' => $request->getLocale(), 'pseudo' => $userProfile->getPseudo()]);
         }
 
