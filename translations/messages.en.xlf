@@ -779,6 +779,7 @@
     </unit>
     <unit id="XsWyrrJ" name="Your message to %user% has been sent">
       <notes>
+        <note category="file-source" priority="1">src\Controller\AdminUserMessageController.php:133</note>
         <note category="file-source" priority="1">src\Controller\UserMessagesController.php:86</note>
       </notes>
       <segment>
@@ -802,6 +803,26 @@
       <segment>
         <source>Your message to %user% has been deleted</source>
         <target>Your message to %user% has been deleted</target>
+      </segment>
+    </unit>
+    <unit id="_7VQZJM" name="The message has been edited with success">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\AdminUserMessageController.php:88</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>The message has been edited with success</source>
+        <target>The message has been edited with success</target>
+      </segment>
+    </unit>
+    <unit id="sroavKL" name="The message has been deleted with success">
+      <notes>
+        <note category="file-source" priority="1">src\Controller\AdminUserMessageController.php:106</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>The message has been deleted with success</source>
+        <target>The message has been deleted with success</target>
       </segment>
     </unit>
   </file>

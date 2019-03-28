@@ -78,6 +78,13 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card border-secondary mb-3" style="height: 100px;">
+                    <div class="card-body text-secondary">
+                        <a class="dashboard-link" href="{{ path('admin_user_message_all_users', { '_locale': app.request.locale }) }}"><h5 class="card-title"><i class="fa fa-comments-o fa-3x" aria-hidden="true"></i><span class="admin-style">{% trans %}MESSAGES{% endtrans %}</span></h5></a>
+                    </div>
+                </div>
+            </div>
         </div>
         {# END row #}
     </div>

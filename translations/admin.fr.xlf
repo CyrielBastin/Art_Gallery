@@ -179,6 +179,7 @@
         <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:21</note>
         <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:18</note>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:16</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversation_between_users.html.twig:47</note>
       </notes>
       <segment>
         <source>Edit</source>
@@ -193,6 +194,7 @@
         <note category="file-source" priority="1">templates\admin\painting\painting_list.html.twig:22</note>
         <note category="file-source" priority="1">templates\admin\style\style_list.html.twig:19</note>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:17</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversation_between_users.html.twig:48</note>
       </notes>
       <segment>
         <source>Delete</source>
@@ -372,6 +374,7 @@
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:20</note>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:12</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_all_users.html.twig:17</note>
       </notes>
       <segment>
         <source>Avatar</source>
@@ -381,6 +384,7 @@
     <unit id="lpzL089" name="Email">
       <notes>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:13</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_all_users.html.twig:18</note>
       </notes>
       <segment>
         <source>Email</source>
@@ -391,6 +395,7 @@
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_overview.html.twig:21</note>
         <note category="file-source" priority="1">templates\admin\user\user_list.html.twig:14</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_all_users.html.twig:19</note>
       </notes>
       <segment>
         <source>Username</source>
@@ -487,7 +492,7 @@
       </notes>
       <segment>
         <source>COMMENTS</source>
-        <target>COMMENT ...</target>
+        <target>COMMENTAIRES</target>
       </segment>
     </unit>
     <unit id="rwXkZaO" name="By Users">
@@ -539,6 +544,7 @@
     <unit id="sda5G2f" name="at">
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_by_user_per_painting.html.twig:10</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversation_between_users.html.twig:40</note>
       </notes>
       <segment>
         <source>at</source>
@@ -549,10 +555,126 @@
       <notes>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_painting_detail.html.twig:9</note>
         <note category="file-source" priority="1">templates\admin\comment\comment_user_user_detail.html.twig:9</note>
+        <note category="file-source" priority="1">templates\admin\user_message\edit_a_message.html.twig:9</note>
+        <note category="file-source" priority="1">templates\admin\user_message\send_a_message.html.twig:9</note>
       </notes>
       <segment>
         <source>Back</source>
         <target>Retour</target>
+      </segment>
+    </unit>
+    <unit id="KxQn4e9" name="MESSAGES">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\dashboard.html.twig:84</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>MESSAGES</source>
+        <target>MESSAGES</target>
+      </segment>
+    </unit>
+    <unit id="0A7CyqY" name="Edit a message">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\edit_a_message.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\user_message\edit_a_message.html.twig:12</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Edit a message</source>
+        <target>Editer un message</target>
+      </segment>
+    </unit>
+    <unit id="z3iGf8g" name="Send a message to">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\send_a_message.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\user_message\send_a_message.html.twig:12</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Send a message to</source>
+        <target>Envoyer un message</target>
+      </segment>
+    </unit>
+    <unit id="XTQUFze" name="List Users">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_all_users.html.twig:5</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_all_users.html.twig:10</note>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversations_by_user.html.twig:9</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>List Users</source>
+        <target>Liste Utilisateurs</target>
+      </segment>
+    </unit>
+    <unit id="DFKdpZn" name="See conversations">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_all_users.html.twig:20</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>See conversations</source>
+        <target>Voir conversations</target>
+      </segment>
+    </unit>
+    <unit id="VuVBrYb" name="Send a message">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_all_users.html.twig:21</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Send a message</source>
+        <target>Envoyer un message</target>
+      </segment>
+    </unit>
+    <unit id="CFbMIHC" name="Conversations for">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversations_by_user.html.twig:5</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Conversations for</source>
+        <target>Conversations pour</target>
+      </segment>
+    </unit>
+    <unit id="32hSNRq" name="%user%'s Conversations">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversations_by_user.html.twig:12</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>%user%'s Conversations</source>
+        <target>Conversations de %user%</target>
+      </segment>
+    </unit>
+    <unit id="pesS9f1" name="Conversation between users">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversation_between_users.html.twig:5</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Conversation between users</source>
+        <target>Conversation entre utilisateurs</target>
+      </segment>
+    </unit>
+    <unit id="HUMvWGk" name="Conversations">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversation_between_users.html.twig:9</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>Conversations</source>
+        <target>Conversations</target>
+      </segment>
+    </unit>
+    <unit id="rbuHKSS" name="posted the">
+      <notes>
+        <note category="file-source" priority="1">templates\admin\user_message\show_conversation_between_users.html.twig:40</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>posted the</source>
+        <target>posté le</target>
       </segment>
     </unit>
   </file>

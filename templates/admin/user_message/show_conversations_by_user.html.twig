@@ -1,0 +1,27 @@
+{% extends 'base_admin.html.twig' %}
+
+{% trans_default_domain 'admin' %}
+
+{% block title %}{% trans %}Conversations for{% endtrans %} {{ user['pseudo'] }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <a href="{{ path('admin_user_message_all_users', { '_locale': app.request.locale }) }}" class="btn btn-dark btn-lg" role="button" style="margin-top: -220px;">{% trans %}List Users{% endtrans %}</a>
+    </div>
+    <div class="container">
+        <h1 class="text-center title-form-custom">{% trans with { '%user%': user['pseudo'] } %}%user%'s Conversations{% endtrans %}</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for conversation in conversations %}
+                <div class="col-md-3">
+                    <div class="card border-secondary mb-3" style="height: 130px;">
+                        <div class="card-body text-secondary">
+                            <a class="dashboard-link" href="{{ path('admin_user_message_see_conversation_between_users', { '_locale': app.request.locale, 'user_pseudo': user['pseudo'], 'receiver_pseudo': conversation['pseudo'] }) }}"><h5 class="card-title"><i class="fa fa-comments-o fa-2x" aria-hidden="true"></i><span class="admin-style" style="float: bottom;">{{ conversation['pseudo'] }}</span></h5></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

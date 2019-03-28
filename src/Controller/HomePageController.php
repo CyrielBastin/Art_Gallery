@@ -20,10 +20,10 @@ class HomePageController extends AbstractController
     public function index(Request $request)
     {
         if($request->cookies->has('_locale')){
-            setcookie('_locale', $request->cookies->get('_locale'), time() + 3600*24*3, null, null, false, true);
+            setcookie('_locale', $request->cookies->get('_locale'), time() + 3600*24*3, '/', null, false, true);
             return $this->redirectToRoute('homepage', ['_locale' => $request->cookies->get('_locale')]);
         }else{
-            setcookie('_locale', 'en', time() + 3600*24*3, null, null, false, true);
+            setcookie('_locale', 'en', time() + 3600*24*3, '/', null, false, true);
         }
 
         return $this->redirectToRoute('homepage', ['_locale' => 'en']);

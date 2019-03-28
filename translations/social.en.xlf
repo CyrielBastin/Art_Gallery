@@ -124,7 +124,6 @@
     <unit id="XTQUFze" name="List Users">
       <notes>
         <note category="file-source" priority="1">templates\user_messages\show_conversations.html.twig:9</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>List Users</source>
@@ -134,7 +133,6 @@
     <unit id="HUMvWGk" name="Conversations">
       <notes>
         <note category="file-source" priority="1">templates\user_messages\show_one_conversation.html.twig:9</note>
-        <note category="state" priority="1">new</note>
       </notes>
       <segment>
         <source>Conversations</source>

@@ -16,7 +16,7 @@ class RedirectController extends AbstractController
      */
     public function changeLocaleToEn()
     {
-        setcookie('_locale', 'en', time() + 3600*24*3, null, null, false, true);
+        setcookie('_locale', 'en', time() + 3600*24*3, '/', null, false, true);
 
         return $this->redirectToRoute('homepage', ['_locale' => 'en']);
     }
@@ -26,9 +26,29 @@ class RedirectController extends AbstractController
      */
     public function changeLocaleToFr()
     {
-        setcookie('_locale', 'fr', time() + 3600*24*3, null, null, false, true);
+        setcookie('_locale', 'fr', time() + 3600*24*3, '/', null, false, true);
 
         return $this->redirectToRoute('homepage', ['_locale' => 'fr']);
+    }
+
+    /**
+     * @Route("/social/change-locale-to-en", name="social_change_locale_to_en")
+     */
+    public function socialChangeLocaleToEn()
+    {
+        setcookie('_locale', 'en', time() + 3600*24*3, '/', null, false, true);
+
+        return $this->redirectToRoute('user_message_show_conversations', ['_locale' => 'en']);
+    }
+
+    /**
+     * @Route("/social/change-locale-to-fr", name="social_change_locale_to_fr")
+     */
+    public function socialChangeLocaleToFr()
+    {
+        setcookie('_locale', 'fr', time() + 3600*24*3, '/', null, false, true);
+
+        return $this->redirectToRoute('user_message_show_conversations', ['_locale' => 'fr']);
     }
 
     /**
@@ -36,29 +56,9 @@ class RedirectController extends AbstractController
      */
     public function adminChangeLocaleToEn()
     {
-        setcookie('_locale', 'en', time() + 3600*24*3, null, null, false, true);
+        setcookie('_locale', 'en', time() + 3600*24*3, '/', null, false, true);
 
         return $this->redirectToRoute('admin_dashboard', ['_locale' => 'en']);
-    }
-
-    /**
-     * @Route("social/change-locale-to-fr", name="social_change_locale_to_fr")
-     */
-    public function socialChangeLocaleToFr()
-    {
-        setcookie('_locale', 'fr', time() + 3600*24*3, null, null, false, true);
-
-        return $this->redirectToRoute('user_message_show_conversations', ['_locale' => 'fr']);
-    }
-
-    /**
-     * @Route("social/change-locale-to-en", name="social_change_locale_to_en")
-     */
-    public function socialChangeLocaleToEn()
-    {
-        setcookie('_locale', 'en', time() + 3600*24*3, null, null, false, true);
-
-        return $this->redirectToRoute('user_message_show_conversations', ['_locale' => 'en']);
     }
 
     /**
@@ -66,7 +66,7 @@ class RedirectController extends AbstractController
      */
     public function adminChangeLocaleToFr()
     {
-        setcookie('_locale', 'fr', time() + 3600*24*3, null, null, false, true);
+        setcookie('_locale', 'fr', time() + 3600*24*3, '/', null, false, true);
 
         return $this->redirectToRoute('admin_dashboard', ['_locale' => 'fr']);
     }
