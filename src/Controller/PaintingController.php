@@ -77,7 +77,7 @@ class PaintingController extends AbstractController
 
             return $this->redirectToRoute('redirect_from_painting_view_one', ['painting_id' => $id]);
         }
-        $this->saveTargetPath($request->getSession(), 'main', 'http://localhost/symfony/Art_Gallery/public/' . $request->getLocale() . '/painting/view/'.$id.'#post-a-commentary');
+        $this->saveTargetPath($request->getSession(), 'main', 'http://localhost/symfony/Bastin_Cyriel/Art_Gallery/public/' . $request->getLocale() . '/painting/view/'.$id.'#post-a-commentary');
 
         return $this->render('painting/painting_view_one.html.twig', ['painting' => $painting, 'commentaries' => $pagination, 'form' => $form->createView()]);
     }
